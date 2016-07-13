@@ -1,0 +1,71 @@
+.social-menu {
+
+	ul {
+		height: 24px;
+		line-height: 1;
+		list-style: none;
+		margin: 0;
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	a {
+		@extend .genericon;
+		@extend .genericon-link;
+		display: block;
+		overflow: hidden;
+		height: 24px;
+		width: 24px;
+		font-size: 0;
+
+		&:before {
+			font-size: 24px;
+		}
+	}
+
+	a[href*="wordpress.org"]:before,
+	a[href*="wordpress.com"]:before {
+		content: '\f205';
+	}
+	a[href*="facebook.com"]:before {
+		content: '\f203';
+	}
+	a[href*="twitter.com"]:before {
+		content: '\f202';
+	}
+	a[href*="dribbble.com"]:before {
+		content: '\f201';
+	}
+	a[href*="plus.google.com"]:before {
+		content: '\f206';
+	}
+	a[href*="pinterest.com"]:before {
+		content: '\f210';
+	}
+	a[href*="github.com"]:before {
+		content: '\f200';
+	}
+	a[href*="tumblr.com"]:before {
+		content: '\f214';
+	}
+	a[href*="youtube.com"]:before {
+		content: '\f213';
+	}
+	a[href*="flickr.com"]:before {
+		content: '\f211';
+	}
+	a[href*="vimeo.com"]:before {
+		content: '\f212';
+	}
+	a[href*="instagram.com"]:before {
+		content: '\f215';
+	}
+	a[href*="codepen.io"]:before {
+		content: '\f216';
+	}
+	a[href*="linkedin.com"]:before {
+		content: '\f208';
+	}
+}

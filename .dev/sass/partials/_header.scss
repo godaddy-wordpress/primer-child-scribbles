@@ -1,0 +1,65 @@
+$entry-title-bg: rgba(0,0,0,.6) !default;
+
+.site-header {
+	padding: 20px 0;
+	background-color: $header-bg-color;
+	text-align: center;
+
+	@media #{$medium-up} {
+		text-align: left;
+	}
+
+	@media #{$large-up} {
+		padding: 53px 0;
+	}
+}
+
+.site-header-wrapper {
+	@extend .row;
+}
+
+.site-title-wrapper {
+	@extend .large-9;
+	@extend .columns;
+}
+
+.site-search-wrapper {
+	@extend .large-3;
+	@extend .columns;
+}
+
+.site-title {
+	font-family: $header-font-family;
+	font-weight: 400;
+	margin: 0;
+	line-height: 1;
+	font-size: emCalc(50);
+	font-size: rem-calc(50);
+
+	a {
+		color: rgb(252, 169, 3);
+	}
+}
+
+.site-description {
+	letter-spacing: 0.2em;
+	font-family: "Raleway", $sans-font-family;
+	color: rgb(111, 111, 111);
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: emCalc(18);
+	font-size: rem-calc(18);
+}
+
+.custom-logo {
+	max-height: 50px;
+	width: auto;
+
+	@media #{$medium-up} {
+		max-height:75px;
+	}
+
+	@media #{$large-up} {
+		max-height:100px;
+	}
+}
