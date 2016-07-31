@@ -14,7 +14,7 @@
 
 		<div class="avatar-container">
 
-			<?php echo get_avatar( get_the_author_email(), '100' ); ?>
+			<?php echo get_avatar( get_the_author_meta( 'meta' ), '100' ); ?>
 
 		</div>
 
