@@ -4,7 +4,6 @@
  * Display site search in the header.
  *
  * @action primer_header
- *
  * @since 1.0.0
  */
 function scribbles_add_search() {
@@ -19,7 +18,6 @@ add_action( 'primer_header', 'scribbles_add_search', 10 );
  * Add hero after header if we are on a post or front page.
  *
  * @action primer_after_header
- *
  * @since 1.0.0
  */
 function scribbles_add_site_header() {
@@ -34,11 +32,8 @@ add_action( 'after_setup_theme', 'scribbles_add_site_header' );
  * Add additional sidebars
  *
  * @action primer_register_sidebars
- *
  * @since 1.0.0
- *
  * @param $sidebars
- *
  * @return array
  */
 function scribbles_add_sidebars( $sidebars ) {
@@ -84,9 +79,8 @@ add_filter( 'primer_register_sidebars', 'scribbles_add_sidebars' );
  * Add a footer menu.
  *
  * @action primer_nav_menus
- *
+ * @since 1.0.0
  * @param $nav_menus
- *
  * @return array
  */
 function scribbles_update_nav_menus( $nav_menus ) {
@@ -104,6 +98,7 @@ add_filter( 'primer_nav_menus', 'scribbles_update_nav_menus' );
 /**
  * Return the custom header
  *
+ * @since 1.0.0
  * @return false|string
  */
 function scribbles_get_custom_header() {
@@ -129,6 +124,7 @@ function scribbles_get_custom_header() {
  * Add additional image sizes
  *
  * @action after_setup_theme
+ * @since 1.0.0
  */
 function scribbles_add_image_sizes() {
 	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
@@ -140,6 +136,7 @@ add_action( 'after_setup_theme', 'scribbles_add_image_sizes' );
 /**
  * Update font types specific to scribbles.
  *
+ * @since 1.0.0
  * @return array
  */
 function scribbles_update_font_types() {
@@ -149,20 +146,56 @@ function scribbles_update_font_types() {
 			'label'   => __( 'Primary Font', 'primer' ),
 			'default' => 'Raleway',
 			'css'     => array(
-
+				'body,
+				h6,
+				.main-navigation,
+				.widget, .widget p, .widget ul, .widget ol,
+				.site-description,
+				.site-info
+				' => array(
+					'font-family' => '"%s", sans-serif',
+				),
 			),
-			'weight'   => array(
-				300,
-				400,
-				7000
-			)
 		),
 		array(
 			'name'    => 'secondary_font',
 			'label'   => __( 'Secondary Font', 'primer' ),
 			'default' => 'Architects Daughter',
 			'css'     => array(
-
+				'h1, h2, h3, h4, h5,
+				blockquote,
+				button,
+				a.button,
+				input,
+				select,
+				textarea,
+				button,
+				a.button,
+				a.button:visited,
+				input[type="button"],
+				input[type="reset"],
+				input[type="submit"],
+				label,
+				legend,
+				.widget-title,
+				.widget_recent_entries .post-date,
+				.entry-footer,
+				.entry-meta,
+				.event-meta,
+				.sermon-meta,
+				.location-meta,
+				.person-meta,
+				.post-format,
+				.more-link,
+				.comment-author,
+				.comment-metadata,
+				#respond,
+				.site-title,
+				.featured-content .entry-header .entry-title,
+				.featured-content .entry-header .entry-title
+				' => array(
+					'font-family' => '"%s", sans-serif',
+				),
 			),
 		),
 	);
@@ -171,7 +204,8 @@ add_action( 'primer_font_types', 'scribbles_update_font_types' );
 
 /**
  * Update colors specific to Scribbles.
- * 
+ *
+ * @since 1.0.0
  * @return array
  */
 function scribbles_update_colors() {

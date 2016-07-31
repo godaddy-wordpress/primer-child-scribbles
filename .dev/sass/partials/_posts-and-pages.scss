@@ -143,7 +143,7 @@
 .person-meta {
 	margin-bottom: 1em;
 	margin-bottom: 1rem;
-	font-family: $sans-font-family;
+	font-family: 'Architects Daughter', $sans-font-family;
 
 	.genericon {
 		line-height: 2;
@@ -160,10 +160,10 @@
 	}
 }
 
-.post-format{
+.post-format {
 	color: $primary-color;
 	text-transform: uppercase;
-	font-family: $sans-font-family;
+	font-family: 'Architects Daughter', $sans-font-family;
 	font-size: rem-calc(13);
 	font-weight: bold;
 }

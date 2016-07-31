@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scribbles 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-24 19:42+0100\n"
+"POT-Creation-Date: 2016-07-31 18:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,63 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:51
+#: functions.php:43
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:53
+#: functions.php:45
 msgid "This sidebar is the fouth column of the footer widget area."
 msgstr ""
 
-#: functions.php:60
+#: functions.php:52
 msgid "Footer 5"
 msgstr ""
 
-#: functions.php:62
+#: functions.php:54
 msgid "This sidebar is the fifth column of the footer widget area."
 msgstr ""
 
-#: functions.php:69
+#: functions.php:61
 msgid "Hero"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:63
 msgid "This sidebar is for the hero area."
 msgstr ""
 
-#: functions.php:98
+#: functions.php:89
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:152
+#: functions.php:146
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:165
+#: functions.php:156
 msgid "Secondary Font"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:189
 msgid "Menu Background Color"
 msgstr ""
 
-#: functions.php:203
+#: functions.php:197
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:205
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:216
 msgid "Main Text Color"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:224
 msgid "Secondary Text Color"
 msgstr ""
 
-#: templates/parts/hero.php:33
+#: templates/parts/site-header.php:33
 msgid "Blog"
 msgstr ""
 
