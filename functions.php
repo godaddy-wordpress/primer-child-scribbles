@@ -22,16 +22,13 @@ add_action( 'primer_header', 'scribbles_add_search', 10 );
  *
  * @since 1.0.0
  */
-function scribbles_add_hero() {
+function scribbles_add_site_header() {
 
-	if ( 'post' === get_post_type() || is_front_page() ) {
-
-		get_template_part( 'templates/parts/hero' );
-
-	}
+	remove_action( 'primer_header', 'primer_add_site_header', 10 );
+	add_action( 'primer_after_header', 'primer_add_site_header', 20 );
 
 }
-add_action( 'primer_after_header', 'scribbles_add_hero', 100 );
+add_action( 'after_setup_theme', 'scribbles_add_site_header' );
 
 /**
  * Add additional sidebars
