@@ -212,54 +212,102 @@ function scribbles_update_colors() {
 	return array(
 		array(
 			'name'    => 'header_textcolor',
-			'default' => '#222222',
+			'default' => '#fca903',
 			'css'     => array(
-
+				'.site-title a, .site-title a:visited' => array(
+					'color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'.site-title a:hover, .site-title a:visited:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
 			),
 		),
 		array(
 			'name'    => 'background_color',
-			'default' => '#f9f9f9',
+			'default' => '#fff',
+			'css'     => array(
+				'body' => array(
+					'background' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'header_background_color',
+			'label'   => esc_html__( 'Header Background Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.site-header' => array(
+					'background-color' => '%1$s',
+				),
+			),
 		),
 		array(
 			'name'    => 'menu_background_color',
-			'label'   => __( 'Menu Background Color', 'primer' ),
-			'default' => '#222222',
+			'label'   => esc_html__( 'Menu Background Color', 'primer' ),
+			'default' => '#fff',
 			'css'     => array(
-
+				'.main-navigation-container, .main-navigation .sub-menu' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'footer_background_color',
+			'label'   => esc_html__( 'Footer Background Color', 'primer' ),
+			'default' => '#3787da',
+			'css'     => array(
+				'.site-footer' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'site_info_background_color',
+			'label'   => esc_html__( 'Site Info Background Color', 'primer' ),
+			'default' => '#78ae3e',
+			'css'     => array(
+				'.site-info-wrapper' => array(
+					'background-color' => '%1$s',
+				),
 			),
 		),
 		array(
 			'name'    => 'tagline_text_color',
-			'label'   => __( 'Tagline Text Color', 'primer' ),
-			'default' => '#7c7c7c',
+			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
+			'default' => '#6f6f6f',
 			'css'     => array(
-
+				'.site-description' => array(
+					'color' => '%1$s',
+				),
 			),
 		),
+
+
+
 		array(
 			'name'    => 'link_color',
-			'label'   => __( 'Link Color', 'primer' ),
-			'default' => '#1585cf',
+			'label'   => esc_html__( 'Link Color', 'primer' ),
+			'default' => '#2e80ba',
 			'css'     => array(
-
-			),
-			'rgba_css' => array(
 
 			),
 		),
 		array(
 			'name'    => 'main_text_color',
-			'label'   => __( 'Main Text Color', 'primer' ),
-			'default' => '#1a1a1a',
+			'label'   => esc_html__( 'Main Text Color', 'primer' ),
+			'default' => '#6f6f6f',
 			'css'     => array(
-
+				'body' => array(
+					'color' => '%1$s',
+				),
 			),
 		),
 		array(
 			'name'    => 'secondary_text_color',
-			'label'   => __( 'Secondary Text Color', 'primer' ),
-			'default' => '#686868',
+			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
+			'default' => '#78ae3e',
 			'css'     => array(
 
 			),
