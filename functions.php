@@ -20,13 +20,13 @@ add_action( 'primer_header', 'scribbles_add_search', 10 );
  * @action primer_after_header
  * @since 1.0.0
  */
-function scribbles_add_site_header() {
+function scribbles_add_hero() {
 
-	remove_action( 'primer_header', 'primer_add_site_header', 10 );
-	add_action( 'primer_after_header', 'primer_add_site_header', 20 );
+	remove_action( 'primer_header', 'primer_add_hero', 10 );
+	add_action( 'primer_after_header', 'primer_add_hero', 20 );
 
 }
-add_action( 'after_setup_theme', 'scribbles_add_site_header' );
+add_action( 'after_setup_theme', 'scribbles_add_hero' );
 
 /**
  * Add additional sidebars
