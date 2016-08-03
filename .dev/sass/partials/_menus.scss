@@ -106,7 +106,7 @@ $menu-background-color: #78ae3e !default;
 				float: none;
 				position: relative;
 
-				&.menu-item-has-children > a::after {
+				&.menu-item-has-children > a:after {
 					width: 0;
 					height: 0;
 					border-bottom: 7px solid transparent;
@@ -130,7 +130,6 @@ $menu-background-color: #78ae3e !default;
 			a,
 			.sub-menu a {
 				padding-left: 1em;
-				color: contrast-color($menu-background-color, #000, #fff, 50%);
 
 				&:hover {
 					background-color: rgba(0,0,0,0.1);

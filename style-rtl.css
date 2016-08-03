@@ -2154,7 +2154,7 @@ textarea {
   /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
   vertical-align: baseline;
   /* Improves appearance and consistency in all browsers */
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Architects Daughter", "Open Sans", sans-serif; }
 
 button,
 a.button,
@@ -2364,7 +2364,7 @@ fieldset {
 legend {
   color: #6f6f6f;
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Architects Daughter", "Open Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0 15px; }
@@ -2472,7 +2472,7 @@ a {
       .main-navigation .sub-menu li {
         float: none;
         position: relative; }
-        .main-navigation .sub-menu li.menu-item-has-children > a::after {
+        .main-navigation .sub-menu li.menu-item-has-children > a:after {
           width: 0;
           height: 0;
           border-bottom: 7px solid transparent;
@@ -2491,8 +2491,7 @@ a {
         top: 0; }
       .main-navigation .sub-menu a,
       .main-navigation .sub-menu .sub-menu a {
-        padding-right: 1em;
-        color: #fff; }
+        padding-right: 1em; }
         .main-navigation .sub-menu a:hover,
         .main-navigation .sub-menu .sub-menu a:hover {
           background-color: rgba(0, 0, 0, 0.1); } }
@@ -2848,7 +2847,7 @@ a {
 .person-meta {
   margin-bottom: 1em;
   margin-bottom: 1rem;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Architects Daughter", "Open Sans", sans-serif; }
   .event-meta .genericon, .event-meta .social-menu a, .social-menu .event-meta a,
   .sermon-meta .genericon,
   .sermon-meta .social-menu a, .social-menu
@@ -2874,7 +2873,7 @@ a {
 .post-format {
   color: #008CBA;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Architects Daughter", "Open Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: bold; }
 
@@ -2956,7 +2955,7 @@ a {
       font-weight: bold; }
     .comment-list li .comment-author,
     .comment-list li .comment-metadata {
-      font-family: "Open Sans", sans-serif; }
+      font-family: "Architects Daughter", "Open Sans", sans-serif; }
     .comment-list li .comment-metadata {
       margin-bottom: 1em;
       font-size: 0.8125rem;
@@ -2991,7 +2990,7 @@ a {
 
 #respond {
   margin-top: 10px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Architects Daughter", "Open Sans", sans-serif; }
   #respond h3#reply-title {
     font-size: 1.5em !important; }
   #respond .logged-in-as {
@@ -3403,7 +3402,7 @@ body.page-template-page-builder #primary {
   .featured-content .entry-header .entry-title {
     font-size: 2.625rem;
     line-height: 1.2;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Architects Daughter", "Open Sans", sans-serif;
     font-weight: bold; }
   .featured-content .entry-header .entry-excerpt p {
     font-style: italic;
@@ -3418,7 +3417,7 @@ body.page-template-page-builder #primary {
     background-color: #008CBA;
     color: #000;
     display: inline-block;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Architects Daughter", "Open Sans", sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8125rem;

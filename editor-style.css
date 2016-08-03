@@ -651,7 +651,7 @@ blockquote p {
 .person-meta {
   margin-bottom: 1em;
   margin-bottom: 1rem;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Architects Daughter", "Open Sans", sans-serif; }
   .event-meta .genericon,
   .sermon-meta .genericon,
   .location-meta .genericon,
@@ -671,7 +671,7 @@ blockquote p {
 .post-format {
   color: #008CBA;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Architects Daughter", "Open Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: bold; }
 
@@ -753,7 +753,7 @@ blockquote p {
       font-weight: bold; }
     .comment-list li .comment-author,
     .comment-list li .comment-metadata {
-      font-family: "Open Sans", sans-serif; }
+      font-family: "Architects Daughter", "Open Sans", sans-serif; }
     .comment-list li .comment-metadata {
       margin-bottom: 1em;
       font-size: 0.8125rem;
@@ -788,7 +788,7 @@ blockquote p {
 
 #respond {
   margin-top: 10px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Architects Daughter", "Open Sans", sans-serif; }
   #respond h3#reply-title {
     font-size: 1.5em !important; }
   #respond .logged-in-as {

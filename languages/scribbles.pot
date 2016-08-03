@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scribbles 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-31 18:42+0100\n"
+"POT-Creation-Date: 2016-08-03 22:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,31 +49,43 @@ msgstr ""
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:156
+#: functions.php:162
 msgid "Secondary Font"
 msgstr ""
 
-#: functions.php:189
+#: functions.php:238
+msgid "Header Background Color"
+msgstr ""
+
+#: functions.php:248
 msgid "Menu Background Color"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:258
+msgid "Footer Background Color"
+msgstr ""
+
+#: functions.php:268
+msgid "Site Info Background Color"
+msgstr ""
+
+#: functions.php:278
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:205
+#: functions.php:291
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:216
+#: functions.php:322
 msgid "Main Text Color"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:347
 msgid "Secondary Text Color"
 msgstr ""
 
-#: templates/parts/site-header.php:33
+#: templates/parts/hero.php:33
 msgid "Blog"
 msgstr ""
 
