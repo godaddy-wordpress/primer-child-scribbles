@@ -1,6 +1,45 @@
 <?php
 
 /**
+ * Move titles above menu templates.
+ *
+ * @since 1.0.0
+ */
+function scribbles_remove_titles(){
+
+	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+
+	if( ! is_front_page() ):
+		add_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+		add_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+		add_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+	endif;
+
+}
+add_action( 'init', 'scribbles_remove_titles' );
+
+/**
+ * Check to see if we should add the hero to the page.
+ *
+ * @action after_setup_theme
+ * @since 1.0.0
+ */
+function scribbles_check_hero() {
+
+	remove_action( 'primer_header', 'primer_add_hero', 10 );
+
+	if ( is_404() || is_page_template( 'templates/page-builder-no-header.php' ) ) {
+		return;
+	}
+
+	add_action( 'primer_after_header', 'scribbles_add_hero', 10 );
+
+}
+add_action( 'template_redirect', 'scribbles_check_hero' );
+
+/**
  * Display site search in the header.
  *
  * @action primer_header

@@ -28,10 +28,6 @@
 
 				</div>
 
-			<?php elseif ( 'post' === get_post_type() ) : ?>
-
-				<h2 class="page-title"><?php _e( 'Blog', 'scribbles' ); ?></h2>
-
 			<?php endif; ?>
 
 		</div>
