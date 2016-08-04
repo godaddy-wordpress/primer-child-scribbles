@@ -1,11 +1,17 @@
 $menu-font-family: "Raleway", $header-font-family !default;
-$menu-background-color: #78ae3e !default;
 
 .main-navigation-container {
 	position: relative;
-	border-style: solid;
-	border-width: 10px 0px;
-	border-image: url('assets/images/border.svg') 10 0 repeat;
+
+	&:before,
+	&:after {
+		background-color: #78ae3e;
+		content: "";
+		display: block;
+		height: 10px;
+		width: 100%;
+		mask: url(assets/images/border.svg) center / contain repeat;
+	}
 
 	.main-navigation-wrapper {
 		@extend .row;
@@ -60,7 +66,7 @@ $menu-background-color: #78ae3e !default;
 
 	.current-menu-item > a,
 	a:hover {
-		color: rgba(#2e80ba, 0.75);
+		color: rgba(#2e80ba, 0.8);
 	}
 
 	.sub-menu a {
@@ -100,7 +106,7 @@ $menu-background-color: #78ae3e !default;
 			position: absolute;
 			width: 250px;
 			z-index: 100;
-			background-color: $menu-background-color;
+			background-color: #fff;
 
 			li {
 				float: none;
@@ -111,7 +117,7 @@ $menu-background-color: #78ae3e !default;
 					height: 0;
 					border-bottom: 7px solid transparent;
 					border-top: 7px solid transparent;
-					border-left: 7px solid contrast-color($menu-background-color, #000, #fff, 50%);
+					border-left: 7px solid $primary-color;
 					font-size: 0;
 					line-height: 0;
 					content: "";

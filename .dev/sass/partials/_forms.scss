@@ -17,7 +17,7 @@ input[type="reset"],
 input[type="submit"] {
 	border: 2px solid rgba(#6f6f6f,1);
 	color: rgba(#6f6f6f,1);
-	background: none;
+	background: transparent;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: none; /* Corrects inability to style clickable 'input' types in iOS */
 	-webkit-font-smoothing: auto;
@@ -92,6 +92,7 @@ textarea {
 	font-size: rem-calc(16);
 	border: 2px solid rgba(#6f6f6f,1);
 	border-radius: 5px;
+	background: transparent;
 
 	&:focus {
 		outline: none;
@@ -167,6 +168,7 @@ legend {
 		padding-right: 40px;
 		border: 2px solid #828282;
 		color: #828282;
+		background: transparent;
 	}
 	.search-submit {
 		background: url(assets/images/search-icon.svg) no-repeat center center;

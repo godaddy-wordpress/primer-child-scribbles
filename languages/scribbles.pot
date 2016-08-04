@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scribbles 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-03 22:32+0100\n"
+"POT-Creation-Date: 2016-08-05 00:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,76 +17,88 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:43
+#: functions.php:82
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:45
+#: functions.php:84
 msgid "This sidebar is the fouth column of the footer widget area."
 msgstr ""
 
-#: functions.php:52
+#: functions.php:91
 msgid "Footer 5"
 msgstr ""
 
-#: functions.php:54
+#: functions.php:93
 msgid "This sidebar is the fifth column of the footer widget area."
 msgstr ""
 
-#: functions.php:61
+#: functions.php:100
 msgid "Hero"
 msgstr ""
 
-#: functions.php:63
+#: functions.php:102
 msgid "This sidebar is for the hero area."
 msgstr ""
 
-#: functions.php:89
+#: functions.php:128
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:146
+#: functions.php:185
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:201
 msgid "Secondary Font"
 msgstr ""
 
-#: functions.php:238
-msgid "Header Background Color"
-msgstr ""
-
-#: functions.php:248
-msgid "Menu Background Color"
-msgstr ""
-
-#: functions.php:258
-msgid "Footer Background Color"
-msgstr ""
-
-#: functions.php:268
-msgid "Site Info Background Color"
-msgstr ""
-
-#: functions.php:278
+#: functions.php:271
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:291
-msgid "Link Color"
+#: functions.php:281
+msgid "Header Background Color"
 msgstr ""
 
-#: functions.php:322
-msgid "Main Text Color"
+#: functions.php:294
+msgid "Menu Background Color"
 msgstr ""
 
-#: functions.php:347
-msgid "Secondary Text Color"
+#: functions.php:304
+msgid "Menu Link Color"
 msgstr ""
 
-#: templates/parts/hero.php:33
-msgid "Blog"
+#: functions.php:327 functions.php:337
+msgid "Hero Background Color"
+msgstr ""
+
+#: functions.php:363
+msgid "Footer Background Color"
+msgstr ""
+
+#: functions.php:373
+msgid "Footer Text Color"
+msgstr ""
+
+#: functions.php:396
+msgid "Site Info Background Color"
+msgstr ""
+
+#: functions.php:406
+msgid "Site Info Text Color"
+msgstr ""
+
+#: functions.php:435
+msgid "Scribbles 2"
+msgstr ""
+
+#: functions.php:450
+msgid "Scribbles 3"
+msgstr ""
+
+#: functions.php:465
+msgid "Scribbles 4"
 msgstr ""
 
 #: templates/parts/site-info.php:17

@@ -128,7 +128,7 @@ $site-footer-anchor-color-hover: $site-footer-text-color	;
 				padding: 0.5em 0;
 			}
 			a {
-				color: #c2dffd;
+				//color: #c2dffd;
 				font-size: rem-calc(18);
 			}
 			.post-date {
@@ -147,9 +147,14 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 .site-info-wrapper {
 	background: $site-footer-info-background;
 
-	border-style: solid;
-	border-width: 10px 0 0;
-	border-image: url('assets/images/border.svg') 10 0 repeat;
+	&:before {
+		background-color: #fca903;
+		content: "";
+		display: block;
+		height: 10px;
+		width: 100%;
+		mask: url(assets/images/border.svg) center / contain repeat;
+	}
 }
 
 .site-info {

@@ -24,8 +24,6 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -335,7 +333,6 @@ pre {
   border-width: 1px;
   border-style: solid;
   border-color: contrast-color(#0a0a0a, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: rem-calc(2 5 1);
   margin-bottom: 1rem; }
@@ -349,7 +346,6 @@ code {
   border-width: 1px;
   border-style: solid;
   border-color: contrast-color(#0a0a0a, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: rem-calc(2 5 1); }
 
@@ -497,7 +493,6 @@ blockquote p {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
-    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -582,13 +577,11 @@ blockquote p {
     left: 0;
     right: 0;
     bottom: -57px;
-    -webkit-border-radius: 100%;
     border-radius: 100%; }
     .featured-image .avatar-container .avatar {
       width: 106px;
       height: 106px;
       border: 3px solid #78ae3e;
-      -webkit-border-radius: 100%;
       border-radius: 100%; }
 
 .byline,
@@ -685,7 +678,6 @@ blockquote p {
 .more-link {
   font-family: "Architects Daughter", "Open Sans", sans-serif;
   font-weight: normal;
-  -webkit-border-radius: 0;
   border-radius: 0;
   border: 1px solid #008CBA;
   padding: .5em 1em;
@@ -771,7 +763,6 @@ blockquote p {
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
-    -webkit-border-radius: 4px;
     border-radius: 4px;
     background-color: #d9d9d9;
     color: #666;
@@ -785,7 +776,6 @@ blockquote p {
   left: -1em;
   left: -1rem;
   position: relative;
-  -webkit-border-radius: 3px;
   border-radius: 3px; }
 
 .comment-form label .required {

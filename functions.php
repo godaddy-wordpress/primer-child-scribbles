@@ -256,59 +256,13 @@ function scribbles_update_colors() {
 				'.site-title a, .site-title a:visited' => array(
 					'color' => '%1$s',
 				),
+				'.site-info-wrapper:before' => array(
+					'background-color' => '%1$s',
+				),
 			),
 			'rgba_css' => array(
 				'.site-title a:hover, .site-title a:visited:hover' => array(
 					'color' => 'rgba(%1$s, 0.8)',
-				),
-			),
-		),
-		array(
-			'name'    => 'background_color',
-			'default' => '#ffffff',
-			'css'     => array(
-				'body' => array(
-					'background' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'header_background_color',
-			'label'   => esc_html__( 'Header Background Color', 'primer' ),
-			'default' => '#fff',
-			'css'     => array(
-				'.site-header' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'menu_background_color',
-			'label'   => esc_html__( 'Menu Background Color', 'primer' ),
-			'default' => '#fff',
-			'css'     => array(
-				'.main-navigation-container, .main-navigation .sub-menu' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'footer_background_color',
-			'label'   => esc_html__( 'Footer Background Color', 'primer' ),
-			'default' => '#3787da',
-			'css'     => array(
-				'.site-footer' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'site_info_background_color',
-			'label'   => esc_html__( 'Site Info Background Color', 'primer' ),
-			'default' => '#78ae3e',
-			'css'     => array(
-				'.site-info-wrapper' => array(
-					'background-color' => '%1$s',
 				),
 			),
 		),
@@ -323,14 +277,37 @@ function scribbles_update_colors() {
 			),
 		),
 		array(
-			'name'    => 'link_color',
-			'label'   => esc_html__( 'Link Color', 'primer' ),
-			'default' => '#3787da',
+			'name'    => 'header_background_color',
+			'label'   => esc_html__( 'Header Background Color', 'primer' ),
+			'default' => '#fff',
 			'css'     => array(
-				'a, a:visited, .entry-title a:hover, .entry-title a:visited:hover, .main-navigation a, abbr, .site-footer a, .site-footer a:visited, .site-info a, .site-info a:visited' => array(
+				'.site-header' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+
+
+
+		array(
+			'name'    => 'menu_background_color',
+			'label'   => esc_html__( 'Menu Background Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.main-navigation-container, .main-navigation .sub-menu' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'menu_link_color',
+			'label'   => esc_html__( 'Menu Link Color', 'primer' ),
+			'default' => '#2e80ba',
+			'css'     => array(
+				'.main-navigation-container a, .main-navigation-container a:visited' => array(
 					'color' => '%1$s',
 				),
-				'button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+				'.menu-toggle div' => array(
 					'background-color' => '%1$s',
 				),
 				'.main-navigation .sub-menu li.menu-item-has-children > a:after' => array(
@@ -338,54 +315,106 @@ function scribbles_update_colors() {
 				),
 			),
 			'rgba_css' => array(
-				'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active,
-				.main-navigation .current-menu-item > a, .main-navigation a:hover, .site-footer a:hover, .site-info a:hover' => array(
+				'.main-navigation-container a:hover, .main-navigation-container a:visited:hover,
+				.main-navigation .current-menu-item > a, .main-navigation a:hover' => array(
 					'color' => 'rgba(%1$s, 0.8)',
 				),
-				'button:hover, button:active, button:focus, a.button:hover, a.button:active, a.button:focus, input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
-					'background-color' => 'rgba(%1$s, 0.8)',
-				),
-				'button, button:hover, button:active, button:focus, a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus, input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
-					'color' => '#ffffff',
-				),
-				'.comment-list li.bypostauthor' => array(
-					'border-color' => 'rgba(%1$s, 0.2)',
+			),
+		),
+
+
+		array(
+			'name'    => 'hero_background_color',
+			'label'   => esc_html__( 'Hero Background Color', 'primer' ),
+			'default' => '#2e80ba',
+			'css'     => array(
+				'.hero' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),
-		array(
-			'name'    => 'main_text_color',
-			'label'   => esc_html__( 'Main Text Color', 'primer' ),
-			'default' => '#6f6f6f',
+		array( // TODO: More tags here...
+			'name'    => 'hero_text_color',
+			'label'   => esc_html__( 'Hero Background Color', 'primer' ),
+			'default' => '#fff',
 			'css'     => array(
-				'body, input, select, textarea, h1, h2, h3, h4, h5, h6, .entry-title a, .entry-title a:visited, .entry-title a:before, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus' => array(
+				'.hero, 
+				.hero a,
+				.hero p,
+				.hero h1,
+				.hero .textwidget .button' => array(
 					'color' => '%1$s',
 				),
+				'.hero .textwidget .button' => array(
+					'border-color'  => '%1$s',
+				),
+				'.hero .textwidget .button:hover' => array(
+					'border-color'  => '%1$s',
+					'background-color'  => '%1$s',
+				),
 			),
-			'rgba_css' => array(
-				'hr' => array(
-					'background-color' => 'rgba(%1$s, 0.1)',
-				),
-				'input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea' => array(
-					'color'        => 'rgba(%1$s, 0.5)',
-					'border-color' => 'rgba(%1$s, 0.1)',
-				),
-				'select, fieldset, blockquote, pre, code, abbr, acronym, .hentry table th, .hentry table td' => array(
-					'border-color' => 'rgba(%1$s, 0.1)',
-				),
-				'.hentry table tr:hover td' => array(
-					'background-color' => 'rgba(%1$s, 0.075)',
+			'rgba_css'     => array(
+			),
+		),
+
+
+
+		array(
+			'name'    => 'footer_background_color',
+			'label'   => esc_html__( 'Footer Background Color', 'primer' ),
+			'default' => '#3787da',
+			'css'     => array(
+				'.site-footer' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),
+		array( // TODO: More tags here...
+			'name'    => 'footer_text_color',
+			'label'   => esc_html__( 'Footer Text Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.site-footer a,
+				.footer-widget-area .footer-widget .widget,
+				.footer-widget-area .footer-widget .widget-title' => array(
+					'color' => '%1$s',
+				),
+				'.footer-widget-area .footer-widget .widget-title' => array(
+					'border-color'  => '%1$s',
+				),
+				'' => array(
+					'border-color'  => '%1$s',
+					'background-color'  => '%1$s',
+				),
+			),
+			'rgba_css'     => array(
+			),
+		),
+
+
 		array(
-			'name'    => 'secondary_text_color',
-			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
+			'name'    => 'site_info_background_color',
+			'label'   => esc_html__( 'Site Info Background Color', 'primer' ),
 			'default' => '#78ae3e',
 			'css'     => array(
-				'blockquote, .entry-meta, .entry-footer, .comment-meta .says, .logged-in-as, .fl-callout-text' => array(
+				'.site-info-wrapper, .main-navigation-container:before, .main-navigation-container:after' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		array( // TODO: More tags here...
+			'name'    => 'site_info_text_color',
+			'label'   => esc_html__( 'Site Info Text Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.site-info, .site-info a, .site-info .social-menu a' => array(
 					'color' => '%1$s',
 				),
+				'.site-info .social-menu a ' => array(
+					'border-color'  => '%1$s',
+				),
+			),
+			'rgba_css'     => array(
 			),
 		),
 	);

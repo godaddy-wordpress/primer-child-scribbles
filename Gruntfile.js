@@ -1,5 +1,3 @@
-/* global module, require */
-
 module.exports = function(grunt) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
@@ -10,19 +8,10 @@ module.exports = function(grunt) {
 
 		autoprefixer: {
 			options: {
-				browsers: [
-					'Android >= 2.1',
-					'Chrome >= 21',
-					'Edge >= 12',
-					'Explorer >= 7',
-					'Firefox >= 17',
-					'Opera >= 12.1',
-					'Safari >= 6.0'
-				],
-				cascade: false
+				// Task-specific options go here.
 			},
-			dist: {
-				src: [ '*.css', 'assets/css/**/*.css' ]
+			your_target: {
+				src: '*.css'
 			}
 		},
 
@@ -35,64 +24,13 @@ module.exports = function(grunt) {
 					{
 						src: 'style.css',
 						dest: 'style-rtl.css'
-					},
-					{
-						src: 'editor-style.css',
-						dest: 'editor-style-rtl.css'
-					},
-					{
-						expand: true,
-						cwd: 'assets/css/admin',
-						src: ['*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css'],
-						dest: 'assets/css/admin',
-						ext: '-rtl.css'
 					}
 				]
 			}
 		},
 
-		cssmin: {
-			options: {
-				shorthandCompacting: false,
-				roundingPrecision: 5,
-				processImport: false
-			},
-			dist: {
-				files: [{
-					expand: true,
-					cwd: 'assets/css',
-					src: ['*.css', '!*.min.css'],
-					dest: 'assets/css',
-					ext: '.min.css'
-				},
-				{
-					expand: true,
-					cwd: 'assets/css/admin',
-					src: ['*.css', '!*.min.css'],
-					dest: 'assets/css/admin',
-					ext: '.min.css'
-				}]
-			}
-		},
-
-		devUpdate: {
-			main: {
-				options: {
-					updateType: 'force', //just report outdated packages
-					reportUpdated: false, //don't report up-to-date packages
-					semver: true, //stay within semver when updating
-					packages: {
-						devDependencies: true, //only check for devDependencies
-						dependencies: false
-					},
-					packageJson: null, //use matchdep default findup to locate package.json
-					reportOnlyPkgs: [] //use updateType action on all packages
-				}
-			}
-		},
-
 		jshint: {
-			all: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js']
+			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js']
 		},
 
 		po2mo: {
@@ -142,15 +80,15 @@ module.exports = function(grunt) {
 
 		replace: {
 			pot: {
-				src: 'languages/*.po*',
+				src: 'languages/' + pkg.name + '.pot',
 				overwrite: true,
 				replacements: [
 					{
 						from: 'SOME DESCRIPTIVE TITLE.',
-						to: pkg.title
+						to: 'Scribbles Theme for WordPress'
 					},
 					{
-						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
 						to: new Date().getFullYear()
 					},
 					{
@@ -167,26 +105,13 @@ module.exports = function(grunt) {
 
 		sass: {
 			options: {
-				precision: 5,
 				sourceMap: false
 			},
 			dist: {
-				options: {
-					require: 'susy'
-				},
-				files: [
-					{
-						'style.css': '.dev/sass/style.scss',
-						'editor-style.css': '.dev/sass/editor-style.scss'
-					},
-					{
-						expand: true,
-						cwd: '.dev/sass/admin',
-						src: ['*.scss'],
-						dest: 'assets/css/admin',
-						ext: '.css'
-					}
-				]
+				files: {
+					'style.css': '.dev/sass/style.scss',
+					'editor-style.css': '.dev/sass/editor-style.scss'
+				}
 			}
 		},
 
@@ -194,21 +119,31 @@ module.exports = function(grunt) {
 			options: {
 				ASCIIOnly: true
 			},
-			dist: {
+			core: {
 				expand: true,
 				cwd: 'assets/js',
 				src: ['*.js', '!*.min.js'],
 				dest: 'assets/js',
 				ext: '.min.js'
-			},
-			admin: {
-				expand: true,
-				cwd: 'assets/js/admin',
-				src: ['*.js', '!*.min.js'],
-				dest: 'assets/js/admin',
-				ext: '.min.js'
 			}
 		},
+
+		devUpdate: {
+			main: {
+				options: {
+					updateType: 'force', //just report outdated packages
+					reportUpdated: false, //don't report up-to-date packages
+					semver: true, //stay within semver when updating
+					packages: {
+						devDependencies: true, //only check for devDependencies
+						dependencies: false
+					},
+					packageJson: null, //use matchdep default findup to locate package.json
+					reportOnlyPkgs: [] //use updateType action on all packages
+				}
+			}
+	    },
+
 
 		watch: {
 			css: {
@@ -216,19 +151,39 @@ module.exports = function(grunt) {
 				tasks: ['sass','autoprefixer','cssjanus']
 			},
 			scripts: {
-				files: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js'],
+				files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
 				tasks: ['jshint', 'uglify'],
 				options: {
 					interrupt: true
 				}
+			},
+			pot: {
+				files: [ '**/*.php' ],
+				tasks: ['update-pot']
+			},
+		},
+
+		browserSync: {
+			dev: {
+				bsFiles: {
+					src: [
+						"*.css",
+						"**/*.php",
+						"*.js"
+					]
+				},
+				options: {
+					proxy: "godaddy.dev", // enter your local WP URL here
+					watchTask: true
+				}
 			}
-		}
+		},
 
 	});
 
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify']);
+	grunt.registerTask('default', ['browserSync', 'watch']);
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 
