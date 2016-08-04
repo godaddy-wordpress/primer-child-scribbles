@@ -265,7 +265,7 @@ function scribbles_update_colors() {
 		),
 		array(
 			'name'    => 'background_color',
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css'     => array(
 				'body' => array(
 					'background' => '%1$s',
@@ -322,13 +322,10 @@ function scribbles_update_colors() {
 				),
 			),
 		),
-
-
-
 		array(
 			'name'    => 'link_color',
 			'label'   => esc_html__( 'Link Color', 'primer' ),
-			'default' => '#ff6663',
+			'default' => '#3787da',
 			'css'     => array(
 				'a, a:visited, .entry-title a:hover, .entry-title a:visited:hover, .main-navigation a, abbr, .site-footer a, .site-footer a:visited, .site-info a, .site-info a:visited' => array(
 					'color' => '%1$s',
@@ -359,7 +356,7 @@ function scribbles_update_colors() {
 		array(
 			'name'    => 'main_text_color',
 			'label'   => esc_html__( 'Main Text Color', 'primer' ),
-			'default' => '#0b3954',
+			'default' => '#6f6f6f',
 			'css'     => array(
 				'body, input, select, textarea, h1, h2, h3, h4, h5, h6, .entry-title a, .entry-title a:visited, .entry-title a:before, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus' => array(
 					'color' => '%1$s',
@@ -384,7 +381,7 @@ function scribbles_update_colors() {
 		array(
 			'name'    => 'secondary_text_color',
 			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
-			'default' => '#686868',
+			'default' => '#78ae3e',
 			'css'     => array(
 				'blockquote, .entry-meta, .entry-footer, .comment-meta .says, .logged-in-as, .fl-callout-text' => array(
 					'color' => '%1$s',
@@ -394,3 +391,63 @@ function scribbles_update_colors() {
 	);
 }
 add_action( 'primer_colors', 'scribbles_update_colors' );
+
+
+/**
+ * Change color schemes
+ *
+ * @action primer_color_schemes
+ * @since 1.0.0
+ * @return array
+ */
+function scribbles_color_schemes() {
+
+	return array(
+		'scribbles-2' => array(
+			'label'  => esc_html__( 'Scribbles 2', 'ascension' ),
+			'colors' => array(
+				'header_textcolor'              => '#f46b06',
+				'background_color'              => '#FFFFFF',
+				'header_background_color'       => '#FFFFFF',
+				'menu_background_color'         => '#FFFFFF',
+				'footer_background_color'       => '#3787da',
+				'site_info_background_color'    => '#f46b06',
+				'tagline_text_color'            => '#6f6f6f',
+				'link_color'                    => '#3787da',
+				'main_text_color'               => '#6f6f6f',
+				'secondary_text_color'          => '#f46b06',
+			),
+		),
+		'scribbles-3' => array(
+			'label'  => esc_html__( 'Scribbles 3', 'ascension' ),
+			'colors' => array(
+				'header_textcolor'              => '#f3755c',
+				'background_color'              => '#FFFFFF',
+				'header_background_color'       => '#FFFFFF',
+				'menu_background_color'         => '#FFFFFF',
+				'footer_background_color'       => '#FFFFFF',
+				'site_info_background_color'    => '#f3755c',
+				'tagline_text_color'            => '#eda125',
+				'link_color'                    => '#c2442b',
+				'main_text_color'               => '#6f6f6f',
+				'secondary_text_color'          => '#6f6f6f',
+			),
+		),
+		'scribbles-4' => array(
+			'label'  => esc_html__( 'Scribbles 4', 'ascension' ),
+			'colors' => array(
+				'header_textcolor'              => '#FFFFFF',
+				'background_color'              => '#FFFFFF',
+				'header_background_color'       => '#44b5da',
+				'menu_background_color'         => '#FFFFFF',
+				'footer_background_color'       => '#44b5da',
+				'site_info_background_color'    => '#ab3490',
+				'tagline_text_color'            => '#eda125',
+				'link_color'                    => '#82c32e',
+				'main_text_color'               => '#6f6f6f',
+				'secondary_text_color'          => '#6f6f6f',
+			),
+		),
+	);
+}
+add_action( 'primer_color_schemes', 'scribbles_color_schemes' );
