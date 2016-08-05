@@ -12,9 +12,9 @@ function scribbles_remove_titles(){
 	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
 
 	if( ! is_front_page() ):
-		add_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
-		add_action( 'primer_after_header', 'primer_add_blog_title', 100 );
-		add_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+		add_action( 'scribbles_hero', 'primer_add_page_builder_template_title' );
+		add_action( 'scribbles_hero', 'primer_add_blog_title' );
+		add_action( 'scribbles_hero', 'primer_add_archive_title' );
 	endif;
 
 }
@@ -30,11 +30,11 @@ function scribbles_check_hero() {
 
 	remove_action( 'primer_header', 'primer_add_hero', 10 );
 
-	if ( is_404() || is_page_template( 'templates/page-builder-no-header.php' ) ) {
+	if ( is_404() ) {
 		return;
 	}
 
-	add_action( 'primer_after_header', 'scribbles_add_hero', 10 );
+	add_action( 'primer_after_header', 'primer_add_hero', 100 );
 
 }
 add_action( 'template_redirect', 'scribbles_check_hero' );
@@ -51,21 +51,6 @@ function scribbles_add_search() {
 
 }
 add_action( 'primer_header', 'scribbles_add_search', 10 );
-
-
-/**
- * Add hero after header if we are on a post or front page.
- *
- * @action primer_after_header
- * @since 1.0.0
- */
-function scribbles_add_hero() {
-
-	remove_action( 'primer_header', 'primer_add_hero', 10 );
-	add_action( 'primer_after_header', 'primer_add_hero', 20 );
-
-}
-add_action( 'after_setup_theme', 'scribbles_add_hero' );
 
 /**
  * Add additional sidebars
@@ -346,12 +331,12 @@ function scribbles_update_colors() {
 			'label'   => esc_html__( 'Hero Background Color', 'primer' ),
 			'default' => '#fff',
 			'css'     => array(
-				'.hero, 
+				'.hero,
 				.hero a,
 				.hero p,
 				.hero h1,
 				.hero h2,
-				.hero h3, 
+				.hero h3,
 				.hero h4,
 				.hero h5,
 				.hero h6,
