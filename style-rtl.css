@@ -2672,15 +2672,18 @@ a {
     color: #286ea0; }
 
 .main-navigation-container {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .main-navigation-container:before, .main-navigation-container:after {
     background-color: #78ae3e;
     content: "";
     display: block;
+    position: relative;
     height: 10px;
-    width: 100%;
-    -webkit-mask: url(assets/images/border.svg) center/contain repeat;
-            mask: url(assets/images/border.svg) center/contain repeat; }
+    width: 110%;
+    right: -5%;
+    -webkit-mask: url(assets/images/border.svg) center/cover repeat;
+            mask: url(assets/images/border.svg) center/cover repeat; }
   .main-navigation-container .social-menu {
     width: auto;
     float: left; }
@@ -2719,8 +2722,10 @@ a {
     padding-right: 3em; }
 
 @media only screen and (min-width: 40.063em) {
-  .main-navigation-container .social-menu {
-    display: none; }
+  .main-navigation-container {
+    overflow: inherit; }
+    .main-navigation-container .social-menu {
+      display: none; }
   .menu-toggle {
     display: none; }
   .main-navigation {
@@ -3264,17 +3269,15 @@ a {
   #respond h3#reply-title {
     font-size: 1.5em !important; }
   #respond .logged-in-as {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #6f6f6f;
+    border-bottom: 1px solid #6f6f6f;
     padding: 10px;
     font-size: .85em; }
   #respond .comment-notes {
     font-size: 1.25em;
-    margin-bottom: 2em;
-    color: #999; }
+    margin-bottom: 2em; }
   #respond .form-allowed-tags {
     font-size: .8em;
-    color: #888;
     margin-bottom: 2em; }
 
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -3597,8 +3600,8 @@ body.page-template-page-builder-no-header #primary {
     display: block;
     height: 10px;
     width: 100%;
-    -webkit-mask: url(assets/images/border.svg) center/contain repeat;
-            mask: url(assets/images/border.svg) center/contain repeat; }
+    -webkit-mask: url(assets/images/border.svg) center/cover repeat;
+            mask: url(assets/images/border.svg) center/cover repeat; }
 
 .site-info {
   font-family: "Raleway", "Raleway", Georgia, serif;

@@ -153,7 +153,7 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 		display: block;
 		height: 10px;
 		width: 100%;
-		mask: url(assets/images/border.svg) center / contain repeat;
+		mask: url(assets/images/border.svg) center / cover repeat;
 	}
 }
 

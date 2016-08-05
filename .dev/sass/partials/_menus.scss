@@ -2,15 +2,18 @@ $menu-font-family: "Raleway", $header-font-family !default;
 
 .main-navigation-container {
 	position: relative;
+	overflow: hidden;
 
 	&:before,
 	&:after {
 		background-color: #78ae3e;
 		content: "";
 		display: block;
+		position: relative;
 		height: 10px;
-		width: 100%;
-		mask: url(assets/images/border.svg) center / contain repeat;
+		width: 110%;
+		left: -5%;
+		mask: url(assets/images/border.svg) center / cover repeat;
 	}
 
 	.main-navigation-wrapper {
@@ -80,7 +83,13 @@ $menu-font-family: "Raleway", $header-font-family !default;
 }
 
 @media #{$medium-up} {
-	.main-navigation-container .social-menu { display: none; }
+	.main-navigation-container {
+		overflow: inherit;
+
+		.social-menu {
+			display: none;
+		}
+	}
 
 	.menu-toggle {
 		display: none;

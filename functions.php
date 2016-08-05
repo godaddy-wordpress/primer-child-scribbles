@@ -288,7 +288,6 @@ function scribbles_update_colors() {
 		),
 
 
-
 		array(
 			'name'    => 'menu_background_color',
 			'label'   => esc_html__( 'Menu Background Color', 'primer' ),
@@ -342,18 +341,38 @@ function scribbles_update_colors() {
 				.hero a,
 				.hero p,
 				.hero h1,
-				.hero .textwidget .button' => array(
+				.hero h2,
+				.hero h3, 
+				.hero h4,
+				.hero h5,
+				.hero h6,
+				.hero .textwidget .button,
+				.hero .widget-title,
+				.hero cite,
+				.hero abbr,
+				.hero acronym
+				' => array(
 					'color' => '%1$s',
 				),
-				'.hero .textwidget .button' => array(
+				'.hero .textwidget .button,
+				.hero blockquote' => array(
 					'border-color'  => '%1$s',
 				),
 				'.hero .textwidget .button:hover' => array(
 					'border-color'  => '%1$s',
 					'background-color'  => '%1$s',
 				),
+				'.hero pre, .hero code' => array(
+					'color' => '%1$s',
+				),
 			),
 			'rgba_css'     => array(
+				'.hero table, .hero th, .hero td, .hero tr' => array(
+					'border-color' => 'rgba(%1$s, 0.1)',
+				),
+				'.hero pre, .hero code' => array(
+					'background-color' => 'rgba(%1$s, 0.05)',
+				),
 			),
 		),
 
@@ -375,6 +394,7 @@ function scribbles_update_colors() {
 			'default' => '#fff',
 			'css'     => array(
 				'.site-footer a,
+				.site-footer a abbr, .site-footer a acronym,
 				.footer-widget-area .footer-widget .widget,
 				.footer-widget-area .footer-widget .widget-title' => array(
 					'color' => '%1$s',
@@ -388,6 +408,9 @@ function scribbles_update_colors() {
 				),
 			),
 			'rgba_css'     => array(
+				'.site-footer a:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
 			),
 		),
 
@@ -415,6 +438,57 @@ function scribbles_update_colors() {
 				),
 			),
 			'rgba_css'     => array(
+				'.site-info a:hover, .site-info .social-menu a:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
+				'.site-info .social-menu a:hover' => array(
+					'border-color'  => 'rgba(%1$s, 0.8)',
+				),
+			),
+		),
+
+
+		array(
+			'name'    => 'link_color',
+			'label'   => esc_html__( 'Link Color', 'primer' ),
+			'default' => '#2e80ba',
+			'css' => array(
+				'#content a, #content a abbr' => array(
+					'color' => '%1$s',
+				),
+			),
+			'rgba_css'     => array(
+				'#content a:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
+			),
+		),
+		array(
+			'name'    => 'main_text_color',
+			'label'   => esc_html__( 'Main Text Color', 'primer' ),
+			'default' => '#6f6f6f',
+			'css' => array(
+				'#content, #content abbr, #content acronym' => array(
+					'color' => '%1$s',
+				),
+				'#content pre, #content code' => array(
+					'color' => '%1$s',
+				),
+				'#content '
+			),
+			'rgba_css'     => array(
+				'#content pre, #content code' => array(
+					'background-color' => 'rgba(%1$s, 0.05)',
+				),
+				'#content table, #content th, #content td, #content tr, .logged-in-as' => array(
+					'border-color' => 'rgba(%1$s, 0.1)',
+				),
+				'#content blockquote, #content blockquote p, #content cite' => array(
+					'color' => 'rgba(%1$s, 0.75)',
+				),
+				'#content blockquote' => array(
+					'border-left-color' => 'rgba(%1$s, 0.25)',
+				),
 			),
 		),
 	);

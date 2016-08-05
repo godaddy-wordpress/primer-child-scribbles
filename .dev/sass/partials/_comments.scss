@@ -122,8 +122,8 @@
 	}
 
 	.logged-in-as {
-		border-top: 1px solid #ddd;
-		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #6f6f6f;
+		border-bottom: 1px solid #6f6f6f;
 		padding: 10px ;
 		font-size: .85em;
 	}
@@ -131,12 +131,10 @@
 	.comment-notes {
 		font-size: 1.25em;
 		margin-bottom: 2em;
-		color: #999;
 	}
 
 	.form-allowed-tags {
 		font-size: .8em;
-		color: #888;
 		margin-bottom: 2em;
 	}
 }
