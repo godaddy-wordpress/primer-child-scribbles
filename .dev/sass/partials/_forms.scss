@@ -165,20 +165,20 @@ legend {
 		height: 40px;
 		line-height: 40px;
 		box-sizing: border-box;
-		padding-right: 40px;
+		padding-right: 45px;
 		border: 2px solid #828282;
 		color: #828282;
 		background: transparent;
 	}
 	.search-submit {
-		background: url(assets/images/search-icon.svg) no-repeat center center;
+		background: url('assets/images/search-icon.png') no-repeat center center;
 		background-size: 65%;
 		padding: 0;
 		height: 40px;
 		border: 0;
 		width: 40px;
 		position: absolute;
-		right: 0;
+		right: 5px;
 		top: 0;
 		border-radius: 5px;
 		text-indent: -9999px;

@@ -143,25 +143,6 @@
 	}
 }
 
-/* Recent Comments Widget */
-
-.widget_recent_comments {
-	li {
-		padding: .5em 0;
-		padding: .5rem 0;
-		border-bottom: 1px solid $body-bg;
-
-		&:last-child {
-			border-bottom: 0;
-			padding-bottom: 0;
-		}
-
-		a {
-			border: 0;
-			display: inline;
-		}
-	}
-}
 
 /* Calendar Widget */
 

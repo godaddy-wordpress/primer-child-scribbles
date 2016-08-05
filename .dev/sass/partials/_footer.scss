@@ -124,16 +124,14 @@ $site-footer-anchor-color-hover: $site-footer-text-color	;
 		}
 
 		.widget_recent_entries {
-			li {
-				padding: 0.5em 0;
-			}
 			a {
 				//color: #c2dffd;
 				font-size: rem-calc(18);
 			}
 			.post-date {
 				font-size: rem-calc(14);
-				margin-top: 5px;
+				margin-bottom: 10px;
+				display: inline-block;
 			}
 		}
 	}
