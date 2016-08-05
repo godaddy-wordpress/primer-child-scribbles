@@ -4193,26 +4193,26 @@ body.page-template-page-builder-no-header #primary {
   display: none; }
 
 .hero,
-.page-title-container {
+#page > .page-title-container {
   background: #008CBA; }
   .hero .page-title,
   .hero .archive-title,
-  .page-title-container .page-title,
-  .page-title-container .archive-title {
+  #page > .page-title-container .page-title,
+  #page > .page-title-container .archive-title {
     padding: 40px 20px;
     font-size: 2.8125rem; }
     @media only screen and (min-width: 40.063em) {
       .hero .page-title,
       .hero .archive-title,
-      .page-title-container .page-title,
-      .page-title-container .archive-title {
+      #page > .page-title-container .page-title,
+      #page > .page-title-container .archive-title {
         padding: 60px 30px;
         font-size: 3.5rem; } }
     @media only screen and (min-width: 64.063em) {
       .hero .page-title,
       .hero .archive-title,
-      .page-title-container .page-title,
-      .page-title-container .archive-title {
+      #page > .page-title-container .page-title,
+      #page > .page-title-container .archive-title {
         padding: 90px 40px;
         font-size: 4.375rem; } }
   .hero,
@@ -4225,46 +4225,46 @@ body.page-template-page-builder-no-header #primary {
   .hero cite,
   .hero p,
   .hero a,
-  .page-title-container,
-  .page-title-container h1,
-  .page-title-container h2,
-  .page-title-container h3,
-  .page-title-container h4,
-  .page-title-container h5,
-  .page-title-container h6,
-  .page-title-container cite,
-  .page-title-container p,
-  .page-title-container a {
+  #page > .page-title-container,
+  #page > .page-title-container h1,
+  #page > .page-title-container h2,
+  #page > .page-title-container h3,
+  #page > .page-title-container h4,
+  #page > .page-title-container h5,
+  #page > .page-title-container h6,
+  #page > .page-title-container cite,
+  #page > .page-title-container p,
+  #page > .page-title-container a {
     color: #fff; }
   .hero .textwidget,
-  .page-title-container .textwidget {
+  #page > .page-title-container .textwidget {
     text-align: center; }
     .hero .textwidget h1,
-    .page-title-container .textwidget h1 {
+    #page > .page-title-container .textwidget h1 {
       font-size: 2.25rem;
       line-height: 1.3; }
       @media only screen and (min-width: 40.063em) {
         .hero .textwidget h1,
-        .page-title-container .textwidget h1 {
+        #page > .page-title-container .textwidget h1 {
           font-size: 3rem; } }
       @media only screen and (min-width: 64.063em) {
         .hero .textwidget h1,
-        .page-title-container .textwidget h1 {
+        #page > .page-title-container .textwidget h1 {
           font-size: 3.875rem; } }
     .hero .textwidget p,
-    .page-title-container .textwidget p {
+    #page > .page-title-container .textwidget p {
       font-size: 16px;
       font-weight: 300; }
       @media only screen and (min-width: 40.063em) {
         .hero .textwidget p,
-        .page-title-container .textwidget p {
+        #page > .page-title-container .textwidget p {
           font-size: 1.25rem; } }
       @media only screen and (min-width: 64.063em) {
         .hero .textwidget p,
-        .page-title-container .textwidget p {
+        #page > .page-title-container .textwidget p {
           font-size: 1.625rem; } }
     .hero .textwidget .button,
-    .page-title-container .textwidget .button {
+    #page > .page-title-container .textwidget .button {
       border-color: #fff;
       color: #fff;
       text-transform: uppercase;
@@ -4276,14 +4276,14 @@ body.page-template-page-builder-no-header #primary {
       margin-top: 1em; }
       @media only screen and (min-width: 40.063em) {
         .hero .textwidget .button,
-        .page-title-container .textwidget .button {
+        #page > .page-title-container .textwidget .button {
           font-size: 0.9375rem; } }
       @media only screen and (min-width: 64.063em) {
         .hero .textwidget .button,
-        .page-title-container .textwidget .button {
+        #page > .page-title-container .textwidget .button {
           font-size: 1.125rem; } }
       .hero .textwidget .button:hover,
-      .page-title-container .textwidget .button:hover {
+      #page > .page-title-container .textwidget .button:hover {
         color: #666;
         border-color: #fff;
         background-color: #fff; }
