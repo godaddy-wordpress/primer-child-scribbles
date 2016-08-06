@@ -114,7 +114,7 @@ $site-footer-anchor-color-hover: $site-footer-text-color	;
 				border: none;
 			}
 
-			li a {
+			li {
 				padding: 0;
 			}
 		}
@@ -144,13 +144,16 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 
 .site-info-wrapper {
 	background: $site-footer-info-background;
+	overflow: hidden;
 
 	&:before {
 		background-color: #fca903;
 		content: "";
 		display: block;
 		height: 10px;
-		width: 100%;
+		width: 110%;
+		position: relative;
+		left: -5%;
 		mask: url(assets/images/border.svg) center / cover repeat;
 	}
 }
