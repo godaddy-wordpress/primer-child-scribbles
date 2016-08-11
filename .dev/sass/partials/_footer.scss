@@ -1,7 +1,7 @@
-$site-footer-background:#3787da;
+$site-footer-background: #3787da;
 $site-footer-text-color: #fff;
 $site-footer-anchor-color: $site-footer-text-color;
-$site-footer-anchor-color-hover: $site-footer-text-color	;
+$site-footer-anchor-color-hover: $site-footer-text-color;
 
 .site-footer {
 	background-color: $site-footer-background;
@@ -17,7 +17,7 @@ $site-footer-anchor-color-hover: $site-footer-text-color	;
 	a {
 		color: $site-footer-anchor-color;
 
-		&:hover{
+		&:hover {
 			color: $site-footer-anchor-color-hover;
 		}
 	}
@@ -25,6 +25,9 @@ $site-footer-anchor-color-hover: $site-footer-text-color	;
 
 .site-footer-inner {
 	@extend .row;
+
+	max-width: 1100px;
+	margin: 0 auto;
 }
 
 .footer-widget-area {
@@ -74,7 +77,7 @@ $site-footer-anchor-color-hover: $site-footer-text-color	;
 	.footer-widget {
 		padding: 0;
 
-		.widget{
+		.widget {
 			color: $site-footer-text-color;
 		}
 
@@ -127,10 +130,12 @@ $site-footer-anchor-color-hover: $site-footer-text-color	;
 			li {
 				padding: 0.5em 0;
 			}
+
 			a {
 				color: #c2dffd;
 				font-size: rem-calc(18);
 			}
+
 			.post-date {
 				font-size: rem-calc(14);
 				margin-top: 5px;
@@ -139,28 +144,30 @@ $site-footer-anchor-color-hover: $site-footer-text-color	;
 	}
 }
 
-$site-footer-info-background: rgba(#78ae3e,1);
+$site-footer-info-background: rgba(#78ae3e, 1);
 $site-footer-info-text-color: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
 $site-footer-info-anchor-color: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
 $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
 
 .site-info-wrapper {
 	background: $site-footer-info-background;
-
 	border-style: solid;
 	border-width: 10px 0 0;
-	border-image: url('assets/images/border.svg') 10 0 repeat;
+	border-image: url("assets/images/border.svg") 10 0 repeat;
 }
 
 .site-info {
 	@extend .row;
-	font-family: 'Raleway', $body-font-family;
+
+	font-family: "Raleway", $body-font-family;
 	font-size: 12px;
 	text-transform: uppercase;
 	padding: 53px 0;
 	color: $site-footer-info-text-color;
 	line-height: 1;
 	text-align: center;
+	max-width: 1100px;
+	margin: 0 auto;
 
 	@media #{$large-up} {
 		text-align: left;
@@ -169,19 +176,22 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 	a {
 		color: $site-footer-info-anchor-color;
 
-		&:hover{
+		&:hover {
 			color: $site-footer-info-anchor-color-hover;
 		}
 	}
 
 	.site-info-text {
 		@extend .columns;
+
 		@extend .large-9;
 	}
 
 	.social-menu {
 		@extend .columns;
+
 		@extend .large-3;
+
 		margin-top: 2em;
 
 		@media #{$large-up} {
@@ -201,13 +211,12 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 				font-size: 27px;
 			}
 		}
-
 	}
-
 }
 
 .footer-menu {
 	text-transform: none;
+
 	@extend .clearfix;
 
 	ul {
@@ -228,7 +237,7 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 
 		a {
 			font-size: rem-calc(17.11);
-			font-weight:bold;
+			font-weight: bold;
 		}
 	}
 }
