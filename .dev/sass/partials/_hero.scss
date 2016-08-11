@@ -1,104 +1,109 @@
-.hero,
-#page > .page-title-container {
-  background: $primary-color;
+.hero {
+	background: $primary-color;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 
-  .page-title,
-  .archive-title {
-    padding: 40px 20px;
-    font-size: rem-calc(45);
+	.page-title {
+		font-size: rem-calc(45);
 
-    @media #{$medium-up} {
-      padding: 60px 30px;
-      font-size: rem-calc(56);
-    }
+		@media #{$medium-up} {
+			font-size: rem-calc(70);
+		}
 
-    @media #{$large-up} {
-      padding: 90px 40px;
-      font-size: rem-calc(70);
-    }
-  }
+		@media #{$large-up} {
+			font-size: rem-calc(90);
+		}
+	}
 
-  &,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  cite,
-  p,
-  a {
-    color: #fff;
-  }
+	&,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	cite,
+	p,
+	a {
+		color: #fff;
+	}
 
-  .textwidget {
-    text-align: center;
-    h1 {
-      font-size: rem-calc(36);
-      line-height: 1.3;
+	.textwidget {
+		text-align: center;
 
-      @media #{$medium-up} {
-        font-size: rem-calc(48);
-      }
+		h1 {
+			font-size: rem-calc(36);
 
-      @media #{$large-up} {
-        font-size: rem-calc(62);
-      }
-    }
-    p {
-      font-size: 16px;
-      font-weight: 300;
+			@media #{$medium-up} {
+				font-size: rem-calc(54);
+			}
 
-      @media #{$medium-up} {
-        font-size: rem-calc(20);
-      }
+			@media #{$large-up} {
+				font-size: rem-calc(72);
+			}
+		}
 
-      @media #{$large-up} {
-        font-size: rem-calc(26);
-      }
-    }
-    .button {
-      border-color: #fff;
-      color: #fff;
-      text-transform: uppercase;
-      font-size: rem-calc(12);
-      letter-spacing: 0.2em;
-      font-family: 'Raleway', $sans-font-family;
-      font-weight: 600;
-      padding: 1.1em;
-      margin-top: 1em;
+		p {
+			font-size: 16px;
+			font-weight: 300;
 
-      @media #{$medium-up} {
-        font-size: rem-calc(15);
-      }
+			@media #{$medium-up} {
+				font-size: rem-calc(24);
+			}
 
-      @media #{$large-up} {
-        font-size: rem-calc(18);
-      }
+			@media #{$large-up} {
+				font-size: rem-calc(32);
+			}
+		}
 
-      &:hover {
-        color: #666;
-        border-color: #fff;
-        background-color: #fff;
-      }
-    }
-  }
+		.button {
+			border-color: #fff;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: rem-calc(12);
+			letter-spacing: 0.2em;
+			font-family: "Raleway", $sans-font-family;
+			font-weight: 600;
+			padding: 1.1em;
+			margin-top: 1em;
+
+			@media #{$medium-up} {
+				font-size: rem-calc(17);
+			}
+
+			@media #{$large-up} {
+				font-size: rem-calc(22);
+			}
+
+			&:hover {
+				color: #666;
+				border-color: #fff;
+				background-color: #fff;
+			}
+		}
+	}
 }
 
-.hero-wrapper,
-.page-header {
-  @extend .row;
+.hero-wrapper {
+	@extend .row;
+
+	max-width: 1100px;
+	margin: 0 auto;
 }
 
-.hero-inner,
-.page-title-container h1 {
-  @extend .columns;
-  @extend .large-12;
+.hero-inner {
+	@extend .columns;
+
+	@extend .large-12;
+
+	padding: 7% 0;
 }
 
 .hero-widget-area {
-  padding: 45px 0;
-  @media #{$large-up} {
-    padding: 90px;
-  }
+	padding: 75px 0;
+
+	@media #{$large-up} {
+		padding: 150px;
+	}
 }

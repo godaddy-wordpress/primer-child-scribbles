@@ -1,12 +1,17 @@
-body.no-max-width .site-title-wrapper,
-body.no-max-width .main-navigation,
+body.no-max-width .site-header-wrapper,
+body.no-max-width .main-navigation-wrapper,
+body.no-max-width .hero-wrapper,
+body.no-max-width .site-content,
 body.no-max-width .site-footer-inner,
 body.no-max-width .site-info {
 	max-width: none;
 }
 
-#content{
+.site-content {
 	@extend .row;
+
+	max-width: 1100px;
+	margin: 0 auto;
 	padding: 2.25rem 0;
 
 	body.layout-one-column-full & {
@@ -16,7 +21,7 @@ body.no-max-width .site-info {
 	}
 
 	body.page-template-page-builder &,
-	body.page-template-page-builder-no-header{
+	body.page-template-page-builder-no-header {
 		max-width: 100%;
 		width: 100%;
 		padding: 0;
@@ -28,8 +33,9 @@ body.no-max-width .site-info {
 	}
 }
 
-#primary{
+#primary {
 	@extend .columns;
+
 	@extend .large-8;
 
 	body.layout-one-column-full & {
@@ -63,7 +69,7 @@ body.no-max-width .site-info {
 	}
 
 	body.page-template-page-builder &,
-	body.page-template-page-builder-no-header &{
+	body.page-template-page-builder-no-header & {
 		max-width: 100%;
 		width: 100%;
 		padding: 0;
@@ -71,8 +77,9 @@ body.no-max-width .site-info {
 	}
 }
 
-#secondary{
+#secondary {
 	@extend .large-4;
+
 	@extend .columns;
 
 	body.layout-two-column-reversed & {
@@ -98,11 +105,10 @@ body.no-max-width .site-info {
 
 #tertiary {
 	@extend .large-3;
+
 	@extend .columns;
 
 	body.layout-three-column-reversed & {
 		@extend .large-pull-6;
 	}
 }
-
-

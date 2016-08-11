@@ -13,21 +13,25 @@ $menu-font-family: "Raleway", $header-font-family !default;
 		height: 10px;
 		width: 110%;
 		left: -5%;
-		mask: url(assets/images/border.svg) center / cover repeat;
+		mask: url("assets/images/border.svg") (center / cover) repeat;
 	}
-
 
 	.main-navigation-wrapper {
 		@extend .row;
+
+		max-width: 1100px;
+		margin: 0 auto;
 	}
 
 	.main-navigation {
 		@extend .columns;
+
 		@extend .large-9;
 	}
 
 	.social-menu {
 		@extend .columns;
+
 		width: auto;
 		float: right;
 
@@ -39,6 +43,7 @@ $menu-font-family: "Raleway", $header-font-family !default;
 
 .menu-toggle {
 	@extend .columns;
+
 	padding: 0.875em 1em;
 	cursor: pointer;
 	width: auto;
@@ -61,6 +66,7 @@ $menu-font-family: "Raleway", $header-font-family !default;
 		margin: 0;
 		list-style: none;
 	}
+
 	a {
 		color: rgba(#2e80ba, 1);
 		display: block;
@@ -80,10 +86,10 @@ $menu-font-family: "Raleway", $header-font-family !default;
 	.sub-menu .sub-menu a {
 		padding-left: 3em;
 	}
-
 }
 
 @media #{$medium-up} {
+
 	.main-navigation-container {
 		overflow: inherit;
 
@@ -148,7 +154,7 @@ $menu-font-family: "Raleway", $header-font-family !default;
 				padding-left: 1em;
 
 				&:hover {
-					background-color: rgba(0,0,0,0.1);
+					background-color: rgba(0, 0, 0, 0.1);
 				}
 			}
 		}
@@ -156,6 +162,7 @@ $menu-font-family: "Raleway", $header-font-family !default;
 }
 
 @media #{$large-up} {
+
 	.main-navigation-container .social-menu {
 		display: block;
 	}
@@ -164,9 +171,11 @@ $menu-font-family: "Raleway", $header-font-family !default;
 .navigation {
 	@extend .row;
 
-	.nav-links{
+	.nav-links {
 		@extend .large-12;
+
 		@extend .columns;
+
 		margin-bottom: 1.5em;
 		margin-bottom: 1.5rem;
 		font-size: 20px;
