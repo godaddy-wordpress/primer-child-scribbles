@@ -1,13 +1,5 @@
-<?php
-/**
- * Displays the site search.
- *
- * @package Primer
- */
-?>
-
 <div class="site-search-wrapper">
 
-		<?php echo get_search_form(); ?>
+	<?php the_widget( 'WP_Widget_Search' ); ?>
 
 </div><!-- .site-search-wrapper -->

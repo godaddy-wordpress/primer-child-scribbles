@@ -1,4 +1,4 @@
-# Scribbles Theme for WordPress
+# Scribbles
 # Copyright (C) 2016
 # This file is distributed under the same license as the scribbles package.
 # GoDaddy Operating Company, LLC.
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scribbles 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-05 22:11+0100\n"
+"POT-Creation-Date: 2016-08-12 01:01-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,104 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:82
-msgid "Footer 4"
-msgstr ""
-
-#: functions.php:84
-msgid "This sidebar is the fouth column of the footer widget area."
-msgstr ""
-
-#: functions.php:91
-msgid "Footer 5"
-msgstr ""
-
-#: functions.php:93
-msgid "This sidebar is the fifth column of the footer widget area."
-msgstr ""
-
-#: functions.php:100
-msgid "Hero"
-msgstr ""
-
-#: functions.php:102
-msgid "This sidebar is for the hero area."
-msgstr ""
-
-#: functions.php:128
+#: functions.php:77
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:185
-msgid "Primary Font"
+#: functions.php:157
+msgid "Footer 4"
 msgstr ""
 
-#: functions.php:201
-msgid "Secondary Font"
+#: functions.php:158
+msgid "This sidebar is the fouth column of the footer widget area."
 msgstr ""
 
-#: functions.php:280
-msgid "Tagline Text Color"
+#: functions.php:166
+msgid "Hero"
 msgstr ""
 
-#: functions.php:290
-msgid "Header Background Color"
-msgstr ""
-
-#: functions.php:302
-msgid "Menu Background Color"
-msgstr ""
-
-#: functions.php:312
-msgid "Menu Link Color"
-msgstr ""
-
-#: functions.php:336 functions.php:346
-msgid "Hero Background Color"
-msgstr ""
-
-#: functions.php:392
-msgid "Footer Background Color"
-msgstr ""
-
-#: functions.php:402
-msgid "Footer Text Color"
-msgstr ""
-
-#: functions.php:429
-msgid "Site Info Background Color"
-msgstr ""
-
-#: functions.php:439
-msgid "Site Info Text Color"
-msgstr ""
-
-#: functions.php:462
-msgid "Link Color"
-msgstr ""
-
-#: functions.php:477
-msgid "Main Text Color"
-msgstr ""
-
-#: functions.php:519
-msgid "Scribbles 2"
-msgstr ""
-
-#: functions.php:538
-msgid "Scribbles 3"
-msgstr ""
-
-#: functions.php:557
-msgid "Scribbles 4"
-msgstr ""
-
-#: functions.php:576
-msgid "Scribbles 5"
-msgstr ""
-
-#: templates/parts/site-info.php:17
-#, php-format
-msgctxt "1. theme name link, 2. theme author link"
-msgid "Built with %1$s by %2$s."
+#: functions.php:167
+msgid "Hero widgets appear over the header image on the front page."
 msgstr ""

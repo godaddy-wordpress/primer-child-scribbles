@@ -1,0 +1,147 @@
+.site-header {
+	position: relative;
+	background-color: $color__background-header;
+}
+
+.hero {
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	z-index: 0;
+
+	.hero-wrapper {
+		@include container($container-size);
+	}
+
+	.hero-inner {
+		@include span(12);
+
+		padding: 7% 0;
+	}
+}
+
+.site-header-wrapper {
+	@include container($container-size);
+
+	padding: 3% 0;
+}
+
+body.no-max-width .site-header-wrapper,
+body.no-max-width .hero .hero-wrapper {
+	max-width: none;
+}
+
+.site-title-wrapper {
+	@include span(6);
+
+	position: relative;
+	z-index: 1;
+
+	@media #{$small-only} {
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	@media #{$medium-down} {
+		@include span(12);
+
+		text-align: center;
+		margin-bottom: 1em;
+	}
+}
+
+.site-title {
+	margin-bottom: 0;
+	font-weight: 400;
+	font-size: 3.25rem;
+	line-height: 1;
+
+	a {
+		color: $header-textcolor;
+
+		&:hover,
+		&:visited:hover {
+			color: rgba($header-textcolor, 0.8);
+		}
+	}
+}
+
+.site-description {
+	color: $color__text-tagline;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.site-search-wrapper {
+	@include span(6);
+
+	@media #{$medium-down} {
+		@include span(12);
+
+		text-align: center;
+	}
+
+	.widget {
+		float: right;
+		position: relative;
+		margin-bottom: 0;
+
+		@media #{$medium-down} {
+			float: none;
+		}
+
+		.search-field {
+			min-width: 250px;
+			border-color: rgba($color__text-tagline, 0.25);
+		}
+	}
+}
+
+.hero {
+	h1, h2, h3, h4, h5, h6, p, blockquote {
+		color: #fff;
+	}
+
+	.page-title {
+		font-size: 3em;
+	}
+}
+
+body.custom-header-image {
+	.hero {
+		text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.header-image img {
+	display: block;
+}
+
+#page > .page-title-container {
+	background-color: white;
+
+	.page-header,
+	.archive-header {
+		@include container($container-size);
+
+		position: relative;
+		z-index: 9999;
+		clear: both;
+
+		h1 {
+			@include span(12);
+
+			padding: 3% 1rem;
+			margin-top: 0;
+			margin-bottom: 0;
+			font-weight: 200;
+
+			@media #{$small-only} {
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;
+			}
+		}
+	}
+}

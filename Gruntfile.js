@@ -115,6 +115,9 @@ module.exports = function( grunt ) {
 				sourceMap: false
 			},
 			dist: {
+				options: {
+					require: 'susy'
+				},
 				files: [
 					{
 						'style.css': '.dev/sass/style.scss',

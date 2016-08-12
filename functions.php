@@ -47,7 +47,8 @@ add_action( 'primer_header', 'scribbles_add_header_search', 20 );
 /**
  * Display author avatar over the post thumbnail.
  *
- * @since 1.0.0
+ * @action primer_after_post_thumbnail
+ * @since  1.0.0
  */
 function scribbles_add_author_avatar() {
 
@@ -162,15 +163,6 @@ function scribbles_sidebars( $sidebars ) {
 		'after_title'   => '</h4>',
 	);
 
-	$sidebars['footer-5'] = array(
-		'name'          => esc_html__( 'Footer 5', 'scribbles' ),
-		'description'   => esc_html__( 'This sidebar is the fifth column of the footer widget area.', 'scribbles' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	);
-
 	$sidebars['hero'] = array(
 		'name'          => esc_html__( 'Hero', 'scribbles' ),
 		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'scribbles' ),
@@ -197,11 +189,64 @@ add_filter( 'primer_sidebars', 'scribbles_sidebars' );
  */
 function scribbles_font_types( $font_types ) {
 
-	$font_types['header_font']['default']    = 'Architects Daughter';
-	$font_types['primary_font']['default']   = 'Raleway';
-	$font_types['secondary_font']['default'] = 'Architects Daughter';
+	$overrides = array(
+		'header_font' => array(
+			'default' => 'Architects Daughter',
+			'css'     => array(
+				'h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				label,
+				legend,
+				table th,
+				dl dt,
+				.site-title,
+				.entry-title,
+				.widget-title,
+				button,
+				a.button,
+				a.fl-button,
+				input[type="button"],
+				input[type="reset"],
+				input[type="submit"],
+				.main-navigation ul li a' => array(
+					'font-family' => '"%1$s", sans-serif',
+				),
+			),
+		),
+		'primary_font' => array(
+			'default' => 'Raleway',
+			'css'     => array(
+				'body,
+				p,
+				ol li,
+				ul li,
+				dl dd,
+				.fl-callout-text' => array(
+					'font-family' => '"%1$s", sans-serif',
+				),
+			),
+		),
+		'secondary_font' => array(
+			'default' => 'Raleway',
+			'css'     => array(
+				'blockquote,
+				.entry-meta,
+				.entry-footer,
+				.comment-list li .comment-meta .says,
+				.comment-list li .comment-metadata,
+				.comment-reply-link,
+				#respond .logged-in-as' => array(
+					'font-family' => '"%1$s", sans-serif',
+				),
+			),
+		),
+	);
 
-	return $font_types;
+	return primer_array_replace_recursive( $font_types, $overrides );
 
 }
 add_filter( 'primer_font_types', 'scribbles_font_types' );
@@ -218,17 +263,80 @@ add_filter( 'primer_font_types', 'scribbles_font_types' );
  */
 function scribbles_colors( $colors ) {
 
-	$colors['header_textcolor']['default']        = '#fca903';
-	$colors['background_color']['default']        = '#ffffff';
-	$colors['header_background_color']['default'] = '#ffffff';
-	$colors['menu_background_color']['default']   = '#ffffff';
-	$colors['footer_background_color']['default'] = '#3787da';
-	$colors['tagline_text_color']['default']      = '#6f6f6f';
-	$colors['link_color']['default']              = '#2e80ba';
-	$colors['main_text_color']['default']         = '#6f6f6f';
-	$colors['secondary_text_color']['default']    = '#78ae3e';
+	$overrides = array(
+		'header_textcolor' => array(
+			'default' => '#fca903',
+		),
+		'background_color' => array(
+			'default' => '#ffffff',
+		),
+		'header_background_color' => array(
+			'default' => '#ffffff',
+		),
+		'menu_background_color' => array(
+			'default' => '#78ae3e',
+		),
+		'footer_background_color' => array(
+			'default' => '#3787da',
+			'css'     => array(
+				'.footer-widget .widget-title,
+				.footer-widget .widget .search-field' => array(
+					'border-color' => '%1$s',
+				),
+				'.footer-widget .widget-title' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		'tagline_text_color' => array(
+			'default' => '#6f6f6f',
+			'css'     => array(
+				'.site-search-wrapper .widget .search-field' => array(
+					'color' => '%1$s',
+				),
+			),
+			'rgba_css'     => array(
+				'.site-search-wrapper .widget .search-field' => array(
+					'border-color' => 'rgba(%1$s, 0.25)',
+				),
+			),
+		),
+		'menu_text_color' => array(
+			'label'   => esc_html__( 'Menu Text Color', 'scribbles' ),
+			'default' => '#ffffff',
+			'css'     => array(
+				'.main-navigation li a' => array(
+					'color' => '%1$s',
+				),
+				'.main-navigation-container:before,
+				.main-navigation-container:after,
+				.menu-toggle div' => array(
+					'background-color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'.main-navigation li a:hover,
+				.main-navigation li a:visited:hover,
+				.main-navigation .current_page_item > a,
+				.main-navigation .current-menu-item > a,
+				.main-navigation .current_page_ancestor > a,
+				.main-navigation .current-menu-ancestor > a' => array(
+					'color' => 'rgba(%1$s, 0.75)',
+				),
+			),
+		),
+		'link_color' => array(
+			'default' => '#3787da',
+		),
+		'main_text_color' => array(
+			'default' => '#404040',
+		),
+		'secondary_text_color' => array(
+			'default' => '#686868',
+		),
+	);
 
-	return $colors;
+	return primer_array_replace_recursive( $colors, $overrides );
 
 }
 add_filter( 'primer_colors', 'scribbles_colors' );
