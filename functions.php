@@ -12,24 +12,35 @@ function scribbles_move_elements() {
 	remove_action( 'primer_header', 'primer_add_hero' );
 	add_action( 'primer_after_header', 'primer_add_hero' );
 
-	// Page titles (will be displayed in hero instead)
+	// Page titles
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+
+	if ( ! is_front_page() ) {
+
+		add_action( 'primer_hero', 'primer_add_page_title' );
+
+	}
 
 }
 add_action( 'template_redirect', 'scribbles_move_elements' );
 
 /**
- * Add custom hero content.
+ * Set hero element style attribute.
  *
- * @action primer_hero
+ * @filter primer_hero_style_attr
  * @since  1.0.0
+ *
+ * @return string
  */
-function scribbles_add_hero_content() {
+function scribbles_hero_style_attr() {
 
-	get_template_part( 'templates/parts/hero-content' );
+	return sprintf(
+		'background: url(%s) no-repeat bottom center; background-size: cover;',
+		primer_get_hero_image()
+	);
 
 }
-add_action( 'primer_hero', 'scribbles_add_hero_content' );
+add_filter( 'primer_hero_style_attr', 'scribbles_hero_style_attr' );
 
 /**
  * Display site search in the header.

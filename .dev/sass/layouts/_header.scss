@@ -9,14 +9,26 @@
 	background-repeat: no-repeat;
 	z-index: 0;
 
-	.hero-wrapper {
+	.hero-inner {
 		@include container($container-size);
+
+		padding: 5% 0;
 	}
 
-	.hero-inner {
+	.widget {
 		@include span(12);
 
-		padding: 7% 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.page-title-container {
+		@include span(12);
+
+		h1 {
+			margin: 0;
+		}
 	}
 }
 
@@ -27,7 +39,7 @@
 }
 
 body.no-max-width .site-header-wrapper,
-body.no-max-width .hero .hero-wrapper {
+body.no-max-width .hero-inner {
 	max-width: none;
 }
 
@@ -116,31 +128,4 @@ body.custom-header-image {
 
 .header-image img {
 	display: block;
-}
-
-#page > .page-title-container {
-	background-color: white;
-
-	.page-header,
-	.archive-header {
-		@include container($container-size);
-
-		position: relative;
-		z-index: 9999;
-		clear: both;
-
-		h1 {
-			@include span(12);
-
-			padding: 3% 1rem;
-			margin-top: 0;
-			margin-bottom: 0;
-			font-weight: 200;
-
-			@media #{$small-only} {
-				padding-left: 0.75rem;
-				padding-right: 0.75rem;
-			}
-		}
-	}
 }

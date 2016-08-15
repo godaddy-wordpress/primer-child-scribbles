@@ -1447,20 +1447,29 @@ body.page-template-page-builder-no-header .content-area {
   background-position: bottom center;
   background-repeat: no-repeat;
   z-index: 0; }
-  .hero .hero-wrapper {
+  .hero .hero-inner {
     max-width: 1100px;
     margin-left: auto;
-    margin-right: auto; }
-    .hero .hero-wrapper:after {
+    margin-right: auto;
+    padding: 5% 0; }
+    .hero .hero-inner:after {
       content: " ";
       display: block;
       clear: both; }
-  .hero .hero-inner {
+  .hero .widget {
     width: 97.22222%;
     float: left;
     margin-left: 1.38889%;
-    margin-right: 1.38889%;
-    padding: 7% 0; }
+    margin-right: 1.38889%; }
+    .hero .widget:last-child {
+      margin-bottom: 0; }
+  .hero .page-title-container {
+    width: 97.22222%;
+    float: left;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%; }
+    .hero .page-title-container h1 {
+      margin: 0; }
 
 .site-header-wrapper {
   max-width: 1100px;
@@ -1473,7 +1482,7 @@ body.page-template-page-builder-no-header .content-area {
     clear: both; }
 
 body.no-max-width .site-header-wrapper,
-body.no-max-width .hero .hero-wrapper {
+body.no-max-width .hero-inner {
   max-width: none; }
 
 .site-title-wrapper {
@@ -1546,37 +1555,6 @@ body.custom-header-image .hero {
 
 .header-image img {
   display: block; }
-
-#page > .page-title-container {
-  background-color: white; }
-  #page > .page-title-container .page-header,
-  #page > .page-title-container .archive-header {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    z-index: 9999;
-    clear: both; }
-    #page > .page-title-container .page-header:after,
-    #page > .page-title-container .archive-header:after {
-      content: " ";
-      display: block;
-      clear: both; }
-    #page > .page-title-container .page-header h1,
-    #page > .page-title-container .archive-header h1 {
-      width: 97.22222%;
-      float: left;
-      margin-left: 1.38889%;
-      margin-right: 1.38889%;
-      padding: 3% 1rem;
-      margin-top: 0;
-      margin-bottom: 0;
-      font-weight: 200; }
-      @media only screen and (max-width: 40.063em) {
-        #page > .page-title-container .page-header h1,
-        #page > .page-title-container .archive-header h1 {
-          padding-left: 0.75rem;
-          padding-right: 0.75rem; } }
 
 /*--------------------------------------------------------------
 # Footer
