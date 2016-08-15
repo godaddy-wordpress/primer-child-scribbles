@@ -25,22 +25,19 @@ function scribbles_move_elements() {
 add_action( 'template_redirect', 'scribbles_move_elements' );
 
 /**
- * Set hero element style attribute.
+ * Set hero image target element.
  *
- * @filter primer_hero_style_attr
+ * @filter primer_hero_image_selector
  * @since  1.0.0
  *
  * @return string
  */
-function scribbles_hero_style_attr() {
+function scribbles_hero_image_selector() {
 
-	return sprintf(
-		'background: url(%s) no-repeat bottom center; background-size: cover;',
-		primer_get_hero_image()
-	);
+	return '.hero';
 
 }
-add_filter( 'primer_hero_style_attr', 'scribbles_hero_style_attr' );
+add_filter( 'primer_hero_image_selector', 'scribbles_hero_image_selector' );
 
 /**
  * Display site search in the header.
@@ -75,45 +72,6 @@ function scribbles_add_author_avatar() {
 add_action( 'primer_after_post_thumbnail', 'scribbles_add_author_avatar' );
 
 /**
- * Add a footer menu.
- *
- * @filter primer_nav_menus
- * @since  1.0.0
- *
- * @param  array $nav_menus
- *
- * @return array
- */
-function scribbles_nav_menus( $nav_menus ) {
-
-	$nav_menus['footer'] = esc_html__( 'Footer Menu', 'scribbles' );
-
-	return $nav_menus;
-
-}
-add_filter( 'primer_nav_menus', 'scribbles_nav_menus' );
-
-/**
- * Set images sizes.
- *
- * @filter primer_image_sizes
- * @since  1.0.0
- *
- * @param  array $sizes
- *
- * @return array
- */
-function scribbles_image_sizes( $sizes ) {
-
-	$sizes['primer-hero']['width']  = 2400;
-	$sizes['primer-hero']['height'] = 1300;
-
-	return $sizes;
-
-}
-add_filter( 'primer_image_sizes', 'scribbles_image_sizes' );
-
-/**
  * Set custom logo args.
  *
  * @filter primer_custom_logo_args
@@ -134,26 +92,6 @@ function scribbles_custom_logo_args( $args ) {
 add_filter( 'primer_custom_logo_args', 'scribbles_custom_logo_args' );
 
 /**
- * Set custom header args.
- *
- * @action primer_custom_header_args
- * @since  1.0.0
- *
- * @param  array $args
- *
- * @return array
- */
-function scribbles_custom_header_args( $args ) {
-
-	$args['width']  = 2400;
-	$args['height'] = 1300;
-
-	return $args;
-
-}
-add_filter( 'primer_custom_header_args', 'scribbles_custom_header_args' );
-
-/**
  * Register sidebar areas.
  *
  * @filter primer_sidebars
@@ -172,15 +110,6 @@ function scribbles_sidebars( $sidebars ) {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
-	);
-
-	$sidebars['hero'] = array(
-		'name'          => esc_html__( 'Hero', 'scribbles' ),
-		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'scribbles' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
 	);
 
 	return $sidebars;
