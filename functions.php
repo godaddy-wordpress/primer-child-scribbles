@@ -8,12 +8,10 @@
  */
 function scribbles_move_elements() {
 
-	// Hero image
-	remove_action( 'primer_header', 'primer_add_hero' );
-	add_action( 'primer_after_header', 'primer_add_hero' );
-
-	// Page titles
+	remove_action( 'primer_header',       'primer_add_hero' );
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+
+	add_action( 'primer_after_header', 'primer_add_hero' );
 
 	if ( ! is_front_page() ) {
 
@@ -51,7 +49,7 @@ add_filter( 'primer_hero_image_selector', 'scribbles_hero_image_selector' );
  */
 function scribbles_default_hero_images( $defaults ) {
 
-	$defaults['default']['description'] = esc_html__( 'Kids Sidewalk Chalk', 'scribbles' );
+	$defaults['default']['description'] = esc_html__( 'Kids playing with sidewalk chalk', 'scribbles' );
 
 	return $defaults;
 
@@ -59,17 +57,17 @@ function scribbles_default_hero_images( $defaults ) {
 add_filter( 'primer_default_hero_images', 'scribbles_default_hero_images' );
 
 /**
- * Display site search in the header.
+ * Display a search form in the header.
  *
  * @action primer_header
  * @since  1.0.0
  */
-function scribbles_add_header_search() {
+function scribbles_add_search_form() {
 
 	get_template_part( 'templates/parts/search' );
 
 }
-add_action( 'primer_header', 'scribbles_add_header_search', 20 );
+add_action( 'primer_header', 'scribbles_add_search_form', 20 );
 
 /**
  * Display author avatar over the post thumbnail.
@@ -111,7 +109,7 @@ function scribbles_custom_logo_args( $args ) {
 add_filter( 'primer_custom_logo_args', 'scribbles_custom_logo_args' );
 
 /**
- * Register sidebar areas.
+ * Set sidebars.
  *
  * @filter primer_sidebars
  * @since  1.0.0
@@ -142,7 +140,7 @@ add_filter( 'primer_sidebars', 'scribbles_sidebars' );
  * @filter primer_font_types
  * @since  1.0.0
  *
- * @param array $font_types
+ * @param  array $font_types
  *
  * @return array
  */
@@ -211,14 +209,16 @@ function scribbles_font_types( $font_types ) {
 add_filter( 'primer_font_types', 'scribbles_font_types' );
 
 /**
- * Register colors.
+ * Set colors.
  *
- * @action primer_colors
+ * @filter primer_colors
  * @since  1.0.0
+ *
+ * @param  array $colors
  *
  * @return array
  */
-function scribbles_colors() {
+function scribbles_colors( $colors ) {
 
 	return array(
 		'background_color' => array(
@@ -358,17 +358,19 @@ function scribbles_colors() {
 	);
 
 }
-add_action( 'primer_colors', 'scribbles_colors' );
+add_filter( 'primer_colors', 'scribbles_colors' );
 
 /**
- * Register color schemes.
+ * Set color schemes.
  *
- * @action primer_color_schemes
+ * @filter primer_color_schemes
  * @since  1.0.0
+ *
+ * @param  array $color_schemes
  *
  * @return array
  */
-function scribbles_color_schemes() {
+function scribbles_color_schemes( $color_schemes ) {
 
 	return array(
 		'bronze' => array(
@@ -475,4 +477,4 @@ function scribbles_color_schemes() {
 	);
 
 }
-add_action( 'primer_color_schemes', 'scribbles_color_schemes' );
+add_filter( 'primer_color_schemes', 'scribbles_color_schemes' );
