@@ -33,6 +33,10 @@
 	font-weight: 500;
 	display: none;
 
+  &.open {
+    display: block;
+  }
+
 	@media #{$medium-up}{
 		display: block;
 		float: left;
