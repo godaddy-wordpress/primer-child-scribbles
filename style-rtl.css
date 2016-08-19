@@ -564,9 +564,7 @@ a {
     color: #3787da; }
   a:hover, a:focus, a:active {
     color: rgba(55, 135, 218, 0.8); }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
+  a:hover, a:active, a:focus {
     outline: 0; }
 
 /*--------------------------------------------------------------
