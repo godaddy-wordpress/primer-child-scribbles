@@ -167,6 +167,12 @@ add_filter( 'primer_fonts', 'scribbles_fonts' );
 function scribbles_font_types( $font_types ) {
 
 	$overrides = array(
+		'site_title_font' => array(
+			'default' => 'Architects Daughter',
+		),
+		'navigation_font' => array(
+			'default' => 'Raleway',
+		),
 		'heading_font' => array(
 			'default' => 'Architects Daughter',
 		),
