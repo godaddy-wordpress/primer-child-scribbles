@@ -1,6 +1,5 @@
 .site-header {
 	position: relative;
-	background-color: $color__background-header;
 }
 
 .hero {
@@ -68,17 +67,17 @@ body.no-max-width .hero-inner {
 	line-height: 1;
 
 	a {
-		color: $header-textcolor;
+		color: $color__site-title-text;
 
 		&:hover,
 		&:visited:hover {
-			color: rgba($header-textcolor, 0.8);
+			color: rgba($color__site-title-text, 0.8);
 		}
 	}
 }
 
 .site-description {
-	color: $color__text-tagline;
+	color: $color__tagline-text;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	font-weight: bold;
@@ -105,23 +104,21 @@ body.no-max-width .hero-inner {
 
 		.search-field {
 			min-width: 250px;
-			border-color: rgba($color__text-tagline, 0.25);
+			border-color: rgba($color__tagline-text, 0.25);
 		}
 	}
 }
 
 .hero {
-	h1, h2, h3, h4, h5, h6, p, blockquote {
-		color: #fff;
+	h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote {
+		color: $color__hero-text;
 	}
 
 	.page-title {
 		font-size: 3em;
 	}
-}
 
-body.custom-header-image {
-	.hero {
+	body.custom-header-image & {
 		text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
 	}
 }

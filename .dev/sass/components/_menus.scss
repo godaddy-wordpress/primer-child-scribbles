@@ -1,5 +1,5 @@
 .main-navigation-container {
-	background-color: $color__background-menu;
+	background-color: $color__menu-bg;
 
 	&:before,
 	&:after {
@@ -10,21 +10,21 @@
 		height: 10px;
 		width: 100%;
 		mask: url("assets/images/border.svg") (center / cover) repeat;
-		background-color: $color__background-header;
+		background-color: $color__menu-text;
 	}
 
-	.social-menu{
+	.social-menu {
 		float: right;
 		padding: 20px;
 
-		a{
+		a {
 			background-color: transparent;
-			color: $color__text-menu;
+			color: $color__menu-text;
 		}
 	}
 }
 
-.main-navigation-wrapper{
+.main-navigation-wrapper {
 	@include container($container-size);
 }
 
@@ -33,18 +33,17 @@
 	font-weight: 500;
 	display: none;
 
-  &.open {
-    display: block;
-  }
+	&.open {
+		display: block;
+	}
 
-	@media #{$medium-up}{
+	@media #{$medium-up} {
 		display: block;
 		float: left;
 	}
 
 	.menu-main-menu-container {
-
-		@media #{$medium-up}{
+		@media #{$medium-up} {
 			width: auto;
 			text-align: center;
 		}
@@ -56,13 +55,13 @@
 		padding-left: 0;
 		text-align: center;
 
-		a{
-			color: $color__text-menu;
+		a {
+			color: $color__menu-text;
 			display: block;
 			padding: 1.5em .75em;
-			border-bottom: 2px solid rgba(0,0,0,.02);
+			border-bottom: 2px solid rgba(0, 0, 0, 0.02);
 
-			@media #{$medium-up}{
+			@media #{$medium-up} {
 				border-bottom: none;
 			}
 		}
@@ -70,21 +69,21 @@
 		ul {
 			z-index: 99999;
 
-			@media #{$medium-up}{
-				background-color: $color__background-menu;
+			@media #{$medium-up} {
+				background-color: $color__menu-bg;
 			}
 
-			a{
+			a {
 				padding: 1em .75em;
 				text-align: center;
 
-				@media #{$medium-up}{
+				@media #{$medium-up} {
 					text-align: left;
 					color: white;
 				}
 			}
 
-			@media #{$medium-up}{
+			@media #{$medium-up} {
 				position: absolute;
 				left: -999em;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -113,7 +112,8 @@
 		}
 	}
 
-	@media #{$medium-up}{
+	@media #{$medium-up} {
+
 		li {
 			position: relative;
 			display: inline-block;
@@ -122,11 +122,13 @@
 		a {
 			text-decoration: none;
 			padding: .25em .75em;
-			color: $color__text-menu;
+			color: $color__menu-text;
 			text-transform: uppercase;
 
-			&:hover {
-				background-color: $color__background-menu-hover;
+			&:hover,
+			&:visited:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+				color: $color__menu-text;
 			}
 		}
 	}
@@ -148,11 +150,11 @@
 		top: 50%;
 		border-bottom: 7px solid transparent;
 		border-top: 7px solid transparent;
-		border-left: 7px solid white;
+		border-left: 7px solid $color__menu-text;
 		transform: translateY(-50%);
 		display: none;
 
-		@media #{$medium-up}{
+		@media #{$medium-up} {
 			display: inline;
 		}
 	}
@@ -173,12 +175,12 @@ body.no-max-width .main-navigation {
 	margin-top: 10px;
 	margin-left: 10px;
 
-	@media #{$medium-up}{
+	@media #{$medium-up} {
 		display: none;
 	}
 
 	div {
-		background-color: $color__text-menu;
+		background-color: $color__menu-text;
 		height: 0.25rem;
 		margin: 0.43rem;
 		transform: rotate(0deg);

@@ -60,7 +60,7 @@
 .footer-widget {
 	.widget {
 		padding: 1em;
-		background: $color__background-body;
+		background-color: $color__bg;
 		border-radius: 8px;
 
 		&:last-child {
@@ -68,13 +68,13 @@
 		}
 
 		.search-field {
-			border-color: $color__background-footer;
+			border-color: $color__footer-widget-bg;
 		}
 	}
 
 	.widget-title {
-		border-bottom: 3px solid $color__background-footer;
-		color: $color__background-footer;
+		border-bottom: 3px solid $color__footer-widget-bg;
+		color: $color__footer-widget-bg;
 	}
 }
 
@@ -87,7 +87,7 @@
 		padding: 0.125rem 2.75rem 0.125rem 0.5rem;
 		font-size: 1.25rem;
 		border: none;
-		border-bottom: 3px solid rgba($color__text-main, 0.25);
+		border-bottom: 3px solid rgba($color__main-text, 0.25);
 		border-radius: 0;
 		appearance: textfield;
 		background: none;

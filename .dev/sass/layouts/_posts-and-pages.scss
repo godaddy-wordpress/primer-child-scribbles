@@ -31,7 +31,7 @@
 	a,
 	a:visited,
 	a:before {
-		color: $color__text-main;
+		color: $color__main-text;
 	}
 
 	a:hover,
@@ -43,7 +43,7 @@
 .entry-meta {
 	font-size: 90%;
 	text-align: center;
-	color: $color__text-secondary;
+	color: $color__secondary-text;
 }
 
 @media #{$small-only} {
@@ -79,7 +79,7 @@
 
 .entry-footer {
 	font-size: 85%;
-	color: $color__text-secondary;
+	color: $color__secondary-text;
 
 	.entry-footer-right {
 		float: right;
@@ -112,7 +112,7 @@
 		left: 0;
 		right: 0;
 		bottom: -57px;
-		border: 6px solid $color__background-body;
+		border: 6px solid $color__bg;
 		border-radius: 100%;
 
 		.avatar {

@@ -135,6 +135,26 @@ function scribbles_sidebars( $sidebars ) {
 add_filter( 'primer_sidebars', 'scribbles_sidebars' );
 
 /**
+ * Set fonts.
+ *
+ * @filter primer_fonts
+ * @since  1.0.0
+ *
+ * @param  array $fonts
+ *
+ * @return array
+ */
+function scribbles_fonts( $fonts ) {
+
+	$fonts[] = 'Architects Daughter';
+	$fonts[] = 'Raleway';
+
+	return $fonts;
+
+}
+add_filter( 'primer_fonts', 'scribbles_fonts' );
+
+/**
  * Set font types.
  *
  * @filter primer_font_types
@@ -147,59 +167,14 @@ add_filter( 'primer_sidebars', 'scribbles_sidebars' );
 function scribbles_font_types( $font_types ) {
 
 	$overrides = array(
-		'header_font' => array(
+		'heading_font' => array(
 			'default' => 'Architects Daughter',
-			'css'     => array(
-				'h1,
-				h2,
-				h3,
-				h4,
-				h5,
-				h6,
-				label,
-				legend,
-				table th,
-				dl dt,
-				.site-title,
-				.entry-title,
-				.widget-title,
-				button,
-				a.button,
-				a.fl-button,
-				input[type="button"],
-				input[type="reset"],
-				input[type="submit"],
-				.main-navigation ul li a' => array(
-					'font-family' => '"%1$s", sans-serif',
-				),
-			),
 		),
 		'primary_font' => array(
 			'default' => 'Raleway',
-			'css'     => array(
-				'body,
-				p,
-				ol li,
-				ul li,
-				dl dd,
-				.fl-callout-text' => array(
-					'font-family' => '"%1$s", sans-serif',
-				),
-			),
 		),
 		'secondary_font' => array(
 			'default' => 'Raleway',
-			'css'     => array(
-				'blockquote,
-				.entry-meta,
-				.entry-footer,
-				.comment-list li .comment-meta .says,
-				.comment-list li .comment-metadata,
-				.comment-reply-link,
-				#respond .logged-in-as' => array(
-					'font-family' => '"%1$s", sans-serif',
-				),
-			),
 		),
 	);
 
@@ -220,142 +195,85 @@ add_filter( 'primer_font_types', 'scribbles_font_types' );
  */
 function scribbles_colors( $colors ) {
 
-	return array(
-		'background_color' => array(
-			'label'   => esc_html__( 'Background Color', 'scribbles' ),
-			'default' => '#ffffff',
-			'css'     => array(
-				'body' => array(
-					'background-color' => '%1$s',
-				),
-			),
+	unset( $colors['content_background_color'] );
+
+	$overrides = array(
+		/**
+		 * Text colors
+		 */
+		'header_textcolor' => array(
+			'default'  => '#fca903',
 		),
-		'header_background_color' => array(
-			'label'   => esc_html__( 'Header Background Color', 'scribbles' ),
-			'default' => '#ffffff',
-			'css'     => array(
-				'.site-header' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
-		'header_text_color' => array(
-			'label'   => esc_html__( 'Header Text Color', 'scribbles' ),
-			'default' => '#222222',
-			'css'     => array(
-				'.site-title-wrapper .site-title a,.main-navigation ul a' => array(
-					'color' => '%1$s',
-				),
-			),
-			'rgba_css'     => array(
-				'.site-description' => array(
-					'color' => 'rgba(%1$s, 0.6)',
-				),
-			),
-		),
-		'menu_background_color' => array(
-			'label'   => esc_html__( 'Menu Background Color', 'scribbles' ),
-			'default' => '#b5345f',
-			'css'     => array(
-				'.main-navigation-container,.main-navigation ul ul' => array(
-					'background-color' => '%1$s',
+		'tagline_text_color' => array(
+			'default'  => '#686868',
+			'rgba_css'  => array(
+				'.site-search-wrapper .widget .search-field' => array(
+					'border-color' => 'rgba(%1$s, 0.25)',
 				),
 			),
 		),
 		'menu_text_color' => array(
-			'label'   => esc_html__( 'Menu Text Color', 'scribbles' ),
-			'default' => '#ffffff',
-			'css'     => array(
-				'.main-navigation ul a, .main-navigation-container .social-menu a' => array(
-					'color' => '%1$s',
-				),
-				'.main-navigation .sub-menu .menu-item-has-children > a::after' => array(
-					'border-left-color' => '%1$s',
-				)
-			),
-			'rgba_css'     => array(
-				'.main-navigation ul a, .main-navigation-container .social-menu a' => array(
-					'color' => 'rgba(%1$s, 0.8)',
-				),
-				'.main-navigation .sub-menu .menu-item-has-children > a::after' => array(
-					'border-left-color' => 'rgba(%1$s, 0.8)',
-				)
-			),
-		),
-		'button_color' => array(
-			'label'   => esc_html__( 'Button Color', 'scribbles' ),
-			'default' => '#ffffff',
-			'css'     => array(
-				'button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"]' => array(
-					'color' => '%1$s',
-				),
-			),
-			'rgba_css'     => array(
-				'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover' => array(
-					'color' => 'rgba(%1$s, 0.8)',
-				),
-			),
-		),
-		'button_bg_color' => array(
-			'label'   => esc_html__( 'Button Background Color', 'scribbles' ),
-			'default' => '#b5345f',
-			'css'     => array(
-				'button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+			'css'  => array(
+				'.main-navigation-container:before, .main-navigation-container:after' => array(
 					'background-color' => '%1$s',
 				),
 			),
-			'rgba_css'     => array(
-				'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover' => array(
-					'background-color' => 'rgba(%1$s, 0.8)',
+		),
+		'heading_text_color' => array(
+			'css'  => array(
+				'.footer-widget .widget-title' => array(
+					'color'        => '%1$s',
+					'border-color' => '%1$s',
 				),
 			),
 		),
-		'footer_social_color' => array(
-			'label'   => esc_html__( 'Footer Social Icon Color', 'scribbles' ),
-			'default' => '#b5345f',
+		/**
+		 * Link / Button colors
+		 */
+		'link_color' => array(
+			'default'  => '#54ccbe',
+		),
+		'button_color' => array(
+			'default'  => '#b5345f',
+		),
+		/**
+		 * Background colors
+		 */
+		'background_color' => array(
+			'default' => '#ffffff',
 			'css'     => array(
-				'.site-info-wrapper a, .site-info .social-menu a, .social-menu a' => array(
+				'.main-navigation ul li.menu-item-has-children .sub-menu li a' => array(
+					'color' => '%1$s',
+				),
+				'.footer-widget .widget' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		'hero_background_color' => array(
+			'default' => '#3f3244',
+		),
+		'menu_background_color' => array(
+			'default' => '#b5345f',
+		),
+		'footer_widget_background_color' => array(
+			'default' => '#3f3244',
+			'css'     => array(
+				'.footer-widget .widget .search-field,
+				.footer-widget .widget-title' => array(
+					'border-color' => '%1$s',
+				),
+				'.footer-widget .widget-title' => array(
 					'color' => '%1$s',
 				),
 			),
 		),
 		'footer_background_color' => array(
-			'label'   => esc_html__( 'Footer Background Color', 'scribbles' ),
 			'default' => '#ffffff',
-			'css'     => array(
-				'.site-info-wrapper, .footer-nav, .site-info-wrapper' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
-		'link_color' => array(
-			'label'   => esc_html__( 'Link Color', 'scribbles' ),
-			'default' => '#54ccbe',
-			'css'     => array(
-				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget a, .main-navigation-container .menu li.current-menu-item > a:hover' => array(
-					'color' => '%1$s',
-				),
-			),
-		),
-		'w_background_color' => array(
-			'label'   => esc_html__( 'Footer Widget Background Color', 'scribbles' ),
-			'default' => '#3f3244',
-			'css'     => array(
-				'.site-footer' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
-		'w_text_color' => array(
-			'label'   => esc_html__( 'Footer Widget Text Color', 'scribbles' ),
-			'default' => '#ffffff',
-			'css'     => array(
-				'.site-footer-inner' => array(
-					'color' => '%1$s',
-				),
-			),
 		),
 	);
+
+	return primer_array_replace_recursive( $colors, $overrides );
 
 }
 add_filter( 'primer_colors', 'scribbles_colors' );
@@ -372,109 +290,69 @@ add_filter( 'primer_colors', 'scribbles_colors' );
  */
 function scribbles_color_schemes( $color_schemes ) {
 
-	return array(
+	$overrides = array(
+		'blush' => array(
+			'colors' => array(
+				'header_textcolor'   => '#b84247',
+				'tagline_text_color' => '#686868',
+			),
+		),
 		'bronze' => array(
-			'label'  => esc_html__( 'Bronze', 'scribbles' ),
 			'colors' => array(
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#ffffff',
-				'header_text_color'       => '#222222',
-				'menu_background_color'   => '#b1a18b',
-				'menu_text_color'         => '#ffffff',
-				'button_color'            => '#ffffff',
-				'button_bg_color'         => '#b1a18b',
-				'footer_social_color'     => '#b1a18b',
-				'footer_background_color' => '#ffffff',
-				'link_color'              => '#b1a18b',
-				'w_background_color'      => '#b1a18b',
-				'w_text_color'            => '#ffffff',
+				'header_textcolor'   => '#a0917d',
+				'tagline_text_color' => '#686868',
 			),
 		),
-		'red' => array(
-			'label'  => esc_html__( 'Red', 'scribbles' ),
+		'canary' => array(
 			'colors' => array(
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#ffffff',
-				'header_text_color'       => '#222222',
-				'menu_background_color'   => '#cc494f',
-				'button_color'            => '#ffffff',
-				'button_bg_color'         => '#cc494f',
-				'footer_social_color'     => '#cc494f',
-				'footer_background_color' => '#ffffff',
-				'link_color'              => '#cc494f',
-				'w_background_color'      => '#cc494f',
-				'w_text_color'            => '#ffffff',
+				'header_textcolor'   => '#d2b160',
+				'tagline_text_color' => '#686868',
 			),
 		),
-		'blue' => array(
-			'label'  => esc_html__( 'Blue', 'scribbles' ),
+		'dark' => array(
 			'colors' => array(
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#ffffff',
-				'header_text_color'       => '#222222',
-				'menu_background_color'   => '#499ccc',
-				'menu_text_color'         => '#ffffff',
-				'button_color'            => '#ffffff',
-				'button_bg_color'         => '#499ccc',
-				'footer_social_color'     => '#499ccc',
-				'footer_background_color' => '#ffffff',
-				'link_color'              => '#499ccc',
-				'w_background_color'      => '#d6ebf9',
-				'w_text_color'            => '#636363',
+//				'hero_background_color' => '#333333',
 			),
 		),
-		'green' => array(
-			'label'  => esc_html__( 'Green', 'scribbles' ),
+		'iguana' => array(
 			'colors' => array(
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#ffffff',
-				'header_text_color'       => '#222222',
-				'menu_background_color'   => '#62bf7c',
-				'menu_text_color'         => '#ffffff',
-				'button_color'            => '#ffffff',
-				'button_bg_color'         => '#62bf7c',
-				'footer_social_color'     => '#62bf7c',
-				'footer_background_color' => '#ffffff',
-				'link_color'              => '#62bf7c',
-				'w_background_color'      => '#f2f2f2',
-				'w_text_color'            => '#888888',
+				'header_textcolor'   => '#58ac70',
+				'tagline_text_color' => '#686868',
 			),
 		),
-		'orange' => array(
-			'label'  => esc_html__( 'Orange', 'scribbles' ),
+		'muted' => array(
 			'colors' => array(
-				'background_color'        => '#ffffff',
-				'header_background_color' => '#ffffff',
-				'header_text_color'       => '#222222',
-				'menu_background_color'   => '#df6135',
-				'menu_text_color'         => '#ffffff',
-				'button_color'            => '#ffffff',
-				'button_bg_color'         => '#df6135',
-				'footer_social_color'     => '#df6135',
-				'footer_background_color' => '#ffffff',
-				'link_color'              => '#df6135',
-				'w_background_color'      => '#222222',
-				'w_text_color'            => '#ffffff',
+				'header_textcolor'   => '#5a6175',
+				'tagline_text_color' => '#5a6175',
 			),
 		),
-		'yellow' => array(
-			'label'  => esc_html__( 'Yellow', 'scribbles' ),
+		'plum' => array(
 			'colors' => array(
-				'background_color'        => '#e9e73d',
-				'header_background_color' => '#e9e73d',
-				'header_text_color'       => '#222222',
-				'menu_background_color'   => '#222222',
-				'menu_text_color'         => '#ffffff',
-				'button_color'            => '#222222',
-				'button_bg_color'         => '#e9e73d',
-				'footer_social_color'     => '#222222',
-				'footer_background_color' => '#e9e73d',
-				'link_color'              => '#777777',
-				'w_background_color'      => '#e9e73d',
-				'w_text_color'            => '#3a3a3a',
+				'header_textcolor'   => '#54496d',
+				'tagline_text_color' => '#686868',
+			),
+		),
+		'rose' => array(
+			'colors' => array(
+				'header_textcolor'   => '#dc8582',
+				'tagline_text_color' => '#686868',
+			),
+		),
+		'tangerine' => array(
+			'colors' => array(
+				'header_textcolor'   => '#e38f47',
+				'tagline_text_color' => '#686868',
+			),
+		),
+		'turquoise' => array(
+			'colors' => array(
+				'header_textcolor'   => '#41cfaf',
+				'tagline_text_color' => '#686868',
 			),
 		),
 	);
+
+	return primer_array_replace_recursive( $color_schemes, $overrides );
 
 }
 add_filter( 'primer_color_schemes', 'scribbles_color_schemes' );
