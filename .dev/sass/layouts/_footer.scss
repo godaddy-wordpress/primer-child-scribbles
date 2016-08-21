@@ -90,19 +90,20 @@ body.no-max-width .footer-widget-area {
 	}
 
 	.site-info-text {
-		@include span(first 6);
+		@include span(12);
+		padding: 3em 0 1em;
+		text-align: center;
 
-		font-size: 90%;
-		line-height: 38px;
+		font-size: 75%;
+		line-height: 1.2;
 	}
 
 	.social-menu {
-		@include span(last 6);
+		@include span(last 4);
 	}
 
 	@media #{$small-only} {
 
-		.site-info-text,
 		.social-menu {
 			@include span(12);
 
@@ -142,7 +143,6 @@ body.no-max-width .site-info-wrapper .site-info {
 
 	a {
 		@extend .genericon;
-
 		@extend .genericon-link;
 
 		font-size: 0;
@@ -286,6 +286,34 @@ body.no-max-width .site-info-wrapper .site-info {
 
 		&:hover {
 			color: #0e76a8;
+		}
+	}
+}
+
+.footer-menu {
+	@include span(first 8);
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		@media #{$medium-up} {
+			text-align: left;
+		}
+
+		li {
+			display: inline-block;
+			font-size: .875rem;
+			font-weight: 600;
+			margin: 0 10px;
+			text-align: center;
+			text-transform: uppercase;
+
+			@media only screen and (min-width: 568px) {
+				text-align: left;
+			}
 		}
 	}
 }

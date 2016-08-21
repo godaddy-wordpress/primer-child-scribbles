@@ -19,6 +19,8 @@ function scribbles_move_elements() {
 
 	}
 
+	add_action( 'primer_before_site_navigation', 'primer_add_social_navigation', 12 );
+
 }
 add_action( 'template_redirect', 'scribbles_move_elements' );
 
