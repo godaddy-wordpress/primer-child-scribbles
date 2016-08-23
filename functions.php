@@ -210,30 +210,41 @@ function scribbles_colors( $colors ) {
 		 * Text colors
 		 */
 		'header_textcolor' => array(
-			'default'  => '#fca903',
+			'default' => '#fca903',
 		),
 		'tagline_text_color' => array(
 			'default'  => '#686868',
-			'rgba_css'  => array(
+			'rgba_css' => array(
 				'.site-search-wrapper .widget .search-field' => array(
 					'border-color' => 'rgba(%1$s, 0.25)',
 				),
 			),
 		),
 		'menu_text_color' => array(
-			'css'  => array(
+			'css' => array(
 				'.main-navigation-container:before, .main-navigation-container:after' => array(
 					'background-color' => '%1$s',
 				),
 			),
 		),
 		'heading_text_color' => array(
-			'css'  => array(
+			'css' => array(
 				'.footer-widget .widget-title' => array(
 					'color'        => '%1$s',
 					'border-color' => '%1$s',
 				),
 			),
+		),
+		'footer_widget_heading_text_color' => array(
+			'default' => '#3f3244',
+			'css'     => array(
+				'.footer-widget .widget-title,
+				.footer-widget .widget .search-field' => array(
+					'border-color' => '%1$s',
+				),
+			),
+		),'footer_menu_text_color' => array(
+			'default' => '#b5345f',
 		),
 		/**
 		 * Link / Button colors
@@ -253,9 +264,6 @@ function scribbles_colors( $colors ) {
 				'.main-navigation ul li.menu-item-has-children .sub-menu li a' => array(
 					'color' => '%1$s',
 				),
-				'.footer-widget .widget' => array(
-					'background-color' => '%1$s',
-				),
 			),
 		),
 		'hero_background_color' => array(
@@ -266,15 +274,9 @@ function scribbles_colors( $colors ) {
 		),
 		'footer_widget_background_color' => array(
 			'default' => '#3f3244',
-			'css'     => array(
-				'.footer-widget .widget .search-field,
-				.footer-widget .widget-title' => array(
-					'border-color' => '%1$s',
-				),
-				'.footer-widget .widget-title' => array(
-					'color' => '%1$s',
-				),
-			),
+		),
+		'footer_widget_content_background_color' => array(
+			'default' => '#ffffff',
 		),
 		'footer_background_color' => array(
 			'default' => '#ffffff',
@@ -301,61 +303,70 @@ function scribbles_color_schemes( $color_schemes ) {
 	$overrides = array(
 		'blush' => array(
 			'colors' => array(
-				'header_textcolor'   => '#b84247',
-				'tagline_text_color' => '#686868',
+				'header_textcolor'                 => '#b84247',
+				'tagline_text_color'               => '#686868',
+				'footer_widget_heading_text_color' => '#b84247',
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
-				'header_textcolor'   => '#a0917d',
-				'tagline_text_color' => '#686868',
+				'header_textcolor'                 => '#a0917d',
+				'tagline_text_color'               => '#686868',
+				'footer_widget_heading_text_color' => '#a0917d',
 			),
 		),
 		'canary' => array(
 			'colors' => array(
-				'header_textcolor'   => '#d2b160',
-				'tagline_text_color' => '#686868',
+				'header_textcolor'                 => '#d2b160',
+				'tagline_text_color'               => '#686868',
+				'footer_widget_heading_text_color' => '#d2b160',
 			),
 		),
 		'dark' => array(
 			'colors' => array(
-//				'hero_background_color' => '#333333',
+				'hero_background_color' => '#333333',
 			),
 		),
 		'iguana' => array(
 			'colors' => array(
-				'header_textcolor'   => '#58ac70',
-				'tagline_text_color' => '#686868',
+				'header_textcolor'                 => '#58ac70',
+				'tagline_text_color'               => '#686868',
+				'footer_widget_heading_text_color' => '#58ac70',
 			),
 		),
 		'muted' => array(
 			'colors' => array(
-				'header_textcolor'   => '#5a6175',
-				'tagline_text_color' => '#5a6175',
+				'header_textcolor'                 => '#5a6175',
+				'tagline_text_color'               => '#5a6175',
+				'footer_widget_heading_text_color' => '#5a6175',
 			),
 		),
 		'plum' => array(
 			'colors' => array(
-				'header_textcolor'   => '#54496d',
-				'tagline_text_color' => '#686868',
+				'header_textcolor'                 => '#54496d',
+				'tagline_text_color'               => '#686868',
+				'footer_widget_heading_text_color' => '#54496d',
 			),
 		),
 		'rose' => array(
 			'colors' => array(
-				'header_textcolor'   => '#dc8582',
-				'tagline_text_color' => '#686868',
+				'header_textcolor'                 => '#dc8582',
+				'tagline_text_color'               => '#686868',
+				'footer_widget_heading_text_color' => '#dc8582',
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
-				'header_textcolor'   => '#e38f47',
-				'tagline_text_color' => '#686868',
+				'header_textcolor'                 => '#e38f47',
+				'tagline_text_color'               => '#686868',
+				'footer_widget_heading_text_color' => '#e38f47',
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
-				'header_textcolor'   => '#41cfaf',
-				'tagline_text_color' => '#686868',
+				'header_textcolor'                 => '#41cfaf',
+				'tagline_text_color'               => '#686868',
+				'footer_widget_heading_text_color' => '#41cfaf',
 			),
 		),
 	);
