@@ -317,6 +317,12 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_widget_heading_text_color' => '#e9c46a',
 			),
 		),
+		'cool' => array(
+			'colors' => array(
+				'header_textcolor'                 => '#78c3fb',
+				'footer_widget_heading_text_color' => '#78c3fb',
+			),
+		),
 		'iguana' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#62bf7c',
