@@ -13,6 +13,9 @@ function scribbles_move_elements() {
 
 	add_action( 'primer_after_header', 'primer_add_hero' );
 
+	add_action( 'primer_before_site_navigation', 'scribbles_nav_wrapper_open', 0 );
+	add_action( 'primer_after_site_navigation', 'scribbles_nav_wrapper_close', 400 );
+
 	if ( ! is_front_page() ) {
 
 		add_action( 'primer_hero', 'primer_add_page_title' );
@@ -23,6 +26,28 @@ function scribbles_move_elements() {
 
 }
 add_action( 'template_redirect', 'scribbles_move_elements' );
+
+/**
+ * Open main navigation wrapper div.
+ *
+ * @since  1.0.0
+ */
+function scribbles_nav_wrapper_open(){
+
+	echo '<div class="main-navigation-wrapper">';
+
+}
+
+/**
+ * Close main navigation wrapper div.
+ *
+ * @since  1.0.0
+ */
+function scribbles_nav_wrapper_close(){
+
+	echo '</div><!-- .main-navigation-wrapper -->';
+
+}
 
 /**
  * Set hero image target element.
