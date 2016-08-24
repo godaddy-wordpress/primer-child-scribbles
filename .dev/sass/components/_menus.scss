@@ -1,16 +1,27 @@
 .main-navigation-container {
 	background-color: $color__menu-bg;
 
-	&:before,
-	&:after {
+	.border-container{
+		height: 10px;
+		overflow-x: hidden;
+		text-align: center;
+		width: 100%;
+		position: relative;
+	}
+
+	svg {
 		content: "";
 		clear: both;
 		display: block;
 		position: relative;
 		height: 10px;
-		width: 100%;
-		mask: url("assets/images/border.svg") (center / cover) repeat;
-		background-color: $color__menu-text;
+		width: auto;
+		margin: 0 auto;
+		margin-left: -30px;
+	}
+
+	.st0{
+		fill: $color__menu-text;
 	}
 
 	.social-menu {

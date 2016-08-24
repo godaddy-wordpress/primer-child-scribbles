@@ -574,16 +574,23 @@ a {
 --------------------------------------------------------------*/
 .main-navigation-container {
   background-color: #b5345f; }
-  .main-navigation-container:before, .main-navigation-container:after {
+  .main-navigation-container .border-container {
+    height: 10px;
+    overflow-x: hidden;
+    text-align: center;
+    width: 100%;
+    position: relative; }
+  .main-navigation-container svg {
     content: "";
     clear: both;
     display: block;
     position: relative;
     height: 10px;
-    width: 100%;
-    -webkit-mask: url("assets/images/border.svg") center/cover repeat;
-    mask: url("assets/images/border.svg") center/cover repeat;
-    background-color: #ffffff; }
+    width: auto;
+    margin: 0 auto;
+    margin-left: -30px; }
+  .main-navigation-container .st0 {
+    fill: #ffffff; }
   .main-navigation-container .social-menu {
     float: right;
     padding: 20px; }

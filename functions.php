@@ -34,6 +34,8 @@ add_action( 'template_redirect', 'scribbles_move_elements' );
  */
 function scribbles_nav_wrapper_open(){
 
+	get_template_part('templates/parts/nav-border');
+
 	echo '<div class="main-navigation-wrapper">';
 
 }
@@ -46,6 +48,8 @@ function scribbles_nav_wrapper_open(){
 function scribbles_nav_wrapper_close(){
 
 	echo '</div><!-- .main-navigation-wrapper -->';
+
+	get_template_part('templates/parts/nav-border');
 
 }
 
@@ -246,8 +250,23 @@ function scribbles_colors( $colors ) {
 			),
 		),
 		'menu_text_color' => array(
+			'css'     => array(
+				'.main-navigation ul li a, .main-navigation ul li a:visited, .main-navigation ul li a:hover, .main-navigation ul li a:visited:hover,.main-navigation-container .social-menu a,.main-navigation ul li.menu-item-has-children .sub-menu li a' => array(
+					'color' => '%1$s',
+				),
+				'.main-navigation-container .st0' => array(
+					'fill' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'.main-navigation ul li a:hover,.main-navigation-container .social-menu a:hover,.main-navigation ul li.menu-item-has-children .sub-menu li a:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
+			),
+		),
+		'menu_background_color' => array(
 			'css' => array(
-				'.main-navigation-container:before, .main-navigation-container:after' => array(
+				'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu, .main-navigation-container:before, .main-navigation-container:after' => array(
 					'background-color' => '%1$s',
 				),
 			),
@@ -277,17 +296,6 @@ function scribbles_colors( $colors ) {
 		),
 		'button_color' => array(
 			'default'  => '#b5345f',
-		),
-		/**
-		 * Background colors
-		 */
-		'background_color' => array(
-			'default' => '#ffffff',
-			'css'     => array(
-				'.main-navigation ul li.menu-item-has-children .sub-menu li a' => array(
-					'color' => '%1$s',
-				),
-			),
 		),
 		'hero_background_color' => array(
 			'default' => '#3f3244',
