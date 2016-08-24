@@ -1,30 +1,30 @@
-# Scribbles
-# Copyright (C) 2016
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the scribbles package.
-# GoDaddy Operating Company, LLC.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: scribbles 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-23 09:58-0500\n"
+"POT-Creation-Date: 2016-08-24 16:40-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:54
+#: functions.php:83
 msgid "Kids playing with sidewalk chalk"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:155
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:156
 msgid "This sidebar is the fouth column of the footer widget area."
 msgstr ""
