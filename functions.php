@@ -317,30 +317,42 @@ function scribbles_color_schemes( $color_schemes ) {
 			'colors' => array(
 				'header_textcolor'                 => '#cc494f',
 				'footer_widget_heading_text_color' => '#cc494f',
+				'footer_widget_background_color'   => '#cc494f',
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#b1a18b',
 				'footer_widget_heading_text_color' => '#b1a18b',
+				'footer_widget_background_color'   => '#b1a18b',
 			),
 		),
 		'canary' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#e9c46a',
 				'footer_widget_heading_text_color' => '#e9c46a',
+				'footer_widget_background_color'   => '#e9c46a',
 			),
 		),
 		'cool' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#78c3fb',
 				'footer_widget_heading_text_color' => '#78c3fb',
+				'footer_widget_background_color'   => '#78c3fb',
+			),
+		),
+		'dark' => array(
+			'colors' => array(
+				'header_textcolor' => '#fca903',
+				'link_color'       => '#54ccbe',
+				'button_color'     => '#b5345f',
 			),
 		),
 		'iguana' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#62bf7c',
 				'footer_widget_heading_text_color' => '#62bf7c',
+				'footer_widget_background_color'   => '#62bf7c',
 			),
 		),
 		'muted' => array(
@@ -348,30 +360,36 @@ function scribbles_color_schemes( $color_schemes ) {
 				'header_textcolor'                 => '#5a6175',
 				'tagline_text_color'               => '#5a6175',
 				'footer_widget_heading_text_color' => '#5a6175',
+				'background_color'                 => '#ffffff',
+				'footer_background_color'          => '#ffffff',
 			),
 		),
 		'plum' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#5d5179',
 				'footer_widget_heading_text_color' => '#5d5179',
+				'footer_widget_background_color'   => '#5d5179',
 			),
 		),
 		'rose' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#f49390',
 				'footer_widget_heading_text_color' => '#f49390',
+				'footer_widget_background_color'   => '#f49390',
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#fc9e4f',
 				'footer_widget_heading_text_color' => '#fc9e4f',
+				'footer_widget_background_color'   => '#fc9e4f',
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
 				'header_textcolor'                 => '#48e5c2',
 				'footer_widget_heading_text_color' => '#48e5c2',
+				'footer_widget_background_color'   => '#48e5c2',
 			),
 		),
 	);
