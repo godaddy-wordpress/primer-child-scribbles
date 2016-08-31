@@ -1535,6 +1535,8 @@ body.page-template-page-builder-no-header .content-area {
     margin-right: 1.38889%; }
     .hero .widget:last-child {
       margin-bottom: 0; }
+    .hero .widget input[type="search"]:focus {
+      background: none; }
   .hero .page-title-container {
     width: 97.22222%;
     float: left;

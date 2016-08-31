@@ -16,7 +16,7 @@ function scribbles_move_elements() {
 	add_action( 'primer_before_site_navigation', 'scribbles_nav_wrapper_open', 0 );
 	add_action( 'primer_after_site_navigation', 'scribbles_nav_wrapper_close', 400 );
 
-	if ( ! is_front_page() ) {
+	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
 		add_action( 'primer_hero', 'primer_add_page_title' );
 
@@ -227,6 +227,14 @@ function scribbles_colors( $colors ) {
 			'rgba_css' => array(
 				'.site-search-wrapper .widget .search-field' => array(
 					'border-color' => 'rgba(%1$s, 0.25)',
+				),
+			),
+		),
+		'hero_text_color' => array(
+			'css'     => array(
+				'.hero .widget input[type="search"]' => array(
+					'color'        => '%1$s',
+					'border-color' => '%1$s',
 				),
 			),
 		),
