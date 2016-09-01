@@ -231,6 +231,7 @@ function scribbles_colors( $colors ) {
 			),
 		),
 		'hero_text_color' => array(
+			'default' => '#ffffff',
 			'css'     => array(
 				'.hero .widget input[type="search"]' => array(
 					'color'        => '%1$s',
@@ -239,6 +240,7 @@ function scribbles_colors( $colors ) {
 			),
 		),
 		'menu_text_color' => array(
+			'default' => '#ffffff',
 			'css'     => array(
 				'.main-navigation ul li a, .main-navigation ul li a:visited, .main-navigation ul li a:hover, .main-navigation ul li a:visited:hover,.main-navigation-container .social-menu a,.main-navigation ul li.menu-item-has-children .sub-menu li a' => array(
 					'color' => '%1$s',
@@ -261,12 +263,19 @@ function scribbles_colors( $colors ) {
 			),
 		),
 		'heading_text_color' => array(
-			'css' => array(
+			'default' => '#353535',
+			'css'     => array(
 				'.footer-widget .widget-title' => array(
 					'color'        => '%1$s',
 					'border-color' => '%1$s',
 				),
 			),
+		),
+		'primary_text_color' => array(
+			'default' => '#252525',
+		),
+		'secondary_text_color' => array(
+			'default' => '#686868',
 		),
 		'footer_widget_heading_text_color' => array(
 			'default' => '#3f3244',
@@ -277,6 +286,15 @@ function scribbles_colors( $colors ) {
 				),
 			),
 		),
+		'footer_widget_text_color' => array(
+			'default' => '#252525',
+		),
+		'footer_menu_text_color' => array(
+			'default' => '#686868',
+		),
+		'footer_text_color' => array(
+			'default' => '#686868',
+		),
 		/**
 		 * Link / Button colors
 		 */
@@ -286,8 +304,17 @@ function scribbles_colors( $colors ) {
 		'button_color' => array(
 			'default'  => '#b5345f',
 		),
+		'button_text_color' => array(
+			'default'  => '#ffffff',
+		),
+		/**
+		 * Background colors
+		 */
+		'background_color' => array(
+			'default' => '#ffffff',
+		),
 		'hero_background_color' => array(
-			'default' => '#3f3244',
+			'default' => '#686868',
 		),
 		'menu_background_color' => array(
 			'default' => '#b5345f',
@@ -323,81 +350,135 @@ function scribbles_color_schemes( $color_schemes ) {
 	$overrides = array(
 		'blush' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#cc494f',
-				'footer_widget_heading_text_color' => '#cc494f',
-				'footer_widget_background_color'   => '#cc494f',
+				'header_textcolor'                 => $color_schemes['blush']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['blush']['base'],
+				'link_color'                       => $color_schemes['blush']['base'],
+				'button_color'                     => $color_schemes['blush']['base'],
+				'menu_background_color'            => $color_schemes['blush']['base'],
+				'footer_widget_background_color'   => $color_schemes['blush']['base'],
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#b1a18b',
-				'footer_widget_heading_text_color' => '#b1a18b',
-				'footer_widget_background_color'   => '#b1a18b',
+				'header_textcolor'                 => $color_schemes['bronze']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['bronze']['base'],
+				'link_color'                       => $color_schemes['bronze']['base'],
+				'button_color'                     => $color_schemes['bronze']['base'],
+				'menu_background_color'            => $color_schemes['bronze']['base'],
+				'footer_widget_background_color'   => $color_schemes['bronze']['base'],
 			),
 		),
 		'canary' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#e9c46a',
-				'footer_widget_heading_text_color' => '#e9c46a',
-				'footer_widget_background_color'   => '#e9c46a',
+				'header_textcolor'                 => $color_schemes['canary']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['canary']['base'],
+				'link_color'                       => $color_schemes['canary']['base'],
+				'button_color'                     => $color_schemes['canary']['base'],
+				'menu_background_color'            => $color_schemes['canary']['base'],
+				'footer_widget_background_color'   => $color_schemes['canary']['base'],
 			),
 		),
 		'cool' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#78c3fb',
-				'footer_widget_heading_text_color' => '#78c3fb',
-				'footer_widget_background_color'   => '#78c3fb',
+				'header_textcolor'                 => $color_schemes['cool']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['cool']['base'],
+				'link_color'                       => $color_schemes['cool']['base'],
+				'button_color'                     => $color_schemes['cool']['base'],
+				'menu_background_color'            => $color_schemes['cool']['base'],
+				'footer_widget_background_color'   => $color_schemes['cool']['base'],
 			),
 		),
 		'dark' => array(
 			'colors' => array(
-				'header_textcolor' => '#fca903',
-				'link_color'       => '#54ccbe',
-				'button_color'     => '#b5345f',
+				// Text
+				'header_textcolor'                 => '#ffffff',
+				'tagline_text_color'               => '#999999',
+				'heading_text_color'               => '#ffffff',
+				'primary_text_color'               => '#e5e5e5',
+				'secondary_text_color'             => '#c1c1c1',
+				'footer_widget_heading_text_color' => '#ffffff',
+				'footer_widget_text_color'         => '#ffffff',
+				// Links & Buttons
+				'button_color' => '#54ccbe',
+				// Backgrounds
+				'background_color'                       => '#222222',
+				'hero_background_color'                  => '#282828',
+				'menu_background_color'                  => '#333333',
+				'footer_widget_content_background_color' => '#333333',
+				'footer_widget_background_color'         => '#282828',
+				'footer_background_color'                => '#222222',
 			),
 		),
 		'iguana' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#62bf7c',
-				'footer_widget_heading_text_color' => '#62bf7c',
-				'footer_widget_background_color'   => '#62bf7c',
+				'header_textcolor'                 => $color_schemes['iguana']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['iguana']['base'],
+				'link_color'                       => $color_schemes['iguana']['base'],
+				'button_color'                     => $color_schemes['iguana']['base'],
+				'menu_background_color'            => $color_schemes['iguana']['base'],
+				'footer_widget_background_color'   => $color_schemes['iguana']['base'],
 			),
 		),
 		'muted' => array(
 			'colors' => array(
+				// Text
 				'header_textcolor'                 => '#5a6175',
 				'tagline_text_color'               => '#5a6175',
+				'heading_text_color'               => '#4f5875',
+				'primary_text_color'               => '#4f5875',
+				'secondary_text_color'             => '#888c99',
 				'footer_widget_heading_text_color' => '#5a6175',
-				'background_color'                 => '#ffffff',
-				'footer_background_color'          => '#ffffff',
+				'footer_menu_text_color'           => $color_schemes['muted']['base'],
+				'footer_text_color'                => '#4f5875',
+				// Links & Buttons
+				'link_color'   => $color_schemes['muted']['base'],
+				'button_color' => $color_schemes['muted']['base'],
+				// Backgrounds
+				'background_color'               => '#ffffff',
+				'hero_background_color'          => '#5a6175',
+				'menu_background_color'          => '#5a6175',
+				'footer_widget_background_color' => '#b6b9c5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'plum' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#5d5179',
-				'footer_widget_heading_text_color' => '#5d5179',
-				'footer_widget_background_color'   => '#5d5179',
+				'header_textcolor'                 => $color_schemes['plum']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['plum']['base'],
+				'link_color'                       => $color_schemes['plum']['base'],
+				'button_color'                     => $color_schemes['plum']['base'],
+				'menu_background_color'            => $color_schemes['plum']['base'],
+				'footer_widget_background_color'   => $color_schemes['plum']['base'],
 			),
 		),
 		'rose' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#f49390',
-				'footer_widget_heading_text_color' => '#f49390',
-				'footer_widget_background_color'   => '#f49390',
+				'header_textcolor'                 => $color_schemes['rose']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['rose']['base'],
+				'link_color'                       => $color_schemes['rose']['base'],
+				'button_color'                     => $color_schemes['rose']['base'],
+				'menu_background_color'            => $color_schemes['rose']['base'],
+				'footer_widget_background_color'   => $color_schemes['rose']['base'],
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#fc9e4f',
-				'footer_widget_heading_text_color' => '#fc9e4f',
-				'footer_widget_background_color'   => '#fc9e4f',
+				'header_textcolor'                 => $color_schemes['tangerine']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['tangerine']['base'],
+				'link_color'                       => $color_schemes['tangerine']['base'],
+				'button_color'                     => $color_schemes['tangerine']['base'],
+				'menu_background_color'            => $color_schemes['tangerine']['base'],
+				'footer_widget_background_color'   => $color_schemes['tangerine']['base'],
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
-				'header_textcolor'                 => '#48e5c2',
-				'footer_widget_heading_text_color' => '#48e5c2',
-				'footer_widget_background_color'   => '#48e5c2',
+				'header_textcolor'                 => $color_schemes['turquoise']['base'],
+				'footer_widget_heading_text_color' => $color_schemes['turquoise']['base'],
+				'link_color'                       => $color_schemes['turquoise']['base'],
+				'button_color'                     => $color_schemes['turquoise']['base'],
+				'menu_background_color'            => $color_schemes['turquoise']['base'],
+				'footer_widget_background_color'   => $color_schemes['turquoise']['base'],
 			),
 		),
 	);
