@@ -4,7 +4,7 @@
 
 .hero {
 	background-size: cover;
-	background-position: bottom center;
+	background-position: top center;
 	background-repeat: no-repeat;
 	z-index: 0;
 
@@ -15,7 +15,15 @@
 	}
 
 	.widget {
-		@include span(12);
+		@include span(6);
+
+		@media #{$medium-only} {
+			@include span(9);
+		}
+
+		@media #{$small-only} {
+			@include span(12);
+		}
 
 		&:last-child {
 			margin-bottom: 0;

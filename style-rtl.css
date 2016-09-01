@@ -1516,7 +1516,7 @@ body.page-template-page-builder-no-header .content-area {
 .hero {
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: bottom center;
+  background-position: top center;
   background-repeat: no-repeat;
   z-index: 0; }
   .hero .hero-inner {
@@ -1529,10 +1529,22 @@ body.page-template-page-builder-no-header .content-area {
       display: block;
       clear: both; }
   .hero .widget {
-    width: 97.22222%;
+    width: 47.22222%;
     float: right;
     margin-right: 1.38889%;
     margin-left: 1.38889%; }
+    @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
+      .hero .widget {
+        width: 72.22222%;
+        float: right;
+        margin-right: 1.38889%;
+        margin-left: 1.38889%; } }
+    @media only screen and (max-width: 40.063em) {
+      .hero .widget {
+        width: 97.22222%;
+        float: right;
+        margin-right: 1.38889%;
+        margin-left: 1.38889%; } }
     .hero .widget:last-child {
       margin-bottom: 0; }
     .hero .widget input[type="search"]:focus {
