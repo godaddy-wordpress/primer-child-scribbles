@@ -255,13 +255,6 @@ function scribbles_colors( $colors ) {
 				),
 			),
 		),
-		'menu_background_color' => array(
-			'css' => array(
-				'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu, .main-navigation-container:before, .main-navigation-container:after' => array(
-					'background-color' => '%1$s',
-				),
-			),
-		),
 		'heading_text_color' => array(
 			'default' => '#353535',
 			'css'     => array(
@@ -318,6 +311,11 @@ function scribbles_colors( $colors ) {
 		),
 		'menu_background_color' => array(
 			'default' => '#b5345f',
+			'css'     => array(
+				'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu, .main-navigation-container:before, .main-navigation-container:after' => array(
+					'background-color' => '%1$s',
+				),
+			),
 		),
 		'footer_widget_background_color' => array(
 			'default' => '#3f3244',
