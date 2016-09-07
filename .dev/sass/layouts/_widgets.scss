@@ -1,0 +1,114 @@
+.widget {
+	margin: 0 0 1.5rem;
+	padding: 1rem;
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	select,
+	textarea {
+		width: 100%;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		padding: 0.25rem 0;
+
+		ul {
+			padding-left: 1.5rem;
+		}
+	}
+}
+
+.widget-title {
+	text-transform: uppercase;
+}
+
+.widget_calendar #calendar_wrap #wp-calendar {
+	td#today {
+		font-weight: bold;
+	}
+
+	tfoot {
+		td#prev {
+			text-align: left;
+		}
+
+		td#next {
+			text-align: right;
+		}
+	}
+}
+
+.footer-widget {
+	.widget {
+		padding: 1em;
+		background-color: $color__bg;
+		border-radius: 8px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.search-field {
+			border-color: $color__footer-widget-bg;
+		}
+	}
+
+	.widget-title {
+		border-bottom: 3px solid $color__footer-widget-bg;
+		color: $color__footer-widget-bg;
+	}
+}
+
+.widget_search {
+	form {
+		position: relative;
+	}
+
+	.search-field {
+		padding: 0.125rem 2.75rem 0.125rem 0.5rem;
+		font-size: 1.25rem;
+		border: none;
+		border-bottom: 3px solid rgba($color__main-text, 0.25);
+		border-radius: 0;
+		appearance: textfield;
+		background: none;
+
+		@media #{$small-only} {
+			width: 100%;
+		}
+	}
+
+	.search-submit {
+		background: url("assets/images/search-icon.svg") no-repeat center center;
+		background-size: 65%;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 2px;
+		right: 5px;
+		text-indent: -9999em;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
