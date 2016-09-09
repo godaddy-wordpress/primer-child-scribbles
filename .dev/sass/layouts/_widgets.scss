@@ -86,6 +86,7 @@
 	.search-field {
 		padding: 0.125rem 2.75rem 0.125rem 0.5rem;
 		font-size: 1.25rem;
+		line-height: 1.25rem;
 		border: none;
 		border-bottom: 3px solid rgba($color__main-text, 0.25);
 		border-radius: 0;
@@ -99,14 +100,17 @@
 
 	.search-submit {
 		background: url("assets/images/search-icon.svg") no-repeat center center;
-		background-size: 65%;
-		width: 40px;
-		height: 40px;
+		background-size: 1.5rem;
+		width: 1.5rem;
+		height: 1.5rem;
+		margin-bottom: 0; // IE fix
 		position: absolute;
-		top: 2px;
-		right: 5px;
+		bottom: 5px;
+		right: 0px;
 		text-indent: -9999em;
 
+		&:active,
+		&:focus,
 		&:hover {
 			background-color: transparent;
 		}

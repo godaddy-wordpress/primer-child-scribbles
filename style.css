@@ -1957,6 +1957,7 @@ body.no-max-width .site-info-wrapper .site-info {
 .widget_search .search-field {
   padding: 0.125rem 2.75rem 0.125rem 0.5rem;
   font-size: 1.25rem;
+  line-height: 1.25rem;
   border: none;
   border-bottom: 3px solid rgba(37, 37, 37, 0.25);
   -webkit-border-radius: 0;
@@ -1969,15 +1970,16 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .widget_search .search-submit {
   background: url("assets/images/search-icon.svg") no-repeat center center;
-  -webkit-background-size: 65% 65%;
-  background-size: 65%;
-  width: 40px;
-  height: 40px;
+  -webkit-background-size: 1.5rem 1.5rem;
+  background-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 0;
   position: absolute;
-  top: 2px;
-  right: 5px;
+  bottom: 5px;
+  right: 0px;
   text-indent: -9999em; }
-  .widget_search .search-submit:hover {
+  .widget_search .search-submit:active, .widget_search .search-submit:focus, .widget_search .search-submit:hover {
     background-color: transparent; }
 
 /*--------------------------------------------------------------
