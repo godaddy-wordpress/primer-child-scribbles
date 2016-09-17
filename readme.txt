@@ -48,7 +48,7 @@ Scribbles is a Primer child theme with a playful and fun mood.
 
 **Contributing:**
 
-You can fork and contribute to Scribbles by visiting [our public repo on GitHub](https://github.com/LiftUX/scribbles-theme).
+You can fork and contribute to Scribbles by visiting [our public repo on GitHub](https://github.com/godaddy/wp-scribbles-theme).
 
 == Installation ==
 
