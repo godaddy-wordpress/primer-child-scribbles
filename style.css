@@ -2086,6 +2086,9 @@ body.no-max-width .site-info-wrapper .site-info {
 .entry-summary {
   margin: 1em 0 0; }
 
+.entry-content {
+  margin-bottom: 1em; }
+
 .entry-header {
   text-align: center; }
 
