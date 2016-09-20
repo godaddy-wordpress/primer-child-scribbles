@@ -369,7 +369,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #ffffff; }
+  background: #ffffff;
+  word-wrap: break-word; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -2084,6 +2085,9 @@ body.no-max-width .site-info-wrapper .site-info {
 .entry-content,
 .entry-summary {
   margin: 1em 0 0; }
+
+.entry-content {
+  margin-bottom: 1em; }
 
 .entry-header {
   text-align: center; }
