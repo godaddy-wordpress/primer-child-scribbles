@@ -369,7 +369,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #ffffff; }
+  background: #ffffff;
+  word-wrap: break-word; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -567,6 +568,30 @@ a {
     color: rgba(84, 204, 190, 0.8); }
   a:hover, a:active, a:focus {
     outline: 0; }
+
+/*--------------------------------------------------------------
+# Pointers
+--------------------------------------------------------------*/
+.wp-pointer-content {
+  border-top: none; }
+  .wp-pointer-content h3 {
+    font-family: sans-serif;
+    text-transform: inherit;
+    font-weight: bold; }
+  .wp-pointer-content p {
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 1.4; }
+  .wp-pointer-content a.close,
+  .wp-pointer-content a.close:visited {
+    color: #0073aa;
+    line-height: 1.5;
+    font-family: sans-serif; }
+    .wp-pointer-content a.close:hover, .wp-pointer-content a.close:active, .wp-pointer-content a.close:focus,
+    .wp-pointer-content a.close:visited:hover,
+    .wp-pointer-content a.close:visited:active,
+    .wp-pointer-content a.close:visited:focus {
+      color: #00a0d2; }
 
 /*--------------------------------------------------------------
 # Menus
@@ -1375,14 +1400,25 @@ body.no-max-width .site-content,
 body.page-template-page-builder .site-content {
   max-width: none; }
 
-body.layout-one-column-narrow .site-content {
-  max-width: 66.66667%;
-  margin-right: auto;
-  margin-left: auto; }
-  body.layout-one-column-narrow .site-content:after {
-    content: " ";
-    display: block;
-    clear: both; }
+@media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
+  body.layout-one-column-narrow .site-content {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto; }
+    body.layout-one-column-narrow .site-content:after {
+      content: " ";
+      display: block;
+      clear: both; } }
+
+@media only screen and (min-width: 61.063em) {
+  body.layout-one-column-narrow .site-content {
+    max-width: 66.66667%;
+    margin-right: auto;
+    margin-left: auto; }
+    body.layout-one-column-narrow .site-content:after {
+      content: " ";
+      display: block;
+      clear: both; } }
 
 .content-area {
   width: 63.88889%;
@@ -1946,6 +1982,7 @@ body.no-max-width .site-info-wrapper .site-info {
 .widget_search .search-field {
   padding: 0.125rem 0.5rem 0.125rem 2.75rem;
   font-size: 1.25rem;
+  line-height: 1.25rem;
   border: none;
   border-bottom: 3px solid rgba(37, 37, 37, 0.25);
   -webkit-border-radius: 0;
@@ -1958,15 +1995,16 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .widget_search .search-submit {
   background: url("assets/images/search-icon.svg") no-repeat center center;
-  -webkit-background-size: 65% 65%;
-  background-size: 65%;
-  width: 40px;
-  height: 40px;
+  -webkit-background-size: 1.5rem 1.5rem;
+  background-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 0;
   position: absolute;
-  top: 2px;
-  left: 5px;
+  bottom: 5px;
+  left: 0px;
   text-indent: -9999em; }
-  .widget_search .search-submit:hover {
+  .widget_search .search-submit:active, .widget_search .search-submit:focus, .widget_search .search-submit:hover {
     background-color: transparent; }
 
 /*--------------------------------------------------------------
@@ -2002,13 +2040,36 @@ body.no-max-width .site-info-wrapper .site-info {
     color: #54ccbe; }
 
 .entry-meta {
-  font-size: 90%;
   text-align: center;
+  font-size: 90%;
   color: #686868; }
+  .entry-meta .posted-date,
+  .entry-meta .posted-author,
+  .entry-meta .comments-number {
+    margin-left: 1rem; }
+    @media only screen and (max-width: 40.063em) {
+      .entry-meta .posted-date,
+      .entry-meta .posted-author,
+      .entry-meta .comments-number {
+        display: block;
+        margin-left: 0; } }
+    .entry-meta .posted-date:before,
+    .entry-meta .posted-author:before,
+    .entry-meta .comments-number:before {
+      position: relative;
+      top: 3px;
+      font-family: 'genericons';
+      font-size: 18px;
+      padding-left: 2px; }
+  .entry-meta .posted-date:before {
+    content: '\f303';
+    top: 4px; }
+  .entry-meta .posted-author:before {
+    content: '\f304'; }
+  .entry-meta .comments-number:before {
+    content: '\f300'; }
 
 @media only screen and (max-width: 40.063em) {
-  .comments-number {
-    display: block; }
   .post-navigation {
     font-size: 90%; } }
 
@@ -2023,7 +2084,10 @@ body.no-max-width .site-info-wrapper .site-info {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 1em 0 0; }
+
+.entry-content {
+  margin-bottom: 1em; }
 
 .entry-header {
   text-align: center; }

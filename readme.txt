@@ -7,11 +7,11 @@ Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Scribbles is a Primer child theme with a playful and fun mood.
+Scribbles is a GoDaddy Primer child theme with a playful and fun mood.
 
 == Description ==
 
-Scribbles is a Primer child theme with a playful and fun mood.
+Scribbles is a GoDaddy Primer child theme with a playful and fun mood.
 
 **Languages Supported:**
 
@@ -48,7 +48,7 @@ Scribbles is a Primer child theme with a playful and fun mood.
 
 **Contributing:**
 
-You can fork and contribute to Scribbles by visiting [our public repo on GitHub](https://github.com/LiftUX/scribbles-theme).
+You can fork and contribute to Scribbles by visiting [our public repo on GitHub](https://github.com/godaddy/wp-scribbles-theme).
 
 == Installation ==
 

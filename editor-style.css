@@ -319,7 +319,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #ffffff; }
+  background: #ffffff;
+  word-wrap: break-word; }
 
 blockquote, q {
   quotes: "" ""; }
