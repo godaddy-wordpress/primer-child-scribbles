@@ -1630,7 +1630,8 @@ body.no-max-width .hero-inner {
   margin-bottom: 0;
   font-weight: 400;
   font-size: 3.25rem;
-  line-height: 1; }
+  line-height: 1;
+  margin-bottom: 10px; }
   .site-title a {
     color: #fca903; }
     .site-title a:hover, .site-title a:visited:hover {
