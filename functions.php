@@ -41,9 +41,9 @@ add_action( 'template_redirect', 'scribbles_move_elements' );
  *
  * @since  1.0.0
  */
-function scribbles_nav_wrapper_open(){
+function scribbles_nav_wrapper_open() {
 
-	get_template_part('templates/parts/nav-border');
+	get_template_part( 'templates/parts/nav-border' );
 
 	echo '<div class="main-navigation-wrapper">';
 
@@ -54,11 +54,11 @@ function scribbles_nav_wrapper_open(){
  *
  * @since  1.0.0
  */
-function scribbles_nav_wrapper_close(){
+function scribbles_nav_wrapper_close() {
 
 	echo '</div><!-- .main-navigation-wrapper -->';
 
-	get_template_part('templates/parts/nav-border');
+	get_template_part( 'templates/parts/nav-border' );
 
 }
 
