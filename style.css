@@ -2292,7 +2292,7 @@ ul.site-header-cart.menu {
   padding: 0;
   margin-bottom: 0; }
   .woocommerce-cart-menu-item .widget_shopping_cart .total {
-    margin: 0 0 10px 0;
+    margin: 0;
     padding-top: 10px;
     text-align: center; }
   .woocommerce-cart-menu-item .widget_shopping_cart .total strong {
