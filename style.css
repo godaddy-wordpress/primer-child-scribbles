@@ -2333,3 +2333,10 @@ li#woocommerce-cart-menu-item li.mini_cart_item a {
 @media only screen and (min-width: 40.063em) {
   li#woocommerce-cart-menu-item .sub-menu {
     margin-left: -6em; } }
+
+@media only screen and (max-width: 40.063em) {
+  .woocommerce-cart-menu-item.open .sub-menu,
+  .woocommerce-cart-menu-item.open ul.sub-menu {
+    display: inline-block; }
+  li #woocommerce-cart-menu-item .widget_shopping_cart {
+    width: 100%; } }
