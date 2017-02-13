@@ -164,6 +164,12 @@ body.single-product {
 	padding: 9px;
 }
 
+.woocommerce ul.products li.product a {
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+}
+
 
 @media #{$small-only} {
 
