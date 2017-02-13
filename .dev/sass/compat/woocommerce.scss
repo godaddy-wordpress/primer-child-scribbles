@@ -147,6 +147,13 @@ body.single-product {
 	}
 }
 
+body.woocommerce-cart {
+
+	.primer-wc-cart-sub-menu {
+		display: none;
+	}
+}
+
 .woocommerce #content table.cart img,
 .woocommerce table.cart img,
 .woocommerce-page #content table.cart img,
@@ -168,13 +175,6 @@ body.single-product {
 	width: 100%;
 	font-size: 16px;
 	text-align: center;
-}
-
-body.woocommerce-cart {
-
-	.primer-wc-cart-sub-menu {
-		display: none;
-	}
 }
 
 @media #{$small-only} {

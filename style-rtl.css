@@ -2314,6 +2314,9 @@ body.single-product span.onsale {
   top: 0;
   right: 0; }
 
+body.woocommerce-cart .primer-wc-cart-sub-menu {
+  display: none; }
+
 .woocommerce #content table.cart img,
 .woocommerce table.cart img,
 .woocommerce-page #content table.cart img,
@@ -2333,9 +2336,6 @@ body.single-product span.onsale {
   width: 100%;
   font-size: 16px;
   text-align: center; }
-
-body.woocommerce-cart .primer-wc-cart-sub-menu {
-  display: none; }
 
 @media only screen and (max-width: 40.063em) {
   .primer-wc-cart-menu .primer-wc-cart-sub-menu {
