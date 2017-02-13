@@ -170,6 +170,12 @@ body.single-product {
 	text-align: center;
 }
 
+body.woocommerce-cart {
+
+	.primer-wc-cart-sub-menu {
+		display: none;
+	}
+}
 
 @media #{$small-only} {
 
