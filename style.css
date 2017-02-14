@@ -2237,13 +2237,14 @@ body.no-max-width .site-info-wrapper .site-info {
     float: left;
     width: 100%; }
   .primer-wc-cart-menu .widget_shopping_cart .total {
-    margin: 0 0 10px 0;
-    padding-top: 10px;
+    margin: 0;
+    padding: 10px 0;
     text-align: center; }
     .primer-wc-cart-menu .widget_shopping_cart .total strong {
       text-indent: 0; }
   .primer-wc-cart-menu .widget_shopping_cart p.buttons {
     padding: .5em;
+    padding-top: 0;
     margin: 0; }
     .primer-wc-cart-menu .widget_shopping_cart p.buttons a {
       text-align: center;
@@ -2284,7 +2285,7 @@ body.no-max-width .site-info-wrapper .site-info {
           .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item a.remove:hover {
             background: red; }
       .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item a:nth-child(2) {
-        padding: .5em 0em;
+        padding: .5em 0 0 0;
         margin: 0;
         width: 100%;
         text-indent: 1.75rem; }
@@ -2340,5 +2341,6 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
 @media only screen and (max-width: 40.063em) {
   .primer-wc-cart-menu .primer-wc-cart-sub-menu {
     width: 100%; }
-  .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item a {
+  .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item a,
+  .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item a:hover {
     color: #ffffff; } }

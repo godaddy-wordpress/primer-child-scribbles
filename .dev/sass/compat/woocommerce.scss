@@ -35,8 +35,8 @@
 		}
 
 		.total {
-			margin: 0 0 10px 0;
-			padding-top: 10px;
+			margin: 0;
+			padding: 10px 0;
 			text-align: center;
 
 			strong {
@@ -47,6 +47,7 @@
 
 		p.buttons {
 			padding: .5em;
+			padding-top: 0;
 			margin: 0;
 
 			a {
@@ -104,7 +105,7 @@
 				}
 
 				a:nth-child(2) {
-					padding: .5em 0em;
+					padding: .5em 0 0 0;
 					margin: 0;
 					width: 100%;
 					text-indent: 1.75rem;
@@ -185,7 +186,8 @@ body.woocommerce-cart {
 			width: 100%;
 		}
 
-		.widget_shopping_cart .cart_list li.mini_cart_item a {
+		.widget_shopping_cart .cart_list li.mini_cart_item a,
+		.widget_shopping_cart .cart_list li.mini_cart_item a:hover {
 			color: $color__menu-text;
 		}
 	}
