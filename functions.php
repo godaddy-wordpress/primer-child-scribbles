@@ -17,17 +17,17 @@ define( 'PRIMER_CHILD_VERSION', '1.0.0' );
  */
 function scribbles_move_elements() {
 
-	remove_action( 'primer_header',       'primer_add_hero' );
-	remove_action( 'primer_after_header', 'primer_add_page_title' );
+	remove_action( 'primer_header',       'primer_add_hero',       7 );
+	remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
 
-	add_action( 'primer_after_header', 'primer_add_hero' );
+	add_action( 'primer_after_header', 'primer_add_hero', 7 );
 
 	add_action( 'primer_before_site_navigation', 'scribbles_nav_wrapper_open', 0 );
 	add_action( 'primer_after_site_navigation', 'scribbles_nav_wrapper_close', 400 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
-		add_action( 'primer_hero', 'primer_add_page_title' );
+		add_action( 'primer_hero', 'primer_add_page_title', 12 );
 
 	}
 
@@ -41,9 +41,9 @@ add_action( 'template_redirect', 'scribbles_move_elements' );
  *
  * @since  1.0.0
  */
-function scribbles_nav_wrapper_open(){
+function scribbles_nav_wrapper_open() {
 
-	get_template_part('templates/parts/nav-border');
+	get_template_part( 'templates/parts/nav-border' );
 
 	echo '<div class="main-navigation-wrapper">';
 
@@ -54,11 +54,11 @@ function scribbles_nav_wrapper_open(){
  *
  * @since  1.0.0
  */
-function scribbles_nav_wrapper_close(){
+function scribbles_nav_wrapper_close() {
 
 	echo '</div><!-- .main-navigation-wrapper -->';
 
-	get_template_part('templates/parts/nav-border');
+	get_template_part( 'templates/parts/nav-border' );
 
 }
 
@@ -305,6 +305,11 @@ function scribbles_colors( $colors ) {
 		),
 		'button_color' => array(
 			'default'  => '#b5345f',
+			'css'     => array(
+				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
+					'background-color' => '%1$s',
+				),
+			),
 		),
 		'button_text_color' => array(
 			'default'  => '#ffffff',
@@ -314,6 +319,11 @@ function scribbles_colors( $colors ) {
 		 */
 		'background_color' => array(
 			'default' => '#ffffff',
+			'css'     => array(
+				'.woocommerce-cart-menu-item .sub-menu, .woocommerce-cart-menu-item ul.sub-menu' => array(
+					'background-color' => '%1$s',
+				),
+			),
 		),
 		'hero_background_color' => array(
 			'default' => '#686868',
