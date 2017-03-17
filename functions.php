@@ -306,7 +306,8 @@ function scribbles_colors( $colors ) {
 		'button_color' => array(
 			'default'  => '#b5345f',
 			'css'     => array(
-				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
+				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a,
+				.woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover' => array(
 					'background-color' => '%1$s',
 				),
 			),
@@ -320,7 +321,8 @@ function scribbles_colors( $colors ) {
 		'background_color' => array(
 			'default' => '#ffffff',
 			'css'     => array(
-				'.woocommerce-cart-menu-item .sub-menu, .woocommerce-cart-menu-item ul.sub-menu' => array(
+				'.woocommerce-cart-menu-item .sub-menu, .woocommerce-cart-menu-item ul.sub-menu,
+				table.variations tr:hover td' => array(
 					'background-color' => '%1$s',
 				),
 			),
