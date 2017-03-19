@@ -156,7 +156,7 @@
 	}
 
 	.primer-woocommerce .cart .qty {
-		padding: 0.2em;
+		padding: 0.19em;
 	}
 
 	#reviews #comments ol.commentlist li {
@@ -178,6 +178,10 @@
 			margin-right: 0;
 		}
 
+	}
+
+	table.variations tr:hover td {
+		background-color: transparent;
 	}
 
 	table.cart {
