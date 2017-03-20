@@ -2326,6 +2326,16 @@ body.no-max-width .site-info-wrapper .site-info {
 .woocommerce-page .primer-woocommerce .cart .qty {
   padding: 0.19em; }
 
+.woocommerce-page span.onsale,
+.woocommerce-page ul.products li.product .onsale {
+  padding: 2px 8px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  min-height: auto;
+  min-width: auto;
+  line-height: inherit; }
+
 .woocommerce-page #reviews #comments ol.commentlist li img.avatar {
   width: 60px; }
 
@@ -2346,18 +2356,6 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .woocommerce-page table.cart td.actions .input-text {
   padding: 10px !important; }
-
-body.woocommerce span.onsale,
-body.woocommerce ul.products li.product .onsale,
-body.single-product span.onsale,
-body.single-product ul.products li.product .onsale {
-  padding: 2px 8px;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  margin: 0;
-  min-height: auto;
-  min-width: auto;
-  line-height: inherit; }
 
 body.single-product span.onsale {
   padding: 3px 18px;
