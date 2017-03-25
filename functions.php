@@ -27,7 +27,7 @@ function scribbles_move_elements() {
 	add_action( 'primer_before_site_navigation', 'scribbles_nav_wrapper_open',    0 );
 	add_action( 'primer_after_site_navigation',  'scribbles_nav_wrapper_close',   400 );
 	add_action( 'primer_after_header',           'primer_add_primary_navigation', 5 );
-	add_action( 'primer_hero',                   'primer_video_header',            3 );
+	add_action( 'primer_hero',                   'primer_video_header',           3 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
