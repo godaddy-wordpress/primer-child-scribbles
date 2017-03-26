@@ -10,6 +10,10 @@
 	background-repeat: no-repeat;
 	z-index: 0;
 
+	#wp-custom-header img {
+		display: none;
+	}
+
 	.hero-inner {
 		@include container($container-size);
 

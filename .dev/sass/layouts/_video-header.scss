@@ -18,21 +18,15 @@
 			right: 0;
 			bottom: 0;
 			margin: auto;
-
-			img {
-				display: none;
-			}
 		}
 
 		#wp-custom-header-video-button {
 			position: absolute;
-			top: 72vh;
+			bottom: 20vh;
 			right: 1em;
 			opacity: 0.5;
-
-			@media #{$medium-only} {
-				top: 68vh;
-			}
+			font-size: 1rem;
+			padding: 0.65em .85em;
 		}
 
 		iframe#wp-custom-header-video {
