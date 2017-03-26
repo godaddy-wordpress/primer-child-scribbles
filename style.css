@@ -1558,6 +1558,7 @@ body.page-template-page-builder-no-header .content-area {
 # Header
 --------------------------------------------------------------*/
 .site-header.video-header + .main-navigation-container + .hero {
+  overflow: hidden;
   background-color: #000;
   color: #000;
   position: relative; }
@@ -1565,17 +1566,22 @@ body.page-template-page-builder-no-header .content-area {
     position: relative; }
   .site-header.video-header + .main-navigation-container + .hero #wp-custom-header {
     position: absolute;
-    height: 100%;
+    height: 100vh;
     top: 0;
-    left: 0; }
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
     .site-header.video-header + .main-navigation-container + .hero #wp-custom-header img {
       display: none; }
   .site-header.video-header + .main-navigation-container + .hero #wp-custom-header-video-button {
     position: absolute;
-    bottom: 0.5em;
+    top: 72vh;
     right: 1em;
-    opacity: 0.5;
-    z-index: 11; }
+    opacity: 0.5; }
+    @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
+      .site-header.video-header + .main-navigation-container + .hero #wp-custom-header-video-button {
+        top: 68vh; } }
   .site-header.video-header + .main-navigation-container + .hero iframe#wp-custom-header-video {
     height: 100%; }
 
