@@ -1557,48 +1557,32 @@ body.page-template-page-builder-no-header .content-area {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-header.video-header + .main-navigation-container + .hero {
+  background-color: #000;
+  color: #000;
+  position: relative; }
+  .site-header.video-header + .main-navigation-container + .hero aside {
+    position: relative; }
+  .site-header.video-header + .main-navigation-container + .hero .hero-inner {
+    z-index: 1; }
+  .site-header.video-header + .main-navigation-container + .hero #wp-custom-header {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0; }
+    .site-header.video-header + .main-navigation-container + .hero #wp-custom-header img {
+      display: none; }
+  .site-header.video-header + .main-navigation-container + .hero #wp-custom-header-video-button {
+    position: absolute;
+    bottom: 0.5em;
+    left: 1em;
+    opacity: 0.5;
+    z-index: 11; }
+  .site-header.video-header + .main-navigation-container + .hero iframe#wp-custom-header-video {
+    height: 100%; }
+
 .site-header {
   position: relative; }
-  .site-header.video-header + .main-navigation-container + .hero {
-    background-color: #000;
-    color: #000;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
-    -moz-box-orient: horizontal;
-    -moz-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-    position: relative; }
-    .site-header.video-header + .main-navigation-container + .hero aside {
-      position: relative; }
-    .site-header.video-header + .main-navigation-container + .hero .hero-inner {
-      z-index: 1; }
-    .site-header.video-header + .main-navigation-container + .hero #wp-custom-header {
-      position: absolute;
-      height: 100%;
-      top: 0;
-      right: 0; }
-      .site-header.video-header + .main-navigation-container + .hero #wp-custom-header img {
-        display: none; }
-    .site-header.video-header + .main-navigation-container + .hero #wp-custom-header-video-button {
-      position: absolute;
-      bottom: 0.5em;
-      left: 1em;
-      opacity: 0.5;
-      z-index: 11; }
-    .site-header.video-header + .main-navigation-container + .hero iframe#wp-custom-header-video {
-      height: 100%; }
 
 .hero {
   -webkit-background-size: cover;
