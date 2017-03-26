@@ -1563,8 +1563,6 @@ body.page-template-page-builder-no-header .content-area {
   position: relative; }
   .site-header.video-header + .main-navigation-container + .hero aside {
     position: relative; }
-  .site-header.video-header + .main-navigation-container + .hero .hero-inner {
-    z-index: 1; }
   .site-header.video-header + .main-navigation-container + .hero #wp-custom-header {
     position: absolute;
     height: 100%;
