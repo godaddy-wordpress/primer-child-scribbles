@@ -17,13 +17,17 @@ define( 'PRIMER_CHILD_VERSION', '1.0.0' );
  */
 function scribbles_move_elements() {
 
-	remove_action( 'primer_header',       'primer_add_hero',       7 );
-	remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
+	remove_action( 'primer_header',                'primer_add_hero',               7 );
+	remove_action( 'primer_after_header',          'primer_add_page_title',         12 );
+	remove_action( 'primer_after_header',          'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_before_header_wrapper', 'primer_video_header',           5 );
 
-	add_action( 'primer_after_header', 'primer_add_hero', 7 );
+	add_action( 'primer_after_header', 'primer_add_hero', 10 );
 
-	add_action( 'primer_before_site_navigation', 'scribbles_nav_wrapper_open', 0 );
-	add_action( 'primer_after_site_navigation', 'scribbles_nav_wrapper_close', 400 );
+	add_action( 'primer_before_site_navigation', 'scribbles_nav_wrapper_open',    0 );
+	add_action( 'primer_after_site_navigation',  'scribbles_nav_wrapper_close',   400 );
+	add_action( 'primer_after_header',           'primer_add_primary_navigation', 5 );
+	add_action( 'primer_hero',                   'primer_video_header',           3 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 

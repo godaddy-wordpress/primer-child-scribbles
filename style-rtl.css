@@ -1590,6 +1590,34 @@ body.page-template-page-builder-no-header .content-area {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-header.video-header + .main-navigation-container + .hero {
+  overflow: hidden;
+  background-color: #000;
+  color: #000;
+  position: relative; }
+  .site-header.video-header + .main-navigation-container + .hero aside {
+    position: relative; }
+  .site-header.video-header + .main-navigation-container + .hero #wp-custom-header {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto; }
+  .site-header.video-header + .main-navigation-container + .hero #wp-custom-header-video-button {
+    position: absolute;
+    bottom: 20vh;
+    left: 1em;
+    opacity: 0.5;
+    font-size: 1rem;
+    padding: 0.65em .85em; }
+    @media only screen and (max-width: 61.063em) {
+      .site-header.video-header + .main-navigation-container + .hero #wp-custom-header-video-button {
+        bottom: 25vh; } }
+  .site-header.video-header + .main-navigation-container + .hero iframe#wp-custom-header-video {
+    height: 100%; }
+
 .site-header {
   position: relative; }
 
@@ -1599,6 +1627,8 @@ body.page-template-page-builder-no-header .content-area {
   background-position: top center;
   background-repeat: no-repeat;
   z-index: 0; }
+  .hero #wp-custom-header img {
+    display: none; }
   .hero .hero-inner {
     max-width: 1100px;
     margin-right: auto;
