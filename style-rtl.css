@@ -1684,7 +1684,7 @@ body.no-max-width .hero-inner {
   font-size: 3em; }
 
 body.custom-header-image .hero {
-  text-shadow: -1px -1px 30px rgba(0, 0, 0, 0.5); }
+  text-shadow: -1px 1px 30px rgba(0, 0, 0, 0.5); }
 
 .header-image img {
   display: block; }
@@ -2352,7 +2352,8 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
 .woocommerce ul.products li.product a.add_to_cart_button {
   width: 100%;
   font-size: 16px;
-  text-align: center; }
+  text-align: center;
+  white-space: normal; }
 
 @media only screen and (max-width: 40.063em) {
   .primer-wc-cart-menu .primer-wc-cart-sub-menu {
