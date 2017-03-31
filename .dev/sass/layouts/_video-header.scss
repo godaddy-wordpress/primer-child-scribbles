@@ -27,6 +27,10 @@
 			opacity: 0.5;
 			font-size: 1rem;
 			padding: 0.65em .85em;
+
+			@media #{$medium-down} {
+				bottom: 25vh;
+			}
 		}
 
 		iframe#wp-custom-header-video {
