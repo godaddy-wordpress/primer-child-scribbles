@@ -1,0 +1,40 @@
+.site-header.video-header {
+
+	+.main-navigation-container +.hero {
+		overflow: hidden;
+		background-color: #000;
+		color: #000;
+		position: relative;
+
+		aside {
+			position: relative;
+		}
+
+		#wp-custom-header {
+			position: absolute;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+
+		#wp-custom-header-video-button {
+			position: absolute;
+			bottom: 20vh;
+			right: 1em;
+			opacity: 0.5;
+			font-size: 1rem;
+			padding: 0.65em .85em;
+
+			@media #{$medium-down} {
+				bottom: 25vh;
+			}
+		}
+
+		iframe#wp-custom-header-video {
+			height: 100%;
+		}
+	}
+}
