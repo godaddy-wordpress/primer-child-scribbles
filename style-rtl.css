@@ -2585,6 +2585,9 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
       margin-right: 0;
       margin-left: 0; } }
 
+.wp-block-pullquote p {
+  margin-bottom: 0.5rem; }
+
 body.customize-support {
   overflow-x: hidden; }
   body.customize-support h1,
