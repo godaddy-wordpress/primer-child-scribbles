@@ -84,9 +84,17 @@ body.no-max-width .footer-widget-area {
 .site-info-wrapper {
 	padding: 1.5em 0;
 	background-color: $color__footer-bg;
+	text-align: none;
 
 	.site-info {
 		@include container($container-size);
+	}
+
+	.privacy-policy-link {
+		display: inline-block;
+		font-size: 75%;
+		line-height: 1.2;
+		margin: 0 1.38889%;
 	}
 
 	.site-info-text {
@@ -103,10 +111,18 @@ body.no-max-width .footer-widget-area {
 	}
 
 	@media #{$small-only} {
+		text-align: center;
 
 		.social-menu {
 			@include span(12);
+			text-align: center;
 
+			+ .privacy-policy-link {
+				padding-top: 3em;
+			}
+		}
+
+		.privacy-policy-link {
 			text-align: center;
 		}
 	}
