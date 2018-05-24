@@ -1,29 +1,58 @@
 sudo: false
 
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+cache:
+  directories:
+    - node_modules
+    - vendor
+    - $HOME/.composer/cache
+    - $HOME/.wp-cli/cache
+    - $HOME/.wp-cli/packages/cache
+
 language:
   - php
   - node_js
 
+branches:
+  only:
+    - /^v\d.*$/
+    - master
+    - develop
+
+env:
+  global:
+    - WP_THEME=scribbles
+
+before_install:
+  - phpenv config-rm xdebug.ini
+
 before_script:
-  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+  - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+  - chmod +x /tmp/wp-cli.phar
 
 script:
   - echo "Deploy only"
 
 before_deploy:
-  - export RELEASE_FOLDER=scribbles
-  - php /tmp/wp-cli.phar package install runcommand/dist-archive
-  - cp -rv ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
-  - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
-  - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
+  - mkdir -p /tmp/$WP_THEME
+  - rsync -av --exclude-from $TRAVIS_BUILD_DIR/.distignore --delete $TRAVIS_BUILD_DIR/ /tmp/$WP_THEME/
+  - cd /tmp
+  - zip -rT $TRAVIS_BUILD_DIR/$WP_THEME.zip $WP_THEME/
+  - sha256sum -b $TRAVIS_BUILD_DIR/$WP_THEME.zip | awk '{print $1}' | tee $TRAVIS_BUILD_DIR/$WP_THEME.zip.sha256
 
 deploy:
   provider: releases
   api_key:
-    secure: llTtvO9X090vIIDl13VQTDWY66reIRrvFSWxFqM6QJ4acCXYvekgyE/3PDfyAW/wTkovmLTE874ijY3EWHxyjm499PUrBJV25aT+/zEpGl2t+RYvEvXyghUreCDI6gdItwh89LQ5W54+/OYmCRgG9sogIA/q21HUd/fuFD1PlhURQzjPVBahpe7k6NgS95HdDy+AwDx1RL5MakAz5oldxwyyyAfNbXhdisiA9SRMEPXDBs0uy/6cqrIHz0AMQ4ilRczzCDanjlfjjdHGdR6Tg8WJyPT7F8ma183SkaYiUuSuPURlP7T3fHevPqwG1GX2t00JItWX+FF2aCmCblLNEFkGus4O0eUBF7t4+4gDNWLAUxgqTWHeGMmSjubw2KA9G5TDYlOFCi7xcPJyyfzeaQEvN+prWTro+q4rHL39b59givrWM9wE2tKEqUqcgmN/Wqza0sDFH8nivyH7vL5ZQtMwUd7D3QJm7+HRjTRn1tmhvyaMrQZ1d/QLmJrsiJcYTMUqN1MBiuiaEKCmwZ6rsDfmT29Ar4sBpHsO+8c0WyisHS6Vb+kwLzxZVgOj3eabbHcqfry8awZzwK/xBssV45tXd2gZWAWt6f23cyw42q6LTDARE10Dp6dZzzIA2siXWb226Ami/wH7m4b6IWD3LMBvOLkqbVoQWrWYPdRbUuc=
-  file: scribbles.zip
+    secure: BaZMluUTPYKI8flJKvxV4beGQM1YzXB6RQ8hQcVEpk9ZuEjYwKeHFoQmLmI5h4JKNrViBoSZmK+KS0LNYaKN2zEVuiPlEu3fccbGRDFQMjZ0Ar+OvTlmD4H8oG5JrXxRkp3eJcFhrz00s/8D0WsbJYLSUkTBlr52floivlBH9q5+4jCDGE82TQ1eDNAdyZMegVyG5FNlXZ4XMNYTuggozh70kPlm1R06/h7Rsmk5T9aNckD5JjN/ZejKhxo3bvFYSFLvaemJrkCj5ls8unbAng/BGJJHi1KhBeWRKYgr2HXq8GD6pfmoeDWC1bM8Y3pVTkAGZt/X+ViF+LfYaws9ub+eIok/GcGRokGz0tAE/D7gkrezh0UDxy4h9Zth/Jrf1CgdKhvJzXn2s3rgc4mSfZ7J8xGZNJmuaqc93C2xMZfv/pllF2WXBp9WNLq038Uon0yp4HBGMMDdDAu8vsVefWESG15EtCcydjyeQk6/XStzZDeNQhFwFa+qSnrvvFF9GlVxmXUDhmKacxgz/tExWsUx3PnzS3JTQtpDtK7wcrolPd3X6lHSSdffZwZfKT6Xy0F8Z39xTO4bG/tPZuwioOu25DIu3SYPoHinbRoQVFMDWjNv/pTz/Aw0AmpePVfH3VzS7lcNt41wOlHKsF1XHDm4b7Z6xshLi2QnF6Ag29U=
+  file:
+    - "$TRAVIS_BUILD_DIR/$WP_THEME.zip"
+    - "$TRAVIS_BUILD_DIR/$WP_THEME.zip.sha256"
+  skip_cleanup: true
+  overwrite: true
   on:
     tags: true
     repo: godaddy/wp-scribbles-theme
-  skip_cleanup: true
-  overwrite: true
