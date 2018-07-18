@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /**
  * Theme Name: Scribbles
  * Theme URI: https://github.com/godaddy/wp-scribbles-theme
  * Author: GoDaddy
  * Author URI: https://www.godaddy.com/
  * Description: Scribbles is a Primer child theme with a playful and fun mood.
- * Version: 1.1.0
+ * Version: 1.1.1
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: scribbles
@@ -1843,7 +1842,8 @@ body.no-max-width .footer-widget-area {
 
 .site-info-wrapper {
   padding: 1.5em 0;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  text-align: none; }
   .site-info-wrapper .site-info {
     max-width: 1100px;
     margin-right: auto;
@@ -1852,6 +1852,11 @@ body.no-max-width .footer-widget-area {
       content: " ";
       display: block;
       clear: both; }
+  .site-info-wrapper .privacy-policy-link {
+    display: inline-block;
+    font-size: 75%;
+    line-height: 1.2;
+    margin: 0 1.38889%; }
   .site-info-wrapper .site-info-text {
     width: 97.22222%;
     float: right;
@@ -1867,12 +1872,18 @@ body.no-max-width .footer-widget-area {
     margin-right: 1.38889%;
     margin-left: 1.38889%; }
   @media only screen and (max-width: 40.063em) {
-    .site-info-wrapper .social-menu {
-      width: 97.22222%;
-      float: right;
-      margin-right: 1.38889%;
-      margin-left: 1.38889%;
-      text-align: center; } }
+    .site-info-wrapper {
+      text-align: center; }
+      .site-info-wrapper .social-menu {
+        width: 97.22222%;
+        float: right;
+        margin-right: 1.38889%;
+        margin-left: 1.38889%;
+        text-align: center; }
+        .site-info-wrapper .social-menu + .privacy-policy-link {
+          padding-top: 3em; }
+      .site-info-wrapper .privacy-policy-link {
+        text-align: center; } }
 
 body.no-max-width .site-info-wrapper .site-info {
   max-width: none; }
@@ -2226,6 +2237,20 @@ body.no-max-width .site-info-wrapper .site-info {
   .comments-area input:not(.submit),
   .comments-area textarea {
     width: 100%; }
+  .comments-area .comment-form-cookies-consent {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 16px; }
+    .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
+      display: inline;
+      width: auto;
+      margin: 0 0 0 10px; }
+      @media only screen and (max-width: 40.063em) {
+        .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
+          margin-top: 2px; } }
 
 .comment-list {
   padding: 0;
