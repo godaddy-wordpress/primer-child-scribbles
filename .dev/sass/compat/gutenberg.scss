@@ -115,7 +115,7 @@
 }
 
 @media #{$small-only} {
-  .wp-block-columns {
+	.wp-block-columns {
 		&.has-1-columns,
 		&.has-2-columns,
 		&.has-3-columns,
