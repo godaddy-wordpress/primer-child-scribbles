@@ -52,47 +52,6 @@ Scribbles is a GoDaddy Primer child theme with a playful and fun mood.
 
 You can fork and contribute to Scribbles by visiting [our public repo on GitHub](https://github.com/godaddy/wp-scribbles-theme).
 
-## Installation ##
-
-1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
-2. Type **Scribbles** in the search form and press the **Enter** key on your keyboard.
-3. Click the **Activate** button to begin using Scribbles on your website.
-4. In your admin panel, navigate to **Appearance > Customize**.
-5. Put the finishing touches on your website by adding a logo, header image, and custom colors.
-
-## Copyright ##
-
-Scribbles WordPress theme, Copyright 2016 GoDaddy Operating Company, LLC.
-Scribbles is distributed under the terms of the GNU GPL.
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-Scribbles bundles the following third-party resources:
-
-Genericons icon font, Copyright 2013 Automattic, Inc.
-License: GPL-2.0 (or later)
-Source: https://genericons.com/
-
-Stock photography, Unsplash
-License: Creative Commons Zero
-Source: https://unsplash.com/photos/CcbnSarTldQ/
-
-## Frequently Asked Questions ##
-
-TODO
-
-## Developer Tools ##
-
-TODO
-
 ## Changelog ##
 
 ### 1.1.2 ###
