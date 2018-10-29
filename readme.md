@@ -72,3 +72,9 @@ You can fork and contribute to Scribbles by visiting [our public repo on GitHub]
 ### 1.0.0 ###
 
 * Initial release.
+
+## Resources ##
+
+* Genericons icon font © 2013 Automattic, Inc., GPL-2.0
+* hero.jpg, © 2015 Unsplash, Creative Commons Zero
+* hero-thumbnail.jpg, © 2015 Unsplash, Creative Commons Zero
