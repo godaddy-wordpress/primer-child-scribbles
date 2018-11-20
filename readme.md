@@ -82,14 +82,6 @@ Stock photography, Unsplash
 License: Creative Commons Zero
 Source: https://unsplash.com/photos/CcbnSarTldQ/
 
-## Frequently Asked Questions ##
-
-TODO
-
-## Developer Tools ##
-
-TODO
-
 ## Changelog ##
 
 ### 1.1.2 ###
