@@ -55,7 +55,7 @@ You can fork and contribute to Scribbles by visiting [our public repo on GitHub]
 
 ## Installation ##
 
-1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+1. In your admin panel, navigate to **Appearance > Themes** and click the **Add New** button.
 2. Type **Scribbles** in the search form and press the **Enter** key on your keyboard.
 3. Click the **Activate** button to begin using Scribbles on your website.
 4. In your admin panel, navigate to **Appearance > Customize**.
