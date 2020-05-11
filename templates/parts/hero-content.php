@@ -1,3 +1,12 @@
+<?php
+/**
+ * Hero Content template
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
+?>
+
 <div class="hero-wrapper">
 
 	<div class="hero-inner">
