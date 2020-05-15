@@ -1,9 +1,9 @@
 <?php
-
 /**
  * Child theme version.
  *
- * @since 1.0.0
+ * @since   1.0.0
+ * @package Primer
  *
  * @var string
  */
@@ -17,17 +17,17 @@ define( 'PRIMER_CHILD_VERSION', '1.1.2' );
  */
 function scribbles_move_elements() {
 
-	remove_action( 'primer_header',                'primer_add_hero',               7 );
-	remove_action( 'primer_after_header',          'primer_add_page_title',         12 );
-	remove_action( 'primer_after_header',          'primer_add_primary_navigation', 11 );
-	remove_action( 'primer_before_header_wrapper', 'primer_video_header',           5 );
+	remove_action( 'primer_header', 'primer_add_hero', 7 );
+	remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_before_header_wrapper', 'primer_video_header', 5 );
 
 	add_action( 'primer_after_header', 'primer_add_hero', 10 );
 
-	add_action( 'primer_before_site_navigation', 'scribbles_nav_wrapper_open',    0 );
-	add_action( 'primer_after_site_navigation',  'scribbles_nav_wrapper_close',   400 );
-	add_action( 'primer_after_header',           'primer_add_primary_navigation', 5 );
-	add_action( 'primer_hero',                   'primer_video_header',           3 );
+	add_action( 'primer_before_site_navigation', 'scribbles_nav_wrapper_open', 0 );
+	add_action( 'primer_after_site_navigation', 'scribbles_nav_wrapper_close', 400 );
+	add_action( 'primer_after_header', 'primer_add_primary_navigation', 5 );
+	add_action( 'primer_hero', 'primer_video_header', 3 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
@@ -119,7 +119,7 @@ add_action( 'primer_after_post_thumbnail', 'scribbles_add_author_avatar' );
  * @filter primer_custom_logo_args
  * @since  1.0.0
  *
- * @param  array $args
+ * @param  array $args Arguments array.
  *
  * @return array
  */
@@ -139,7 +139,7 @@ add_filter( 'primer_custom_logo_args', 'scribbles_custom_logo_args' );
  * @filter primer_sidebars
  * @since  1.0.0
  *
- * @param  array $sidebars
+ * @param  array $sidebars Registered sidebars array.
  *
  * @return array
  */
@@ -165,7 +165,7 @@ add_filter( 'primer_sidebars', 'scribbles_sidebars' );
  * @filter primer_fonts
  * @since  1.0.0
  *
- * @param  array $fonts
+ * @param  array $fonts Registered fonts array.
  *
  * @return array
  */
@@ -185,7 +185,7 @@ add_filter( 'primer_fonts', 'scribbles_fonts' );
  * @filter primer_font_types
  * @since  1.0.0
  *
- * @param  array $font_types
+ * @param  array $font_types Registered font types array.
  *
  * @return array
  */
@@ -198,13 +198,13 @@ function scribbles_font_types( $font_types ) {
 		'navigation_font' => array(
 			'default' => 'Raleway',
 		),
-		'heading_font' => array(
+		'heading_font'    => array(
 			'default' => 'Architects Daughter',
 		),
-		'primary_font' => array(
+		'primary_font'    => array(
 			'default' => 'Raleway',
 		),
-		'secondary_font' => array(
+		'secondary_font'  => array(
 			'default' => 'Raleway',
 		),
 	);
@@ -220,7 +220,7 @@ add_filter( 'primer_font_types', 'scribbles_font_types' );
  * @filter primer_colors
  * @since  1.0.0
  *
- * @param  array $colors
+ * @param  array $colors Colors array.
  *
  * @return array
  */
@@ -228,14 +228,15 @@ function scribbles_colors( $colors ) {
 
 	unset( $colors['content_background_color'] );
 
+	// @codingStandardsIgnoreStart
 	$overrides = array(
 		/**
 		 * Text colors
 		 */
-		'header_textcolor' => array(
+		'header_textcolor'                       => array(
 			'default' => '#fca903',
 		),
-		'tagline_text_color' => array(
+		'tagline_text_color'                     => array(
 			'default'  => '#686868',
 			'rgba_css' => array(
 				'.site-search-wrapper .widget .search-field' => array(
@@ -243,7 +244,7 @@ function scribbles_colors( $colors ) {
 				),
 			),
 		),
-		'hero_text_color' => array(
+		'hero_text_color'                        => array(
 			'default' => '#ffffff',
 			'css'     => array(
 				'.hero .widget input[type="search"]' => array(
@@ -252,9 +253,9 @@ function scribbles_colors( $colors ) {
 				),
 			),
 		),
-		'menu_text_color' => array(
-			'default' => '#ffffff',
-			'css'     => array(
+		'menu_text_color'                        => array(
+			'default'  => '#ffffff',
+			'css'      => array(
 				'.main-navigation ul li a, .main-navigation ul li a:visited, .main-navigation ul li a:hover, .main-navigation ul li a:visited:hover,.main-navigation-container .social-menu a,.main-navigation ul li.menu-item-has-children .sub-menu li a' => array(
 					'color' => '%1$s',
 				),
@@ -268,7 +269,7 @@ function scribbles_colors( $colors ) {
 				),
 			),
 		),
-		'heading_text_color' => array(
+		'heading_text_color'                     => array(
 			'default' => '#353535',
 			'css'     => array(
 				'.footer-widget .widget-title' => array(
@@ -277,13 +278,13 @@ function scribbles_colors( $colors ) {
 				),
 			),
 		),
-		'primary_text_color' => array(
+		'primary_text_color'                     => array(
 			'default' => '#252525',
 		),
-		'secondary_text_color' => array(
+		'secondary_text_color'                   => array(
 			'default' => '#686868',
 		),
-		'footer_widget_heading_text_color' => array(
+		'footer_widget_heading_text_color'       => array(
 			'default' => '#3f3244',
 			'css'     => array(
 				'.footer-widget .widget-title,
@@ -292,37 +293,37 @@ function scribbles_colors( $colors ) {
 				),
 			),
 		),
-		'footer_widget_text_color' => array(
+		'footer_widget_text_color'               => array(
 			'default' => '#252525',
 		),
-		'footer_menu_text_color' => array(
+		'footer_menu_text_color'                 => array(
 			'default' => '#686868',
 		),
-		'footer_text_color' => array(
+		'footer_text_color'                      => array(
 			'default' => '#686868',
 		),
 		/**
 		 * Link / Button colors
 		 */
-		'link_color' => array(
-			'default'  => '#54ccbe',
+		'link_color'                             => array(
+			'default' => '#54ccbe',
 		),
-		'button_color' => array(
-			'default'  => '#b5345f',
+		'button_color'                           => array(
+			'default' => '#b5345f',
 		),
-		'button_text_color' => array(
-			'default'  => '#ffffff',
+		'button_text_color'                      => array(
+			'default' => '#ffffff',
 		),
 		/**
 		 * Background colors
 		 */
-		'background_color' => array(
+		'background_color'                       => array(
 			'default' => '#ffffff',
 		),
-		'hero_background_color' => array(
+		'hero_background_color'                  => array(
 			'default' => '#686868',
 		),
-		'menu_background_color' => array(
+		'menu_background_color'                  => array(
 			'default' => '#b5345f',
 			'css'     => array(
 				'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu, .main-navigation-container:before, .main-navigation-container:after' => array(
@@ -330,16 +331,17 @@ function scribbles_colors( $colors ) {
 				),
 			),
 		),
-		'footer_widget_background_color' => array(
+		'footer_widget_background_color'         => array(
 			'default' => '#3f3244',
 		),
 		'footer_widget_content_background_color' => array(
 			'default' => '#ffffff',
 		),
-		'footer_background_color' => array(
+		'footer_background_color'                => array(
 			'default' => '#ffffff',
 		),
 	);
+	// @codingStandardsIgnoreEnd
 
 	return primer_array_replace_recursive( $colors, $overrides );
 
@@ -352,14 +354,14 @@ add_filter( 'primer_colors', 'scribbles_colors' );
  * @filter primer_color_schemes
  * @since  1.0.0
  *
- * @param  array $color_schemes
+ * @param  array $color_schemes Registered color schemes.
  *
  * @return array
  */
 function scribbles_color_schemes( $color_schemes ) {
 
 	$overrides = array(
-		'blush' => array(
+		'blush'     => array(
 			'colors' => array(
 				'header_textcolor'                 => $color_schemes['blush']['base'],
 				'footer_widget_heading_text_color' => $color_schemes['blush']['base'],
@@ -369,7 +371,7 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_widget_background_color'   => $color_schemes['blush']['base'],
 			),
 		),
-		'bronze' => array(
+		'bronze'    => array(
 			'colors' => array(
 				'header_textcolor'                 => $color_schemes['bronze']['base'],
 				'footer_widget_heading_text_color' => $color_schemes['bronze']['base'],
@@ -379,7 +381,7 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_widget_background_color'   => $color_schemes['bronze']['base'],
 			),
 		),
-		'canary' => array(
+		'canary'    => array(
 			'colors' => array(
 				'header_textcolor'                 => $color_schemes['canary']['base'],
 				'footer_widget_heading_text_color' => $color_schemes['canary']['base'],
@@ -389,7 +391,7 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_widget_background_color'   => $color_schemes['canary']['base'],
 			),
 		),
-		'cool' => array(
+		'cool'      => array(
 			'colors' => array(
 				'header_textcolor'                 => $color_schemes['cool']['base'],
 				'footer_widget_heading_text_color' => $color_schemes['cool']['base'],
@@ -399,19 +401,19 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_widget_background_color'   => $color_schemes['cool']['base'],
 			),
 		),
-		'dark' => array(
+		'dark'      => array(
 			'colors' => array(
-				// Text
-				'header_textcolor'                 => '#ffffff',
-				'tagline_text_color'               => '#999999',
-				'heading_text_color'               => '#ffffff',
-				'primary_text_color'               => '#e5e5e5',
-				'secondary_text_color'             => '#c1c1c1',
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#ffffff',
-				// Links & Buttons
-				'button_color' => '#54ccbe',
-				// Backgrounds
+				// Text.
+				'header_textcolor'                       => '#ffffff',
+				'tagline_text_color'                     => '#999999',
+				'heading_text_color'                     => '#ffffff',
+				'primary_text_color'                     => '#e5e5e5',
+				'secondary_text_color'                   => '#c1c1c1',
+				'footer_widget_heading_text_color'       => '#ffffff',
+				'footer_widget_text_color'               => '#ffffff',
+				// Links & Buttons.
+				'button_color'                           => '#54ccbe',
+				// Backgrounds.
 				'background_color'                       => '#222222',
 				'hero_background_color'                  => '#282828',
 				'menu_background_color'                  => '#333333',
@@ -420,7 +422,7 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_background_color'                => '#222222',
 			),
 		),
-		'iguana' => array(
+		'iguana'    => array(
 			'colors' => array(
 				'header_textcolor'                 => $color_schemes['iguana']['base'],
 				'footer_widget_heading_text_color' => $color_schemes['iguana']['base'],
@@ -430,9 +432,9 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_widget_background_color'   => $color_schemes['iguana']['base'],
 			),
 		),
-		'muted' => array(
+		'muted'     => array(
 			'colors' => array(
-				// Text
+				// Text.
 				'header_textcolor'                 => '#5a6175',
 				'tagline_text_color'               => '#5a6175',
 				'heading_text_color'               => '#4f5875',
@@ -441,18 +443,18 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_widget_heading_text_color' => '#5a6175',
 				'footer_menu_text_color'           => $color_schemes['muted']['base'],
 				'footer_text_color'                => '#4f5875',
-				// Links & Buttons
-				'link_color'   => $color_schemes['muted']['base'],
-				'button_color' => $color_schemes['muted']['base'],
-				// Backgrounds
-				'background_color'               => '#ffffff',
-				'hero_background_color'          => '#5a6175',
-				'menu_background_color'          => '#5a6175',
-				'footer_widget_background_color' => '#b6b9c5',
-				'footer_background_color'        => '#ffffff',
+				// Links & Buttons.
+				'link_color'                       => $color_schemes['muted']['base'],
+				'button_color'                     => $color_schemes['muted']['base'],
+				// Backgrounds.
+				'background_color'                 => '#ffffff',
+				'hero_background_color'            => '#5a6175',
+				'menu_background_color'            => '#5a6175',
+				'footer_widget_background_color'   => '#b6b9c5',
+				'footer_background_color'          => '#ffffff',
 			),
 		),
-		'plum' => array(
+		'plum'      => array(
 			'colors' => array(
 				'header_textcolor'                 => $color_schemes['plum']['base'],
 				'footer_widget_heading_text_color' => $color_schemes['plum']['base'],
@@ -462,7 +464,7 @@ function scribbles_color_schemes( $color_schemes ) {
 				'footer_widget_background_color'   => $color_schemes['plum']['base'],
 			),
 		),
-		'rose' => array(
+		'rose'      => array(
 			'colors' => array(
 				'header_textcolor'                 => $color_schemes['rose']['base'],
 				'footer_widget_heading_text_color' => $color_schemes['rose']['base'],
