@@ -5,6 +5,8 @@
  * Author URI: https://www.godaddy.com/
  * Description: Scribbles is a Primer child theme with a playful and fun mood.
  * Version: 1.1.2
+ * Tested up to: 5.9
+ * Requires PHP: 5.6.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: scribbles
@@ -91,7 +93,8 @@ a:hover {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
 
 b,
 strong {
@@ -145,8 +148,6 @@ figure {
   margin: 1em 40px; }
 
 hr {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible; }
@@ -194,8 +195,6 @@ fieldset {
   padding: 0.35em 0.625em 0.75em; }
 
 legend {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -208,8 +207,6 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
 
@@ -320,7 +317,6 @@ pre {
   overflow: auto;
   padding: 1em;
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 code, kbd, tt, var {
@@ -332,7 +328,6 @@ code {
   padding: 0.125rem 0.25rem;
   background-color: rgba(225, 225, 225, 0.5);
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 pre code {
@@ -355,16 +350,12 @@ big {
 # Elements
 --------------------------------------------------------------*/
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
 body {
@@ -475,7 +466,6 @@ textarea,
 .select2-container .select2-choice {
   color: rgba(37, 37, 37, 0.5);
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0.75rem;
   resize: none;
@@ -546,7 +536,6 @@ input[type="reset"],
 input[type="submit"] {
   display: inline-block;
   border: none;
-  -webkit-border-radius: 8px;
   border-radius: 8px;
   background-color: #b5345f;
   color: #ffffff;
@@ -724,7 +713,6 @@ a {
           display: block;
           position: absolute;
           right: -999em;
-          -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
           .main-navigation ul ul ul {
             right: -999em;
@@ -765,8 +753,6 @@ a {
     border-bottom: 7px solid transparent;
     border-top: 7px solid transparent;
     border-right: 7px solid #ffffff;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     display: none; }
     @media only screen and (min-width: 40.063em) {
@@ -793,24 +779,15 @@ body.no-max-width .main-navigation {
     background-color: #ffffff;
     height: 0.25rem;
     margin: 0.43rem;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .15s ease-in-out;
     transition: .15s ease-in-out;
-    -webkit-transform-origin: right center;
-    -ms-transform-origin: right center;
     transform-origin: right center; }
   .menu-toggle.open div:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
   .menu-toggle.open div:nth-child(2) {
     width: 0%;
     opacity: 0; }
   .menu-toggle.open div:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
 .navigation.pagination {
@@ -821,7 +798,6 @@ body.no-max-width .main-navigation {
     .navigation.pagination .nav-links .page-numbers {
       display: inline-block;
       border: none;
-      -webkit-border-radius: 3px;
       border-radius: 3px;
       line-height: 1;
       margin: 0 0.25em;
@@ -941,9 +917,7 @@ object {
   overflow: hidden; }
   .screen-reader-text:focus {
     background-color: #fff;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: #21759b;
@@ -1629,7 +1603,6 @@ body.page-template-page-builder-no-header .content-area {
   position: relative; }
 
 .hero {
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -1910,11 +1883,9 @@ body.no-max-width .site-info-wrapper .site-info {
     border: 0;
     width: 32px;
     height: 32px;
-    -webkit-transition: 200ms opacity;
     transition: 200ms opacity;
     color: #ffffff;
     background-color: #252525;
-    -webkit-border-radius: 3px;
     border-radius: 3px; }
     .social-menu a:visited {
       color: #ffffff; }
@@ -2058,7 +2029,6 @@ body.no-max-width .site-info-wrapper .site-info {
 .footer-widget .widget {
   padding: 1em;
   background-color: #ffffff;
-  -webkit-border-radius: 8px;
   border-radius: 8px; }
   .footer-widget .widget:last-child {
     margin-bottom: 0; }
@@ -2078,9 +2048,10 @@ body.no-max-width .site-info-wrapper .site-info {
   line-height: 1.25rem;
   border: none;
   border-bottom: 3px solid rgba(37, 37, 37, 0.25);
-  -webkit-border-radius: 0;
   border-radius: 0;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
   background: none; }
   @media only screen and (max-width: 40.063em) {
     .widget_search .search-field {
@@ -2088,7 +2059,6 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .widget_search .search-submit {
   background: url("assets/images/search-icon.svg") no-repeat center center;
-  -webkit-background-size: 1.5rem 1.5rem;
   background-size: 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -2202,7 +2172,6 @@ body.no-max-width .site-info-wrapper .site-info {
   position: relative;
   margin-bottom: 65px; }
   .featured-image img {
-    -webkit-border-radius: 8px;
     border-radius: 8px; }
   .featured-image .avatar-container {
     position: absolute;
@@ -2213,10 +2182,8 @@ body.no-max-width .site-info-wrapper .site-info {
     left: 0;
     bottom: -57px;
     border: 6px solid #ffffff;
-    -webkit-border-radius: 100%;
     border-radius: 100%; }
     .featured-image .avatar-container .avatar {
-      -webkit-border-radius: 100%;
       border-radius: 100%; }
 
 /*--------------------------------------------------------------
@@ -2238,10 +2205,6 @@ body.no-max-width .site-info-wrapper .site-info {
   .comments-area textarea {
     width: 100%; }
   .comments-area .comment-form-cookies-consent {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     line-height: 16px; }
     .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
@@ -2279,17 +2242,13 @@ body.no-max-width .site-info-wrapper .site-info {
         float: left; }
     .comment-list li.bypostauthor {
       display: block;
-      padding: 0.5em 0.5em 0.5em -webkit-calc(0.5em + 32px);
       padding: 0.5em 0.5em 0.5em calc(0.5em + 32px);
-      -webkit-border-radius: 8px;
       border-radius: 8px;
       border: 3px solid rgba(84, 204, 190, 0.2); }
 
 .comment-meta .avatar {
   float: right;
-  margin-right: -webkit-calc(-1em - 32px);
   margin-right: calc(-1em - 32px);
-  -webkit-border-radius: 8px;
   border-radius: 8px; }
   @media only screen and (max-width: 40.063em) {
     .comment-meta .avatar {
@@ -2340,7 +2299,6 @@ body.no-max-width .site-info-wrapper .site-info {
       max-height: 250px;
       overflow-y: auto;
       border: none;
-      -webkit-box-shadow: none;
       box-shadow: none;
       display: inline-block;
       background: inherit; }
@@ -2367,7 +2325,6 @@ body.no-max-width .site-info-wrapper .site-info {
           margin-bottom: 5px; }
     .primer-wc-cart-menu .widget_shopping_cart .cart_list {
       background: transparent;
-      -webkit-box-shadow: none;
       box-shadow: none; }
       .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item {
         padding: 0;
@@ -2378,7 +2335,6 @@ body.no-max-width .site-info-wrapper .site-info {
         padding: .5em 1em;
         text-indent: 0;
         opacity: 1;
-        -webkit-transition: opacity .25s ease-out;
         transition: opacity .25s ease-out; }
         .primer-wc-cart-menu .widget_shopping_cart .cart_list li.mini_cart_item img {
           width: 100%;
@@ -2429,7 +2385,6 @@ body.no-max-width .site-info-wrapper .site-info {
 .woocommerce-page span.onsale,
 .woocommerce-page ul.products li.product .onsale {
   padding: 2px 8px;
-  -webkit-border-radius: 0;
   border-radius: 0;
   margin: 0;
   min-height: auto;
